@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithms on Blowfish</title>
-    <link>https://Johnny-wyk.github.io/zh-cn/algorithm/</link>
+    <link>http://localhost:1313/zh-cn/algorithm/</link>
     <description>Recent content in Algorithms on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Johnny</copyright>
-    <atom:link href="https://Johnny-wyk.github.io/zh-cn/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/zh-cn/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>二分查找</title>
-      <link>https://Johnny-wyk.github.io/zh-cn/algorithm/hash/</link>
+      <link>http://localhost:1313/zh-cn/algorithm/hash/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://Johnny-wyk.github.io/zh-cn/algorithm/hash/</guid>
+      <guid>http://localhost:1313/zh-cn/algorithm/hash/</guid>
       <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
       
     </item>
     
     <item>
       <title>哈希算法</title>
-      <link>https://Johnny-wyk.github.io/zh-cn/algorithm/mid/</link>
+      <link>http://localhost:1313/zh-cn/algorithm/mid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://Johnny-wyk.github.io/zh-cn/algorithm/mid/</guid>
+      <guid>http://localhost:1313/zh-cn/algorithm/mid/</guid>
       <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
       
     </item>
