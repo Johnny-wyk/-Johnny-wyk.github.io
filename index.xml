@@ -1,20 +1,60 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to Blowfish! :tada: on Blowfish</title>
+    <title>欢迎来到 JohnnyBlog 的个人博客 on Blowfish</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Welcome to Blowfish! :tada: on Blowfish</description>
+    <description>Recent content in 欢迎来到 JohnnyBlog 的个人博客 on Blowfish</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh-cn</language>
     <copyright>© 2024 Johnny</copyright>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Binary Search</title>
-      <link>http://localhost:1313/algorithm/hash/</link>
+      <title></title>
+      <link>http://localhost:1313/friend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/algorithm/hash/</guid>
+      <guid>http://localhost:1313/friend/</guid>
+      <description>友链</description>
+      
+    </item>
+    
+    <item>
+      <title>JVM知识点</title>
+      <link>http://localhost:1313/interview/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/interview/jvm/</guid>
+      <description>JVM # 1.概念： # JVM是可运行Java代码的假想计算机，包括</description>
+      
+    </item>
+    
+    <item>
+      <title>mysql面试知识点</title>
+      <link>http://localhost:1313/interview/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/interview/mysql/</guid>
+      <description>mysql # MYSQL支持的存储引擎 # 存储引擎就是存储数据、建立索引</description>
+      
+    </item>
+    
+    <item>
+      <title>二分查找</title>
+      <link>http://localhost:1313/algorithm/mid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/mid/</guid>
       <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/algorithm/mid/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>链表</title>
+      <link>http://localhost:1313/algorithm/linkedlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/linkedlist/</guid>
+      <description>链表 # 基础知识 # 链表是一种通过指针串联在一起的线性结构，每一</description>
       
     </item>
     

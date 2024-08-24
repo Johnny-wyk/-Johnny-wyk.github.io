@@ -29,6 +29,16 @@
     </item>
     
     <item>
+      <title>JVM知识点</title>
+      <link>http://localhost:1313/zh-cn/interview/jvm/jvminterview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/zh-cn/interview/jvm/jvminterview/</guid>
+      <description>JVM # 1.概念： # JVM是可运行Java代码的假想计算机，包括</description>
+      
+    </item>
+    
+    <item>
       <title>mysql面试知识点</title>
       <link>http://localhost:1313/zh-cn/interview/mysql/mysqlinterview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

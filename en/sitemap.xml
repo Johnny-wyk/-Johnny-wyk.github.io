@@ -3,108 +3,108 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/algorithm/</loc>
+    <loc>http://localhost:1313/en/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/algorithm/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="http://localhost:1313/algorithm/"
-    />
-  </url>
-  <url>
-    <loc>http://localhost:1313/authors/</loc>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/authors/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
       href="http://localhost:1313/authors/"
     />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/authors/"
+    />
   </url>
   <url>
-    <loc>http://localhost:1313/algorithm/hash/</loc>
+    <loc>http://localhost:1313/en/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/algorithm/hash/"
+      href="http://localhost:1313/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/algorithm/hash/"
+      href="http://localhost:1313/en/"
     />
   </url>
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/en/categories/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/categories/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
       href="http://localhost:1313/categories/"
     />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/categories/"
+    />
   </url>
   <url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>http://localhost:1313/en/interview/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/series/"
+      href="http://localhost:1313/interview/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
+      href="http://localhost:1313/en/interview/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/interview/jvm/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/interview/jvm/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/interview/jvm/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/series/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
       href="http://localhost:1313/series/"
     />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/series/"
+    />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/en/tags/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/tags/"
-    />
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
       href="http://localhost:1313/tags/"
     />
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-      rel="alternate"
-      hreflang="zh-cn"
-      href="http://localhost:1313/zh-cn/"
-    />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://localhost:1313/"
+      href="http://localhost:1313/en/tags/"
     />
   </url>
 </urlset>
