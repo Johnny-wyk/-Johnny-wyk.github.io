@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interviews on Blowfish</title>
+    <link>http://localhost:1313/interview/</link>
+    <description>Recent content in Interviews on Blowfish</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2024 Johnny</copyright>
+    <atom:link href="http://localhost:1313/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JVM知识点</title>
+      <link>http://localhost:1313/interview/jvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/interview/jvm/</guid>
+      <description>JVM # 1.概念： # JVM是可运行Java代码的假想计算机，包括</description>
+      
+    </item>
+    
+    <item>
+      <title>mysql面试知识点</title>
+      <link>http://localhost:1313/interview/mysql/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/interview/mysql/</guid>
+      <description>mysql # MYSQL支持的存储引擎 # 存储引擎就是存储数据、建立索引</description>
+      
+    </item>
+    
+  </channel>
+</rss>
