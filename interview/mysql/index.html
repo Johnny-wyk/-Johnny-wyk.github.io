@@ -85,7 +85,7 @@
     "name": "mysql面试知识点",
     "headline": "mysql面试知识点",
     "description": "记录一些和mysql相关的面试内容",
-    "abstract": "mysql # MYSQL支持的存储引擎 # 存储引擎就是存储数据、建立索引",
+    "abstract": "mysql # 慢查询 # 聚合查询 多表查询 表数据量过大查询 深度分页查询 表象",
     "inLanguage": "zh-cn",
     "url" : "http:\/\/localhost:1313\/interview\/mysql\/",
     "author" : {
@@ -101,7 +101,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "483"
+    "wordCount": "716"
   }]
   </script>
 
@@ -621,7 +621,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
   
 
   
@@ -776,6 +776,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#慢查询">慢查询</a></li>
         <li><a href="#mysql支持的存储引擎">MYSQL支持的存储引擎</a></li>
         <li><a href="#索引">索引</a>
           <ul>
@@ -802,6 +803,7 @@
   <ul>
     <li>
       <ul>
+        <li><a href="#慢查询">慢查询</a></li>
         <li><a href="#mysql支持的存储引擎">MYSQL支持的存储引擎</a></li>
         <li><a href="#索引">索引</a>
           <ul>
@@ -879,6 +881,200 @@
     </span>        
     
 </h1>
+
+
+<h3 class="relative group">慢查询 
+    <div id="%E6%85%A2%E6%9F%A5%E8%AF%A2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%85%A2%E6%9F%A5%E8%AF%A2" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>聚合查询 多表查询 表数据量过大查询 深度分页查询
+表象：页面加载过慢、接口压测响应时间过长（超过1s）</p>
+<p>如何定位慢查询?
+方案二：MySQL自带慢日志
+慢查询日志记录了所有执行时间超过指定参数（long_query_time，单位：秒，默认10秒）的所有SQL语句的日志
+如果要开启慢查询日志，需要在MySQL的配置文件（/etc/my.cnf）中配置如下信息</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /interview/mysql/img_4_hu1359873003973796841.png 330w,
+        /interview/mysql/img_4_hu1554436829042929881.png 660w,
+        /interview/mysql/img_4_hu16195869921396036577.png 1024w,
+        /interview/mysql/img_4_hu7366303323161792681.png 2x"
+        src="/interview/mysql/img_4_hu1554436829042929881.png"
+        alt="img_4.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /interview/mysql/img_5_hu14009886588056915807.png 330w,
+        /interview/mysql/img_5_hu18057641173915451738.png 660w,
+        /interview/mysql/img_5_hu3234227287921592467.png 1024w,
+        /interview/mysql/img_5_hu11302087972970854112.png 2x"
+        src="/interview/mysql/img_5_hu18057641173915451738.png"
+        alt="img_5.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>如何分析一个SQL语句执行很慢
+可以采用EXPLAIN 或者DESC命令获取MySQL 如何执行SELECT 语句的信息
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /interview/mysql/img_6_hu12950934071485455684.png 330w,
+        /interview/mysql/img_6_hu11990907015828702173.png 660w,
+        /interview/mysql/img_6_hu16214394846728859443.png 1024w,
+        /interview/mysql/img_6_hu8059352302661812313.png 2x"
+        src="/interview/mysql/img_6_hu11990907015828702173.png"
+        alt="img_6.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /interview/mysql/img_7_hu5207551872660482021.png 330w,
+        /interview/mysql/img_7_hu7588510196291227908.png 660w,
+        /interview/mysql/img_7_hu17861156097557464129.png 1024w,
+        /interview/mysql/img_7_hu1304342354033867110.png 2x"
+        src="/interview/mysql/img_7_hu7588510196291227908.png"
+        alt="img_7.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /interview/mysql/img_8_hu14706552920814781819.png 330w,
+        /interview/mysql/img_8_hu14810228432847799475.png 660w,
+        /interview/mysql/img_8_hu13409126242809991041.png 1024w,
+        /interview/mysql/img_8_hu3618127043923866503.png 2x"
+        src="/interview/mysql/img_8_hu14810228432847799475.png"
+        alt="img_8.png"
+      />
+      
+      
+    </figure>
+  
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /interview/mysql/img_9_hu17044292766710169205.png 330w,
+        /interview/mysql/img_9_hu13756348300663255838.png 660w,
+        /interview/mysql/img_9_hu6790557743781486449.png 1024w,
+        /interview/mysql/img_9_hu4248788258585892737.png 2x"
+        src="/interview/mysql/img_9_hu13756348300663255838.png"
+        alt="img_9.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
 
 
 <h3 class="relative group">MYSQL支持的存储引擎 
@@ -1000,6 +1196,35 @@ B树与B+树对比:
 ①：磁盘读写代价B+树更低；</p>
 <p>②：查询效率B+树更加稳定；</p>
 <p>③：B+树便于扫库和区间查询</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /interview/mysql/img_10_hu10978986818272227870.png 330w,
+        /interview/mysql/img_10_hu5080164120884905390.png 660w,
+        /interview/mysql/img_10_hu3416539276569919638.png 1024w,
+        /interview/mysql/img_10_hu7316267284669772482.png 2x"
+        src="/interview/mysql/img_10_hu5080164120884905390.png"
+        alt="img_10.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
 
 
 <h4 class="relative group">1.1聚集索引vs聚簇索引 

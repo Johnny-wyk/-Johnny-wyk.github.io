@@ -24,7 +24,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/interview/mysql/</guid>
-      <description>mysql # MYSQL支持的存储引擎 # 存储引擎就是存储数据、建立索引</description>
+      <description>mysql # 慢查询 # 聚合查询 多表查询 表数据量过大查询 深度分页查询 表象</description>
       
     </item>
     
