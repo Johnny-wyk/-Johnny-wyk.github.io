@@ -100,7 +100,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1291"
+    "wordCount": "4342"
   }]
   </script>
 
@@ -609,7 +609,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">9 分钟</span>
   
 
   
@@ -785,8 +785,24 @@
             <li><a href="#请求包">请求包：</a></li>
             <li><a href="#post传值-在body中传值">post传值 在body中传值</a></li>
             <li><a href="#request-header请求头">request header请求头：</a></li>
+            <li><a href="#响应包">响应包：</a></li>
+            <li><a href="#状态码">状态码</a></li>
+            <li><a href="#response-header-响应头">response header 响应头</a></li>
           </ul>
         </li>
+        <li><a href="#级录扫描">⼆级⽬录扫描</a></li>
+        <li><a href="#端扫描">端⼝扫描</a></li>
+        <li><a href="#nmap">nmap</a>
+          <ul>
+            <li><a href="#2防墙">2.防⽕墙</a></li>
+          </ul>
+        </li>
+        <li><a href="#全端扫描">全端⼝扫描</a></li>
+        <li><a href="#question-and-answer">Question and Answer</a></li>
+        <li><a href="#爆破">爆破</a></li>
+        <li><a href="#kali带字典">kali⾃带字典</a></li>
+        <li><a href="#靶场">靶场</a></li>
+        <li><a href="#html">html</a></li>
       </ul>
     </li>
   </ul>
@@ -825,8 +841,24 @@
             <li><a href="#请求包">请求包：</a></li>
             <li><a href="#post传值-在body中传值">post传值 在body中传值</a></li>
             <li><a href="#request-header请求头">request header请求头：</a></li>
+            <li><a href="#响应包">响应包：</a></li>
+            <li><a href="#状态码">状态码</a></li>
+            <li><a href="#response-header-响应头">response header 响应头</a></li>
           </ul>
         </li>
+        <li><a href="#级录扫描">⼆级⽬录扫描</a></li>
+        <li><a href="#端扫描">端⼝扫描</a></li>
+        <li><a href="#nmap">nmap</a>
+          <ul>
+            <li><a href="#2防墙">2.防⽕墙</a></li>
+          </ul>
+        </li>
+        <li><a href="#全端扫描">全端⼝扫描</a></li>
+        <li><a href="#question-and-answer">Question and Answer</a></li>
+        <li><a href="#爆破">爆破</a></li>
+        <li><a href="#kali带字典">kali⾃带字典</a></li>
+        <li><a href="#靶场">靶场</a></li>
+        <li><a href="#html">html</a></li>
       </ul>
     </li>
   </ul>
@@ -1487,6 +1519,558 @@ linux命名 linux is not unix</p>
 </span></span><span class="line"><span class="cl"> %22%7D%2C%22%24device_id%22%3A%221919cdf8e18175-0bdab4c7be43008-20331d51
 </span></span><span class="line"><span class="cl">557200-1919cdf8e19227%22%7D; 
 </span></span><span class="line"><span class="cl">t1=DEB48BC37658EAC11885AA1DFE8F8632CA2B49294C51C1BACC
+</span></span></code></pre></div>
+
+<h4 class="relative group">响应包： 
+    <div id="%E5%93%8D%E5%BA%94%E5%8C%85" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%93%8D%E5%BA%94%E5%8C%85" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+
+
+<h4 class="relative group">状态码 
+    <div id="%E7%8A%B6%E6%80%81%E7%A0%81" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%8A%B6%E6%80%81%E7%A0%81" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>100-299 -&gt; 响应正常</p>
+<p>30x -&gt; 301 ⽹⻚发⽣了跳转</p>
+<p>40x -&gt; 404 not found -&gt; 请求的路径不存在 4开头的状态码代表请求的错误 包括但不限于权 限问题、请求路径问题
+404 请求路径问题</p>
+<p>401 un auth -&gt; 权限不够</p>
+<p>5xx &gt; 501 internel error -&gt; 5开头的状态码⼀般意味着服务器有内部错误</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">HTTP/1.1 200 OK 状态码
+</span></span><span class="line"><span class="cl">Server: nginx/1.20.1
+</span></span><span class="line"><span class="cl"> Date: Wed, 11 Sep 2024 08:37:06 GMT
+</span></span><span class="line"><span class="cl"> Content-Type: application/json;charset=utf-8
+</span></span><span class="line"><span class="cl"> Connection: close
+</span></span><span class="line"><span class="cl"> Cache-Control: no-cache
+</span></span><span class="line"><span class="cl"> X-Content-Type-Options: nosniff
+</span></span><span class="line"><span class="cl"> X-Frame-Options: SAMEORIGIN
+</span></span><span class="line"><span class="cl"> X-XSS-Protection: 1; mode=block
+</span></span><span class="line"><span class="cl">Access-Control-Allow-Credentials: true
+</span></span><span class="line"><span class="cl"> Content-Length: 235
+</span></span><span class="line"><span class="cl"> {
+</span></span><span class="line"><span class="cl"> }
+</span></span><span class="line"><span class="cl">  &#34;ACTION&#34;: &#34;46116&#34;,
+</span></span><span class="line"><span class="cl">  &#34;MAXCOUNT&#34;: &#34;10&#34;,
+</span></span><span class="line"><span class="cl">  &#34;ERRORNO&#34;: &#34;0&#34;,
+</span></span><span class="line"><span class="cl">  &#34;ERRORMESSAGE&#34;: &#34;未找到资讯信息&#34;,
+</span></span><span class="line"><span class="cl">  &#34;IDINDEX&#34;: &#34;0&#34;,
+</span></span><span class="line"><span class="cl">  &#34;INFOTITLEINDEX&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">  &#34;DATESINDEX&#34;: &#34;2&#34;,
+</span></span><span class="line"><span class="cl">  &#34;MEDIAINDEX&#34;: &#34;3&#34;,
+</span></span><span class="line"><span class="cl">  &#34;FLAGINDEX&#34;: &#34;4&#34;,
+</span></span><span class="line"><span class="cl">  &#34;STOCKCODEINDEX&#34;: &#34;5&#34;
+</span></span></code></pre></div>
+
+<h4 class="relative group">response header 响应头 
+    <div id="response-header-%E5%93%8D%E5%BA%94%E5%A4%B4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#response-header-%E5%93%8D%E5%BA%94%E5%A4%B4" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Server: nginx/1.20.1
+</span></span><span class="line"><span class="cl"> Date: Wed, 11 Sep 2024 08:37:06 GMT
+</span></span><span class="line"><span class="cl"> Content-Type: application/json;charset=utf-8  -&gt; 响应类型
+</span></span><span class="line"><span class="cl">Connection: close
+</span></span><span class="line"><span class="cl"> Cache-Control: no-cache
+</span></span><span class="line"><span class="cl"> X-Content-Type-Options: nosniff
+</span></span><span class="line"><span class="cl"> X-Frame-Options: SAMEORIGIN
+</span></span><span class="line"><span class="cl"> X-XSS-Protection: 1; mode=block
+</span></span><span class="line"><span class="cl"> Access-Control-Allow-Credentials: true
+</span></span><span class="line"><span class="cl"> Content-Length: 235  -&gt; 响应⻓度
+</span></span></code></pre></div><p>dirsearch 可以根据扫描得到的response的状态码来判断⽬标路径、⽂件 是否存在</p>
+<p>404 -&gt; 不存在</p>
+<p>200 -&gt; 存在</p>
+<p>301 -&gt; 该路径不直接存在 -&gt; 被重定向到另⼀个路径</p>
+
+
+<h3 class="relative group">⼆级⽬录扫描 
+    <div id="%E7%BA%A7%E5%BD%95%E6%89%AB%E6%8F%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%BA%A7%E5%BD%95%E6%89%AB%E6%8F%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Target: http://112.124.71.224:18080/
+</span></span><span class="line"><span class="cl">[16:48:49] Starting: game/
+</span></span><span class="line"><span class="cl"> [16:49:07] 200 -  158B  - /game/www
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  300B  - /game/.ht_wsr.txt
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess.bak1
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  304B  - /game/.htaccess_extra
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess.orig
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  305B  - /game/.htaccess.sample
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess_orig
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  301B  - /game/.htaccessOLD
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  299B  - /game/.htpasswds
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  302B  - /game/.htaccessOLD2
+</span></span><span class="line"><span class="cl"> [16:49:26] 403 -  303B  - /game/.htpasswd_test
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  301B  - /game/.htaccessBAK
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess.save
+</span></span><span class="line"><span class="cl"> [16:49:26] 403 -  300B  - /game/.httr-oauth
+</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  301B  - /game/.htaccess_sc
+</span></span><span class="line"><span class="cl"> [16:50:34] 200 -  158B  - /game/www.zip
+</span></span></code></pre></div><p>得到了www.zip 备份⽂件</p>
+
+
+<h3 class="relative group">端⼝扫描 
+    <div id="%E7%AB%AF%E6%89%AB%E6%8F%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%AB%AF%E6%89%AB%E6%8F%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>ip : 112.124.71.224</p>
+<p>通过浏览器正常访问 发现返回空响应</p>
+<p>能说这个ip地址（服务器）没有任何的对外服务吗？</p>
+<p>1-65535个端⼝</p>
+<p>浏览器访问112.124.71.224 只探测了80</p>
+<p>https://112.124.71.224 -&gt; 443</p>
+
+
+<h3 class="relative group">nmap 
+    <div id="nmap" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#nmap" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>使⽤nmap对112.124.71.224扫描了80端⼝</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">nmap 112.124.71.224 -p 80
+</span></span><span class="line"><span class="cl"> Starting Nmap 7.95 ( https://nmap.org ) at 2024-09-11 10:29 CST
+</span></span><span class="line"><span class="cl"> Nmap scan report for 112.124.71.224
+</span></span><span class="line"><span class="cl"> Host is up (0.052s latency).
+</span></span><span class="line"><span class="cl"> PORT  
+</span></span><span class="line"><span class="cl"> STATE  SERVICE
+</span></span><span class="line"><span class="cl"> 80/tcp closed http
+</span></span><span class="line"><span class="cl"> Nmap done: 1 IP address (1 host up) scanned in 0.20 seconds
+</span></span></code></pre></div><p>想让nmap帮我们扫描这台主机的所有端⼝?
+tcp三次握⼿</p>
+<p>第⼀次握⼿：</p>
+<p>client(nmap) -&gt; server(112.124.71.224:80) : syn 请求包</p>
+<p>server -&gt; client : ack 确认包</p>
+<p>如果只根据上⾯两个包就判定端⼝是否开放 在nmap属于半开扫描</p>
+<p>半开扫描的结果不⼀定准确</p>
+<p>client -&gt; 决定建⽴连接 -&gt; syn+ack</p>
+<p>server -&gt; client -&gt; ack</p>
+<p>nmap在默认情况下都是全连接扫描 -&gt; 三次握⼿+ 四次挥⼿-sS -&gt; 指定nmap进⾏半开扫描 2次握⼿ 提升速度 牺牲的精度</p>
+<p>特洛伊⽊⻢ -&gt; 1个特征 -&gt; ⽤过⼀次就⾃我销毁</p>
+<p>⽤过1次 取决于有没有完整的建⽴过1次tcp三次握⼿</p>
+<p>CTF解题模式、AWD局域⽹攻防竞赛</p>
+<p>靶机不会给你初始权限 提供低权限⽤户</p>
+<p>出题⼈会在靶机中放置⼀个特洛伊⽊⻢</p>
+<p>nc连接端⼝ 就可以得到⼀个shell</p>
+<p>netcat 瑞⼠军⼑</p>
+<p>nc ip port  nc 112.124.71.224 1445 -&gt; $&gt;id -&gt; root</p>
+<p>nmap 112.124.71.224 -p 1-65535 -&gt; ⽐赛的时候 如果直接nmap 会导致特洛伊⽊⻢⾃我销毁 -&gt; -sS半开扫描可以解决这个问题</p>
+<p>tcp三次握⼿ 四次挥⼿</p>
+<p>只⽤了两次握⼿就判断了端⼝是否开放</p>
+<p>nmap收到ack的回复 ⽬标端⼝开放</p>
+<p>client(nmap) -&gt; server(112.124.71.224:80) : syn 请求包</p>
+<p>server -&gt; RST/FIN : ack 确认包</p>
+<p>nmap收到rst/fin回复 判定端⼝未开放</p>
+<p>为什么说端⼝未开放 有可能会回复 有可能不会回复？</p>
+<p>取决于端⼝是怎样的不开放</p>
+<p>1.112.124.71.224的确没有http服务</p>
+<p>nmap扫描 80/443 -&gt; 不会回应</p>
+
+
+<h4 class="relative group">2.防⽕墙 
+    <div id="2%E9%98%B2%E5%A2%99" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#2%E9%98%B2%E5%A2%99" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>112.124.71.224开放了http服务 但是限制了源ip地址</p>
+<p>nmap扫描80/443 -&gt; 会回应 -&gt; FIN/RST</p>
+<p>80/tcp close/open/filtered(过滤的)</p>
+
+
+<h3 class="relative group">全端⼝扫描 
+    <div id="%E5%85%A8%E7%AB%AF%E6%89%AB%E6%8F%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%85%A8%E7%AB%AF%E6%89%AB%E6%8F%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Host is up (0.051s latency).
+</span></span><span class="line"><span class="cl"> Not shown: 65521 closed tcp ports (conn-refused)
+</span></span><span class="line"><span class="cl"> PORT    
+</span></span><span class="line"><span class="cl">  STATE  
+</span></span><span class="line"><span class="cl">21/tcp  
+</span></span><span class="line"><span class="cl">22/tcp  
+</span></span><span class="line"><span class="cl">135/tcp  
+</span></span><span class="line"><span class="cl">  open    
+</span></span><span class="line"><span class="cl">  open    
+</span></span><span class="line"><span class="cl">  SERVICE
+</span></span><span class="line"><span class="cl"> ftp    
+</span></span><span class="line"><span class="cl"> ssh    
+</span></span><span class="line"><span class="cl"> filtered msrpc
+</span></span><span class="line"><span class="cl"> 136/tcp  
+</span></span><span class="line"><span class="cl">137/tcp  
+</span></span><span class="line"><span class="cl"> filtered profile
+</span></span><span class="line"><span class="cl"> -&gt; ⽂件传输协议
+</span></span><span class="line"><span class="cl"> -&gt; ssh远程连接linux服务器
+</span></span><span class="line"><span class="cl"> filtered netbios-ns
+</span></span><span class="line"><span class="cl"> 138/tcp  
+</span></span><span class="line"><span class="cl">139/tcp  
+</span></span><span class="line"><span class="cl">445/tcp  
+</span></span><span class="line"><span class="cl"> filtered netbios-dgm
+</span></span><span class="line"><span class="cl"> filtered netbios-ssn
+</span></span><span class="line"><span class="cl"> filtered microsoft-ds
+</span></span><span class="line"><span class="cl"> 135-139 445端⼝ 都是windows特有的端⼝ netbios  samba服务 ⽂件共享
+</span></span><span class="line"><span class="cl">17010永恒之蓝漏洞 就是基于445端⼝的samba服务进⾏的攻击
+</span></span><span class="line"><span class="cl">政企的安全建设中 ⼀般认为445端⼝是⾼危端⼝
+</span></span><span class="line"><span class="cl">windowes 7  -&gt; 永恒之蓝漏洞 导致全球千万台pc机 感染了勒索病毒
+</span></span><span class="line"><span class="cl">windows 10 -&gt; 永恒之⿊ 影响⾯不如永恒之蓝⼴泛 
+</span></span><span class="line"><span class="cl">593/tcp  
+</span></span><span class="line"><span class="cl"> filtered http-rpc-epmap
+</span></span><span class="line"><span class="cl"> 4444/tcp  filtered krb524
+</span></span><span class="line"><span class="cl"> filtered -&gt; 已过滤状态 阿⾥云防⽕墙默认不启⽤445端⼝ 系统⾃带的防⽕墙
+</span></span><span class="line"><span class="cl">5003/tcp  open    
+</span></span><span class="line"><span class="cl"> filemaker
+</span></span><span class="line"><span class="cl"> 5355/tcp  filtered llmnr
+</span></span><span class="line"><span class="cl"> 18080/tcp open    
+</span></span><span class="line"><span class="cl"> unknown -&gt; unkown就是nmap没有匹配到指纹
+</span></span><span class="line"><span class="cl">80 -&gt; http -&gt; 实际建站不会使⽤默认80 -&gt; tomcat / nginx -&gt; 8080
+</span></span><span class="line"><span class="cl">服务器 和web应⽤ 是⼀⽐⼀的关系吗？ 不是
+</span></span><span class="line"><span class="cl">80 -&gt; ⽹站A
+</span></span><span class="line"><span class="cl"> 8080
+</span></span><span class="line"><span class="cl"> 8081
+</span></span><span class="line"><span class="cl"> 18080
+</span></span><span class="line"><span class="cl"> 18081
+</span></span><span class="line"><span class="cl">使⽤⾼位端⼝启⽤web服务
+</span></span><span class="line"><span class="cl">40301/tcp open    
+</span></span><span class="line"><span class="cl"> unknown
+</span></span><span class="line"><span class="cl"> Nmap done: 1 IP address (1 host up) scanned in 4063.19 seconds
+</span></span></code></pre></div><p>扫描：
+对112.124.71.224发起端⼝扫描</p>
+<p>我们的流量 是从当前主机直接到达了⽬标主机吗</p>
+<p>使⽤校园⽹：⽹络出⼝就是学校的公⽹IP（⽹关） -&gt; ⽹关可能部署⼀些流量清洗的设备</p>
+<p>使⽤浏览器访问18080端⼝ 可以正常访问 这是因为浏览器访问的流量合法 不存在扫描器的特
+征</p>
+<p>nmap特征明显 可能被校园⽹的流量清洗设备捕获 扫描结果被劫持</p>
+
+
+<h3 class="relative group">Question and Answer 
+    <div id="question-and-answer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#question-and-answer" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>
+<p>⽹络问题</p>
+<p>⽹卡NAT模式：· 安全问题如果虚拟机部署了靶场可能导致被其他⼈攻击对虚拟机造成损坏</p>
+<p>校园⽹问题 上游的校园⽹服务器 只会对1个校园⽹账号下发1个ip地址导致使⽤桥接模式的虚拟机获取不到ip地址 没⽹</p>
+</li>
+<li>
+<p>pip问题
+什么是pip?</p>
+<p>pip是python官⽅的⽤于管理（安装、更新、卸载）python依赖（库、包）</p>
+<p>python3 -m pip install -r requirement.txt -&gt; no moudule name pip</p>
+<p>python3安装pip  -&gt; curl bootstrap.com/get-pip.py  -&gt; python3 get-pip.py</p>
+</li>
+<li>
+<p>运⾏问题
+域名 -&gt; dns</p>
+<p>顶级域：.com   .cn（中国特⾊顶级域） .gov政府  .gov.cn（中国政府的顶级域） .gov(美
+国政府)</p>
+<p>.org 组织</p>
+<p>⼦域名 -&gt; 在主域名之下 -&gt; mo60.cn -&gt; blog.mo60.cn / tools.mo60.cn</p>
+</li>
+</ol>
+
+
+<h3 class="relative group">爆破 
+    <div id="%E7%88%86%E7%A0%B4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E7%88%86%E7%A0%B4" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+
+<h3 class="relative group">kali⾃带字典 
+    <div id="kali%E5%B8%A6%E5%AD%97%E5%85%B8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#kali%E5%B8%A6%E5%AD%97%E5%85%B8" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>/usr/share/wordlists/rockyou.tar.gz  -&gt; rockyou是美国情报机构</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$&gt; zcat rockyou.txt.gz &gt; /root/password.txt
+</span></span><span class="line"><span class="cl">$&gt; head -n 10 /root/password.txt
+</span></span></code></pre></div><p>/usr/share/wordlists/ -&gt; kali存放字典的⽬录</p>
+
+
+<h3 class="relative group">靶场 
+    <div id="%E9%9D%B6%E5%9C%BA" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%9D%B6%E5%9C%BA" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>http://112.124.71.224:18080/login.php</p>
+
+
+<h3 class="relative group">html 
+    <div id="html" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#html" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>hyper text mark language -&gt; 超⽂本标记语⾔</p>
+<p>以标签的⽅式进⾏编写  标签是成对的</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
+</span></span></span><span class="line"><span class="cl"><span class="cp">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>   -&gt; 指代了html的
+</span></span><span class="line"><span class="cl">标准
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ... html代码会被浏览器渲染 呈现出画⾯给⽤户
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>⽹⻚标题<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ...  -&gt; ⽹⻚的主体内容
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>body -&gt;  表单 -&gt; 表单是html⽹⻚前端与后端交互的介质</p>
+<p>表单</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;GET&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> Username:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>  控件
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;username&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> Password:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;password&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Login&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;Login&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">控件最重要的属性 就是name值
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>前端：浏览器中看到的⻚⾯ 统⼀都是前端</p>
+<p>后端：逻辑处理 ⽐如百度热搜 热搜榜单 后端做的逻辑处理</p>
+<p>账号：admin</p>
+<p>密码：password</p>
+<p>前端：在浏览器中能看到的⻚⾯ 全都属于前端  /admin/index.php  -》 后台管理界⾯ -&gt;</p>
+<p>前端</p>
+<p>后端：逻辑代码</p>
+<p>后端会接收前端的传值 -&gt; 前端就是我们⽤户操作过程中会传值</p>
+<p>cookie 饼⼲</p>
+<p>cookie -》 session 会话</p>
+<p>cookie session机制 就是为了解决http⽆状态性</p>
+<p>⽹站的注册登录功能</p>
+<p>登录之后 服务器就会向浏览器写⼊cookie</p>
+<p>浏览器发起的每个请求 都会携带cookie</p>
+<p>cookie 会存储在浏览器</p>
+<p>session 存储在服务器</p>
+<p>csrf漏洞  -&gt; 跨站请求伪造</p>
+<p>http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;password_</p>
+<p>conf=password&amp;Change=Change#</p>
+<p>admin ⽤户 改密码</p>
+<p>may -&gt;http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;pas</p>
+<p>sword_conf=password&amp;Change=Change#</p>
+<p>may在不知情况的情况下 修改了密码</p>
+<p>密码 参数也会加密</p>
+<p>短链接</p>
+<p>session cookie这⼀套机制导致的</p>
+<p>cookie 记录当前⽤户的身份</p>
+<p>本质上要解决的是 服务器</p>
+<p>token  -&gt; 令牌</p>
+<p>token  1个token对应1次⽹络请求</p>
+<p>admin:http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;pas</p>
+<p>sword_conf=password&amp;Change=Change&amp;token=fdjaf84384u83ruf3483</p>
+<p>may：http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;pass</p>
+<p>word_conf=password&amp;Change=Change&amp;token=fdjaf84384u83ruf3483</p>
+<p>token⻛险</p>
+<p>是在当前请求的响应中把下⼀次请求要给⽤户的token直接展示了</p>
+<p>tcp/ip -&gt; 有状态性</p>
+<p>应⽤层   http  -&gt; ⽆状态性</p>
+<p>表示层</p>
+<p>会话层</p>
+<p>传输层</p>
+<p>⽹络层</p>
+<p>数据链路层</p>
+<p>物理层</p>
+<p>响应</p>
+<p>200 OK  -&gt; http状态码</p>
+<p>100-299  -&gt; 请求是没有发⽣错误</p>
+<p>300 -&gt; 399 -&gt; 服务器发⽣了重定向</p>
+<p>400 -&gt; 499   404  -&gt; 404 not found -&gt; 请求路径、资源不存在  401 权限不够   4xx状态码就是</p>
+<p>请求有问题</p>
+<p>500 -&gt; 599 5xx⼀般是服务器内部出问题  501    http 501 interl error 内部错误</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">HTTP/1.1 200 OK
+</span></span><span class="line"><span class="cl"> Date: Thu, 12 Sep 2024 08:33:37 GMT
+</span></span><span class="line"><span class="cl"> Server: Apache/2.4.7 (Ubuntu)
+</span></span><span class="line"><span class="cl"> X-Powered-By: PHP/5.5.9-1ubuntu4.20
+</span></span><span class="line"><span class="cl"> Expires: Tue, 23 Jun 2009 12:00:00 GMT
+</span></span><span class="line"><span class="cl"> Cache-Control: no-cache, must-revalidate
+</span></span><span class="line"><span class="cl"> Pragma: no-cache
+</span></span><span class="line"><span class="cl"> Vary: Accept-Encoding
+</span></span><span class="line"><span class="cl"> Content-Length: 4943  -&gt; 响应体⼤⼩
+</span></span><span class="line"><span class="cl">Connection: close
+</span></span><span class="line"><span class="cl"> Content-Type: text/html;charset=utf-8  -&gt; 响应类型
+</span></span><span class="line"><span class="cl">response header 响应头
+</span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
+</span></span></span><span class="line"><span class="cl"><span class="cp">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/1999/xhtml&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;Content-Type&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;text/html; charset=UTF-8&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Vulnerability: Brute Force :: Damn Vulnerable Web Application 
+</span></span><span class="line"><span class="cl">(DVWA) v1.9<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../dvwa/css/main.css&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;icon&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;\image/ico&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../favicon.ico&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../dvwa/js/dvwaPage.js&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;home&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;header&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../dvwa/images/logo.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Damn Vulnerable Web 
+</span></span></span><span class="line"><span class="cl"><span class="s">Application&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main_menu&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main_menu_padded&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../.&#39;&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../.&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../instructions.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../instructions.php&#34;</span><span class="p">&gt;</span>Instructions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../setup.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../setup.php&#34;</span><span class="p">&gt;</span>Setup / Reset DB<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> 
+</span></span><span class="line"><span class="cl"><span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/brute/&#39;&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;selected&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/brute/&#34;</span><span class="p">&gt;</span>Brute Force<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/exec/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/exec/&#34;</span><span class="p">&gt;</span>Command Injection<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/csrf/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/csrf/&#34;</span><span class="p">&gt;</span>CSRF<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/fi/.?
+</span></span></span><span class="line"><span class="cl"><span class="s"> page=include.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/fi/.?
+</span></span></span><span class="line"><span class="cl"><span class="s"> page=include.php&#34;</span><span class="p">&gt;</span>File Inclusion<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/upload/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/upload/&#34;</span><span class="p">&gt;</span>File Upload<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/captcha/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/captcha/&#34;</span><span class="p">&gt;</span>Insecure CAPTCHA<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/sqli/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/sqli/&#34;</span><span class="p">&gt;</span>SQL Injection<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/sqli_blind/&#39;&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/sqli_blind/&#34;</span><span class="p">&gt;</span>SQL Injection 
+</span></span><span class="line"><span class="cl">(Blind)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/xss_r/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/xss_r/&#34;</span><span class="p">&gt;</span>XSS (Reflected)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/xss_s/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/xss_s/&#34;</span><span class="p">&gt;</span>XSS (Stored)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> 
+</span></span><span class="line"><span class="cl"><span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../security.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../security.php&#34;</span><span class="p">&gt;</span>DVWA Security<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../phpinfo.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../phpinfo.php&#34;</span><span class="p">&gt;</span>PHP Info<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../about.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../about.php&#34;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> 
+</span></span><span class="line"><span class="cl"><span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../logout.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
+</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../logout.php&#34;</span><span class="p">&gt;</span>Logout<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main_body&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;body_padded&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Vulnerability: Brute Force<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;vulnerable_code_area&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Login<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;GET&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> Username:<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;username&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> Password:<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">AUTOCOMPLETE</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;password&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Login&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;Login&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>Username and/or password incorrect.<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>More Information<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://hiderefer.com/?
+</span></span></span><span class="line"><span class="cl"><span class="s"> https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>https://www.owasp.org/index.php/Testing_for_Brute_Force_(
+</span></span><span class="line"><span class="cl"> OWASP-AT-004)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://hiderefer.com/?
+</span></span></span><span class="line"><span class="cl"><span class="s"> http://www.symantec.com/connect/articles/password-crackers-ensuring
+</span></span></span><span class="line"><span class="cl"><span class="s">security-your-password&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>http://www.symantec.com/connect/articles/password
+</span></span><span class="line"><span class="cl">crackers-ensuring-security-your-password<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://hiderefer.com/?
+</span></span></span><span class="line"><span class="cl"><span class="s"> http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in
+</span></span></span><span class="line"><span class="cl"><span class="s">windows.html&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>http://www.sillychicken.co.nz/Security/how
+</span></span><span class="line"><span class="cl">to-brute-force-http-forms-in-windows.html<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;clear&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;system_info&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;View Help&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;popup_button&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="na">onClick</span><span class="o">=</span><span class="s">&#34;javascript:popUp( &#39;../../vulnerabilities/view_help.php?
+</span></span></span><span class="line"><span class="cl"><span class="s"> id=brute&amp;security=low&#39; )&#34;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;View Source&#34;</span> 
+</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;popup_button&#34;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&#34;javascript:popUp( 
+</span></span></span><span class="line"><span class="cl"><span class="s">&#39;../../vulnerabilities/view_source.php?id=brute&amp;security=low&#39; )&#34;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">div</span> 
+</span></span><span class="line"><span class="cl"><span class="na">align</span><span class="o">=</span><span class="s">&#34;left&#34;</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Username:<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> admin<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Security Level:<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> 
+</span></span><span class="line"><span class="cl">low<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>PHPIDS:<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> disabled<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;footer&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Damn Vulnerable Web Application (DVWA) v1.9<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></div>
         </div>
         
