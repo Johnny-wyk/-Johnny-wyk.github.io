@@ -18,6 +18,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/all/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -128,7 +133,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/all/algorithm/tree/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/algorithm/mid/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/all/algorithm/mid/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
@@ -153,7 +168,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/all/algorithm/linkedlist/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/algorithm/stack/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/all/algorithm/stack/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

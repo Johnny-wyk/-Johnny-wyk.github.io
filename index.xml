@@ -69,6 +69,16 @@
     </item>
     
     <item>
+      <title>二叉树</title>
+      <link>http://localhost:1313/all/algorithm/tree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/tree/</guid>
+      <description>二叉树理论基础篇 # 递归查找 # 递归算法的三个要素 1.确定递归函</description>
+      
+    </item>
+    
+    <item>
       <title>二分查找</title>
       <link>http://localhost:1313/algorithm/mid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -76,6 +86,16 @@
       <guid>http://localhost:1313/algorithm/mid/</guid>
       <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/algorithm/mid/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>二分查找</title>
+      <link>http://localhost:1313/all/algorithm/mid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/mid/</guid>
+      <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/all/algorithm/mid/featured.jpg" />
     </item>
     
     <item>
@@ -89,11 +109,31 @@
     </item>
     
     <item>
+      <title>链表</title>
+      <link>http://localhost:1313/all/algorithm/linkedlist/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/linkedlist/</guid>
+      <description>链表 # 基础知识 # 链表是一种通过指针串联在一起的线性结构，每一</description>
+      
+    </item>
+    
+    <item>
       <title>栈</title>
       <link>http://localhost:1313/algorithm/stack/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/algorithm/stack/</guid>
+      <description>栈与队列理论基础 # 用栈实现队列 # class MyQueue { Stack&amp;lt;Integer&amp;gt; stackIn; Stack&amp;lt;Integer&amp;gt; stackOut; /** Initialize your data structure here. */</description>
+      
+    </item>
+    
+    <item>
+      <title>栈</title>
+      <link>http://localhost:1313/all/algorithm/stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/stack/</guid>
       <description>栈与队列理论基础 # 用栈实现队列 # class MyQueue { Stack&amp;lt;Integer&amp;gt; stackIn; Stack&amp;lt;Integer&amp;gt; stackOut; /** Initialize your data structure here. */</description>
       
     </item>
