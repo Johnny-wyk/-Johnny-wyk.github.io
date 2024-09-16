@@ -29,6 +29,16 @@
     </item>
     
     <item>
+      <title>哈希表基础知识</title>
+      <link>http://localhost:1313/algorithm/hash/basicknowledge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/hash/basicknowledge/</guid>
+      <description>哈希表理论基础 # 哈希表 # 哈希表中关键码就是数组的索引下标，然</description>
+      
+    </item>
+    
+    <item>
       <title>链表</title>
       <link>http://localhost:1313/algorithm/linkedlist/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
