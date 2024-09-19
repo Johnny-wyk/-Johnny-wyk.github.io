@@ -1,0 +1,1810 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title> &middot; Blowfish</title>
+  <meta name="title" content=" &middot; Blowfish" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/python/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.ac59a1b8eaafef739c129d12787ac29f6a420bcb348c7aeec8949a8d0b7d6c2023766c169d14b9031b751504eb3c976efe786fec135b340a49868acd8caa4127.css"
+    integrity="sha512-rFmhuOqv73OcEp0SeHrCn2pCC8s0jHruyJSajQt9bCAjdmwWnRS5Axt1FQTrPJdu/nhv7BNbNApJhorNjKpBJw==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.949e93ad68f98f91b41032983a7aee8da40cd845c548ac475ad1b4771bb9d273da1fb4d059d4d2f8f724a6a7ce5962b522b302ed72b43b8a1057a0e4e3ffc58e.js"
+    integrity="sha512-lJ6TrWj5j5G0EDKYOnrujaQM2EXFSKxHWtG0dxu50nPaH7TQWdTS&#43;PckpqfOWWK1IrMC7XK0O4oQV6Dk4//Fjg==" data-copy="" data-copied=""></script>
+  
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/python/">
+  <meta property="og:site_name" content="Blowfish">
+  <meta property="og:title" content="Blowfish">
+  <meta property="og:description" content="文件操作 # 2.1 python操作⽂文件流程 # f=open(filename) # 打开⽂文件 f.w">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Blowfish">
+  <meta name="twitter:description" content="文件操作 # 2.1 python操作⽂文件流程 # f=open(filename) # 打开⽂文件 f.w">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "欢迎来到 JohnnyBlog 的个人博客",
+    "name": "",
+    "headline": "",
+    
+    "abstract": "文件操作 # 2.1 python操作⽂文件流程 # f=open(filename) # 打开⽂文件 f.w",
+    "inLanguage": "zh-cn",
+    "url" : "http:\/\/localhost:1313\/python\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Johnny"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "5003"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Johnny" />
+  
+  
+  
+  <link href="https://twitter.com/burufugu" rel="me" />
+  
+  
+  <link href="https://github.com/Johnny-wyk" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PEDMYR1V0K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PEDMYR1V0K');
+</script>
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    
+    
+    <div>
+        <a href="/" class="flex">
+            <span class="sr-only">Blowfish</span>
+
+            <img src="/img/avatar.jpg" width="110" height="82"
+                class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Blowfish" />
+
+        </a>
+    </div>
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Blowfish</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        首页
+    </p>
+</a>
+
+
+            
+            
+  <a href="/all/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        全部
+    </p>
+</a>
+
+
+            
+            
+  <a href="/algorithm/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        算法
+    </p>
+</a>
+
+
+            
+            
+  <a href="/interview/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        面试
+    </p>
+</a>
+
+
+            
+            
+  <a href="/networkengineering/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        网络安全🧑
+    </p>
+</a>
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400" style="margin-right:5px">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            首页
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/all/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            全部
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/algorithm/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            算法
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/interview/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            面试
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/networkengineering/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            网络安全🧑
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+ 
+  
+   
+  
+ 
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/img/paint_hu6070582080876971993.png);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >欢迎来到 JohnnyBlog 的个人博客</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/python/"
+      ></a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">10 分钟</span>
+  
+
+  
+  
+</div>
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="Johnny" src="/img/avatar_hu6747771277720944470.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      作者
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      Johnny
+    </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://twitter.com/burufugu"
+          target="_blank"
+          aria-label="X-Twitter"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/Johnny-wyk"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open class="toc-right mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#文件操作">文件操作</a>
+      <ul>
+        <li><a href="#21-python操作文件流程">2.1 python操作⽂文件流程</a></li>
+        <li><a href="#22-创建文件">2.2 创建⽂文件</a></li>
+        <li><a href="#23-只读模式">2.3 只读模式</a></li>
+        <li><a href="#24-追加模式">2.4 追加模式</a></li>
+        <li><a href="#25-循环文件">2.5 循环⽂文件</a></li>
+        <li><a href="#26-二进制模式操作文件">2.6 ⼆二进制模式操作⽂文件</a></li>
+        <li><a href="#28-文件打开模式混合模式">2.8 ⽂文件打开模式（混合模式）</a></li>
+      </ul>
+    </li>
+    <li><a href="#一模块和包">一、模块和包</a>
+      <ul>
+        <li><a href="#11-什什么是模块">1.1 什什么是模块</a></li>
+        <li><a href="#12-第3方开源模块安装">1.2 第3⽅方开源模块安装</a></li>
+        <li><a href="#13-什什么是包package">1.3 什什么是包（package)</a></li>
+      </ul>
+    </li>
+    <li><a href="#二几个常用python模块">二、⼏几个常⽤用Python模块</a>
+      <ul>
+        <li><a href="#21-系统调用os模块">2.1 系统调⽤用OS模块</a></li>
+        <li><a href="#time-模块">time 模块</a></li>
+        <li><a href="#23-datetime模块">2.3 datetime模块</a></li>
+        <li><a href="#24-random随机数">2.4 random随机数</a></li>
+        <li><a href="#25-序列列化json模块">2.5 序列列化json模块</a></li>
+        <li><a href="#26-excel处理理模块">2.6 Excel处理理模块</a>
+          <ul>
+            <li><a href="#261-打开文件">2.6.1 打开⽂文件</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#文件操作">文件操作</a>
+      <ul>
+        <li><a href="#21-python操作文件流程">2.1 python操作⽂文件流程</a></li>
+        <li><a href="#22-创建文件">2.2 创建⽂文件</a></li>
+        <li><a href="#23-只读模式">2.3 只读模式</a></li>
+        <li><a href="#24-追加模式">2.4 追加模式</a></li>
+        <li><a href="#25-循环文件">2.5 循环⽂文件</a></li>
+        <li><a href="#26-二进制模式操作文件">2.6 ⼆二进制模式操作⽂文件</a></li>
+        <li><a href="#28-文件打开模式混合模式">2.8 ⽂文件打开模式（混合模式）</a></li>
+      </ul>
+    </li>
+    <li><a href="#一模块和包">一、模块和包</a>
+      <ul>
+        <li><a href="#11-什什么是模块">1.1 什什么是模块</a></li>
+        <li><a href="#12-第3方开源模块安装">1.2 第3⽅方开源模块安装</a></li>
+        <li><a href="#13-什什么是包package">1.3 什什么是包（package)</a></li>
+      </ul>
+    </li>
+    <li><a href="#二几个常用python模块">二、⼏几个常⽤用Python模块</a>
+      <ul>
+        <li><a href="#21-系统调用os模块">2.1 系统调⽤用OS模块</a></li>
+        <li><a href="#time-模块">time 模块</a></li>
+        <li><a href="#23-datetime模块">2.3 datetime模块</a></li>
+        <li><a href="#24-random随机数">2.4 random随机数</a></li>
+        <li><a href="#25-序列列化json模块">2.5 序列列化json模块</a></li>
+        <li><a href="#26-excel处理理模块">2.6 Excel处理理模块</a>
+          <ul>
+            <li><a href="#261-打开文件">2.6.1 打开⽂文件</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">文件操作 
+    <div id="%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">2.1 python操作⽂文件流程 
+    <div id="21-python%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#21-python%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6%E6%B5%81%E7%A8%8B" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">f</span><span class="o">=</span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>  <span class="c1"># 打开⽂文件</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;我是野⽣生程序员&#34;</span><span class="p">)</span> <span class="c1"># 写操作</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1">#读操作</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1">#保存并关闭</span>
+</span></span></code></pre></div><p>文件打开模式（⽂文本模式）</p>
+<p>r 只读模式</p>
+<p>w 创建模式，若⽂文件已存在，则覆盖旧⽂文件</p>
+<p>a 追加模式，新数据会写到⽂文件末尾</p>
+
+
+<h3 class="relative group">2.2 创建⽂文件 
+    <div id="22-%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#22-%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;D:/⼯工作⽇日常/staff.txt&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>  <span class="c1"># 若⽂文件已存在，则覆盖</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;Alex  CEO  600</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;⿊黑姑娘  ⾏行行政  5000</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.3 只读模式 
+    <div id="23-%E5%8F%AA%E8%AF%BB%E6%A8%A1%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#23-%E5%8F%AA%E8%AF%BB%E6%A8%A1%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;兼职⽩白领学⽣生空姐模特护⼠士联系⽅方式.txt&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>  <span class="c1"># 读⼀一⾏行行</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;------分隔符-------&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>  <span class="c1"># 读所有，剩下的所有</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.4 追加模式 
+    <div id="24-%E8%BF%BD%E5%8A%A0%E6%A8%A1%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#24-%E8%BF%BD%E5%8A%A0%E6%A8%A1%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;兼职⽩白领学⽣生空姐模特护⼠士联系⽅方式.txt&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;⿊黑姑娘 北北京  168  48</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>  <span class="c1"># 会追加到⽂文件尾部</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.5 循环⽂文件 
+    <div id="25-%E5%BE%AA%E7%8E%AF%E6%96%87%E4%BB%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#25-%E5%BE%AA%E7%8E%AF%E6%96%87%E4%BB%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="s1">&#39;兼职⽩白领学⽣生空姐模特护⼠士联系⽅方式.txt&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span><span class="p">,</span><span class="n">addr</span><span class="p">,</span><span class="n">height</span><span class="p">,</span><span class="n">weight</span><span class="p">,</span><span class="n">phone</span> <span class="o">=</span> <span class="n">line</span>
+</span></span><span class="line"><span class="cl">    <span class="n">height</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">weight</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">weight</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">height</span> <span class="o">&gt;</span> <span class="mi">170</span> <span class="ow">and</span> <span class="n">weight</span> <span class="o">&lt;=</span> <span class="mi">50</span><span class="p">:</span>  <span class="c1"># 只打印身⾼高&gt;170 and 体重&lt;=50的</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.6 ⼆二进制模式操作⽂文件 
+    <div id="26-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#26-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%A8%A1%E5%BC%8F%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>上⾯面操作的只是⽂文本⽂文件 ，但是如果遇到视频呀、图⽚片呀，你直接打开的话会报错</p>
+<p>如何处理理图⽚片、视频⽂文件呢？</p>
+<p>可以⽤用2进制模式打开⽂文件</p>
+<p>rb 2进制只读模式</p>
+<p>wb 2进制创建模式，若⽂文件已存在，则覆盖旧⽂文件</p>
+<p>ab 2进制追加模式，新数据会写到⽂文件末尾</p>
+<p>这样，你读出来的数据，就是bytes字节类型了了，当然写进去的也必须是bytes格式了</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;gbk_file2&#34;</span><span class="p">,</span><span class="s2">&#34;wb&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&#34;哈&#34;</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;gbk&#34;</span><span class="p">)</span> <span class="p">)</span>  <span class="c1"># 写⼊入的⽂文本要⽤用字节类型</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mode</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">返回</span><span class="err">⽂</span><span class="n">文件</span><span class="err">•</span><span class="n">打开的模式</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="n">返回</span><span class="err">⽂</span><span class="n">文件名</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fileno</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">返回</span><span class="err">⽂</span><span class="n">文件句句柄在内核中的索引值</span><span class="err">，</span><span class="n">以后做IO多路路复</span><span class="err">⽤</span><span class="n">用时可以</span><span class="err">⽤</span><span class="n">用到</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">flush</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">把</span><span class="err">⽂</span><span class="n">文件从内存buffer</span><span class="err">⾥</span><span class="n">里里强制刷新到硬盘</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">readable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">判断是否可读</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">readline</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">只读</span><span class="err">⼀</span><span class="n">一</span><span class="err">⾏</span><span class="n">行行</span><span class="err">，</span><span class="n">遇到</span>\<span class="n">r</span> <span class="ow">or</span> \<span class="n">n为</span><span class="err">⽌</span><span class="n">止</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">seek</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">把操作</span><span class="err">⽂</span><span class="n">文件的光标移到指定位置</span>
+</span></span><span class="line"><span class="cl"><span class="o">*</span><span class="n">注意seek的</span><span class="err">⻓</span><span class="n">长度是按字节算的</span><span class="err">，</span> <span class="n">字符编码存每个字符所占的字节</span><span class="err">⻓</span><span class="n">长度不不</span><span class="err">⼀</span><span class="n">一样</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="n">如</span><span class="err">“</span><span class="n">路路</span><span class="err">⻜</span><span class="n">飞学城</span><span class="err">”</span> <span class="err">⽤</span><span class="n">用gbk存是2个字节</span><span class="err">⼀</span><span class="n">一个字</span><span class="err">，⽤</span><span class="n">用utf</span><span class="o">-</span><span class="mi">8</span><span class="n">就是3个字节</span><span class="err">，</span><span class="n">因此以gbk打开时</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl"><span class="n">seek</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="n">就把光标切换到了了</span><span class="err">“⻜</span><span class="n">飞</span><span class="err">”</span><span class="n">和</span><span class="err">“</span><span class="n">学</span><span class="err">”</span><span class="n">两个字中间</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="n">但如果是utf8</span><span class="p">,</span><span class="n">seek</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="n">会导致</span><span class="err">，</span><span class="n">拿到了了</span><span class="err">⻜</span><span class="n">飞这个字的</span><span class="err">⼀</span><span class="n">一部分字节</span><span class="err">，</span><span class="n">打印的话会报错</span><span class="err">，</span><span class="n">因为处理理剩</span>
+</span></span><span class="line"><span class="cl"><span class="n">下的</span><span class="err">⽂</span><span class="n">文本时发现</span><span class="err">⽤</span><span class="n">用utf8处理理不不了了了了</span><span class="err">，</span><span class="n">因为编码对不不上了了</span><span class="err">。</span><span class="n">少了了</span><span class="err">⼀</span><span class="n">一个字节</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">seekable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">判断</span><span class="err">⽂</span><span class="n">文件是否可进</span><span class="err">⾏</span><span class="n">行行seek操作</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">tell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">返回当前</span><span class="err">⽂</span><span class="n">文件操作光标位置</span> 
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">truncate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">按指定</span><span class="err">⻓</span><span class="n">长度截断</span><span class="err">⽂</span><span class="n">文件</span>
+</span></span><span class="line"><span class="cl"><span class="o">*</span><span class="n">指定</span><span class="err">⻓</span><span class="n">长度的话</span><span class="err">，</span><span class="n">就从</span><span class="err">⽂</span><span class="n">文件开头开始截断指定</span><span class="err">⻓</span><span class="n">长度</span><span class="err">，</span><span class="n">不不指定</span><span class="err">⻓</span><span class="n">长度的话</span><span class="err">，</span><span class="n">就从当前位置到</span><span class="err">⽂</span><span class="n">文件尾部</span>
+</span></span><span class="line"><span class="cl"><span class="n">的内容全去掉</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">writable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># real signature unknown</span>
+</span></span><span class="line"><span class="cl"><span class="n">判断</span><span class="err">⽂</span><span class="n">文件是否可写</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.8 ⽂文件打开模式（混合模式） 
+    <div id="28-%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%A8%A1%E5%BC%8F%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#28-%E6%96%87%E4%BB%B6%E6%89%93%E5%BC%80%E6%A8%A1%E5%BC%8F%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>w+ 写读 , 这个功能基本没什什么意义，它会创建⼀一个新⽂文件 ，写⼀一段内容，可以再把写的内容读出来，
+没什什么卵卵⽤用。</p>
+<p>r+ 读写，能读能写,但都是写在⽂文件最后，跟追加⼀一样</p>
+<p>a+ 追加读,⽂文件 ⼀一打开时光标会在⽂文件尾部,写的数据全会是追加的形式</p>
+
+
+<h2 class="relative group">一、模块和包 
+    <div id="%E4%B8%80%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%80%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">1.1 什什么是模块 
+    <div id="11-%E4%BB%80%EF%A7%BD%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#11-%E4%BB%80%EF%A7%BD%E4%B9%88%E6%98%AF%E6%A8%A1%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在计算机程序的开发过程中，随着程序代码越写越多，在⼀一个⽂文件⾥里里代码就会越来越⻓长，越来越不不容易易
+维护。</p>
+<p>为了了编写可维护的代码，我们把很多代码按功能分组，分别放到不不同的⽂文件⾥里里，这样，每个⽂文件包含的
+代码就相对较少，很多编程语⾔言都采⽤用这种组织代码的⽅方式。在Python中，⼀一个.py⽂文件就可以称之为
+⼀</p>
+<p>一个模块（Module）。</p>
+<p>使⽤用模块有什什么好处？</p>
+<ol>
+<li>
+<p>最⼤大的好处是⼤大⼤大提⾼高了了代码的可维护性。其次，编写代码不不必从零开始。当⼀一个模块编写完毕，
+就可以被其他地⽅方引⽤用。我们在编写程序的时候，也经常引⽤用其他模块，包括Python内置的模块
+和来⾃自第三⽅方的模块。</p>
+</li>
+<li>
+<p>使⽤用模块还可以避免函数名和变量量名冲突。每个模块有独⽴立的命名空间，因此相同名字的函数和变量
+完全可以分别存在不不同的模块中，所以，我们⾃自⼰己在编写模块时，不不必考虑名字会与其他模块冲
+突</p>
+</li>
+</ol>
+<p>模块分类</p>
+<p>模块分为三种：</p>
+<p>内置标准模块（⼜又称标准库）执⾏行行help(‘modules’)查看所有python⾃自带模块列列表</p>
+<p>第三⽅方开源模块，可通过pip install 模块名 联⽹网安装</p>
+<p>自定义模块</p>
+<p>模块导⼊入&amp;调⽤用</p>
+<p>导⼊入模块有以下⼏几种⽅方式：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">module_a</span>  <span class="c1">#导⼊入</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">module</span> <span class="kn">import</span> <span class="n">xx</span> <span class="c1"># 导⼊入某个模块下的某个⽅方法 or ⼦子模块</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">module.xx.xx</span> <span class="kn">import</span> <span class="n">xx</span> <span class="k">as</span> <span class="n">rename</span> <span class="c1">#导⼊入后⼀一个⽅方法后重命令</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">module.xx.xx</span> <span class="kn">import</span> <span class="o">*</span>  <span class="c1">#导⼊入⼀一个模块下的所有⽅方法，不不建议使⽤用</span>
+</span></span><span class="line"><span class="cl"><span class="n">module_a</span><span class="o">.</span><span class="n">xxx</span>  <span class="c1">#调⽤</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">1.2 第3⽅方开源模块安装 
+    <div id="12-%E7%AC%AC3%E6%96%B9%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#12-%E7%AC%AC3%E6%96%B9%E5%BC%80%E6%BA%90%E6%A8%A1%E5%9D%97%E5%AE%89%E8%A3%85" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p><a href="https://pypi.python.org/pypi"   target="_blank">
+    https://pypi.python.org/pypi</a>是python的开源模块库，截⽌止2020年年5.26⽇日 ，已经收录了了236,269个来
+自全世界python开发者贡献的模块,⼏几乎涵盖了了你想⽤用python做的任何事情。 事实上每个python开发
+者，只要注册⼀一个账号就可以往这个平台上传你⾃自⼰己的模块，这样全世界的开发者都可以容易易的下载并
+使⽤用你的模块。</p>
+<p>那如何从这个平台上下载代码呢？</p>
+<p>直接在上⾯面这个⻚页⾯面上点download,下载后，解压并进⼊入⽬目录，执⾏行行以下命令完成安装</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">编译源码</span>    
+</span></span><span class="line"><span class="cl"><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">build</span> <span class="n">安装源码</span>    
+</span></span><span class="line"><span class="cl"><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</span></span></code></pre></div><ol start="2">
+<li>直接通过pip安装</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip3</span> <span class="n">install</span> <span class="n">paramiko</span> <span class="c1">#paramiko 是模块名</span>
+</span></span></code></pre></div><p>pip命令默认会连接在国外的python官⽅方服务器器下载，速度⽐比较慢，你还可以使⽤用国内的⾖豆瓣源，数据
+会定期同步国外官⽹网，速度快好多</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">i</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">douban</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span> <span class="n">alex_sayhi</span> <span class="o">--</span><span class="n">trusted</span><span class="o">-</span><span class="n">host</span> 
+</span></span><span class="line"><span class="cl"><span class="n">pypi</span><span class="o">.</span><span class="n">douban</span><span class="o">.</span><span class="n">com</span>   <span class="c1">#alex_sayhi是模块名</span>
+</span></span></code></pre></div><p>下载后，直接导⼊入使⽤用就可以，跟⾃自带的模块调⽤用⽅方法⽆无差</p>
+
+
+<h3 class="relative group">1.3 什什么是包（package) 
+    <div id="13-%E4%BB%80%EF%A7%BD%E4%B9%88%E6%98%AF%E5%8C%85package" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#13-%E4%BB%80%EF%A7%BD%E4%B9%88%E6%98%AF%E5%8C%85package" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>若你写的项⽬目较复杂，有很多代码⽂文件的话，为了了⽅方便便管理理，可以⽤用包来管理理。 ⼀一个包其实就是⼀一个⽂文
+件⽬目录，你可以把属于同⼀一个业务线的代码⽂文件都放在同⼀一个包⾥里里。</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /python/img_hu15547039606920431775.png 330w,
+        /python/img_hu9810029796550082941.png 660w,
+        /python/img_hu6709216869903153104.png 1024w,
+        /python/img_hu9271024473471682614.png 2x"
+        src="/python/img_hu9810029796550082941.png"
+        alt="img.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>如何创建⼀一个包？
+只需要在⽬目录下创建⼀一个空的__init__.py ⽂文件 ， 这个⽬目录就变成了了包。这个⽂文件叫包的初始化⽂文件
+，⼀一般为空，当然也可以写东⻄西，当你调⽤用这个包下及其任意⼦子包的的任意模块时， 这
+个__init__.py⽂文件都会先执⾏行行。</p>
+<p>以下 有a、b 2个包，a2是a的⼦子包，b2是b的⼦子包</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /python/img_1_hu12505024532618208121.png 330w,
+        /python/img_1_hu10895086739594131866.png 660w,
+        /python/img_1_hu10761513088295540753.png 1024w,
+        /python/img_1_hu3824498453574591462.png 2x"
+        src="/python/img_1_hu10895086739594131866.png"
+        alt="img_1.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+
+
+<h2 class="relative group">二、⼏几个常⽤用Python模块 
+    <div id="%E4%BA%8C%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8python%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E5%87%A0%E4%B8%AA%E5%B8%B8%E7%94%A8python%E6%A8%A1%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">2.1 系统调⽤用OS模块 
+    <div id="21-%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8os%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#21-%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8os%E6%A8%A1%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>os 模块提供了了很多允许你的程序与操作系统直接交互的功能
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /python/img_2_hu10641563506027401029.png 330w,
+        /python/img_2_hu16270473703285570559.png 660w,
+        /python/img_2_hu4498246689585373377.png 1024w,
+        /python/img_2_hu14206962753427482806.png 2x"
+        src="/python/img_2_hu16270473703285570559.png"
+        alt="img_2.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+
+
+<h3 class="relative group">time 模块 
+    <div id="time-%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#time-%E6%A8%A1%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>在平常的代码中，我们常常需要与时间打交道。在Python中，与时间处理理有关的模块就包括：time，
+datetime,calendar(很少⽤用，不不讲)，下⾯面分别来介绍。</p>
+<p>我们写程序时对时间的处理理可以归为以下3种：</p>
+<p>时间的显示，在屏幕显示、记录⽇日志等 &ldquo;2022-03-04&rdquo;</p>
+<p>时间的转换，⽐比如把字符串串格式的⽇日期转成Python中的⽇日期类型</p>
+<p>时间的运算，计算两个⽇日期间的差值等</p>
+<p>在Python中，通常有这⼏几种⽅方式来表示时间：</p>
+<ol>
+<li>
+<p>时间戳（timestamp）, 表示的是从1970年年1⽉月1⽇日00:00:00开始按秒计算的偏移量量。例例⼦子：
+1554864776.161901</p>
+</li>
+<li>
+<p>格式化的时间字符串串，⽐比如“2020-10-03 17:54”</p>
+</li>
+<li>
+<p>元组（struct_time）共九个元素。由于Python的time模块实现主要调⽤用C库，所以各个平台可能
+有所不不同，mac上：time.struct_time(tm_year=2020, tm_mon=4, tm_mday=10, tm_hour=2,
+tm_min=53, tm_sec=15, tm_wday=2, tm_yday=100, tm_isdst=0)</p>
+</li>
+</ol>
+<p>time模块的常⽤用⽅方法</p>
+<p>time.localtime([secs]) ：将⼀一个时间戳转换为当前时区的struct_time。若secs参数未提供，
+则以当前时间为准。</p>
+<p>time.gmtime([secs]) ：和localtime()⽅方法类似，gmtime()⽅方法是将⼀一个时间戳转换为UTC时区
+（0时区）的struct_time。</p>
+<p>time.time() ：返回当前时间的时间戳。</p>
+<p>time.mktime(t) ：将⼀一个struct_time转化为时间戳。</p>
+<p>time.sleep(secs) ：线程推迟指定的时间运⾏行行,单位为秒。</p>
+<p>time.strftime(format[, t]) ：把⼀一个代表时间的元组或者struct_time</p>
+<p>time.localtime()和time.gmtime()返回）转化为格式化的时间字符串串。如果t未指定，将传⼊入
+time.localtime()。</p>
+<p>举例例：
+time.strftime(“%Y-%m-%d %X”, time.localtime()) #输出’2017-10-01
+12:14:23’</p>
+<p>time.strptime(string[, format]) ：把⼀一个格式化时间字符串串转化为struct_time。实际上它
+和strftime()是逆操作。</p>
+
+
+<h3 class="relative group">2.3 datetime模块 
+    <div id="23-datetime%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#23-datetime%E6%A8%A1%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>相⽐比于time模块，datetime模块的接⼝口则更更直观、更更容易易调⽤</p>
+<p>我们需要记住的⽅方法仅以下⼏几个：
+1.d=datetime.datetime.now() 返回当前的datetime⽇日期类型, d.timestamp(),d.today(),
+d.year,d.timetuple()等⽅方法可以调⽤用</p>
+<p>2.datetime.date.fromtimestamp(322222) 把⼀一个时间戳转为datetime⽇日期类型</p>
+<ol start="3">
+<li>时间运算</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">821218</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#当前时间 +4天</span>
+</span></span><span class="line"><span class="cl"><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">276589</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">&gt;&gt;&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span> <span class="o">+</span> <span class="n">datetime</span><span class="o">.</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="c1">#当前时间+4⼩小时</span>
+</span></span><span class="line"><span class="cl"><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">876275</span><span class="p">)</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.4 random随机数 
+    <div id="24-random%E9%9A%8F%E6%9C%BA%E6%95%B0" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#24-random%E9%9A%8F%E6%9C%BA%E6%95%B0" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>程序中有很多地⽅方需要⽤用到随机字符，⽐比如登录⽹网站的随机验证码，通过random模块可以很容易易⽣生成
+随机字符串</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#返回1-10之间的⼀一个随机数，不不包括10</span>
+</span></span><span class="line"><span class="cl"> <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span> <span class="c1">#返回1-10之间的⼀一个随机数，包括10</span>
+</span></span><span class="line"><span class="cl"> <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">#随机选取0到100间的偶数</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>  <span class="c1">#返回⼀一个随机浮点数</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="s1">&#39;abce3#$@1&#39;</span><span class="p">)</span> <span class="c1">#返回⼀一个给定数据集合中的随机字符</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;#&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="s1">&#39;abcdefghij&#39;</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>  <span class="c1">#从多个字符中选取特定数量量的字符</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">#⽣生成随机字符串串</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">string</span> 
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span> 
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;4fvda1&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">#洗牌</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl"> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="o">&gt;&gt;&gt;</span> <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+</span></span><span class="line"><span class="cl"> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.5 序列列化json模块 
+    <div id="25-%E5%BA%8F%E5%88%97%EF%A6%9C%E5%8C%96json%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#25-%E5%BA%8F%E5%88%97%EF%A6%9C%E5%8C%96json%E6%A8%A1%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>什么是Json?</p>
+<p>JSON(JavaScriptObject Notation, JS 对象简谱) 是⼀一种轻量量级的数据交换格式。它采⽤用完全独⽴立于编程
+语⾔言的⽂文本格式来存储和表示数据。简洁和清晰的层次结构使得 JSON 成为理理想的数据交换语⾔言。 易易于
+人阅读和编写，同时也易易于机器器解析和⽣生成，并有效地提升⽹网络传输效率。</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /python/img_3_hu1074587212296234928.png 330w,
+        /python/img_3_hu1087922929344355356.png 660w,
+        /python/img_3_hu12562374763652909599.png 1024w,
+        /python/img_3_hu1368924440637389776.png 2x"
+        src="/python/img_3_hu1087922929344355356.png"
+        alt="img_3.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>Json的作⽤用是⽤用于不不同语⾔言接⼝口间的数据交换，⽐比如你把python的list、dict直接扔给javascript, 它是解
+析不不了了的。2个语⾔言互相谁也不不认识。Json就像是计算机界的英语 ，可以帮各个语⾔言之间实现数据类型
+的相互转换。</p>
+<p>什么是序列列化？</p>
+<p>序列列化是指把内存⾥里里的数据类型转变成字符串串，以使其能存储到硬盘或通过⽹网络传输到远程，因为硬盘
+或⽹网络传输时只能接受bytes</p>
+<p>为什什么要序列列化？</p>
+<p>你打游戏过程中，打累了了，停下来，关掉游戏、想过2天再玩，2天之后，游戏⼜又从你上次停⽌止的地⽅方继
+续运⾏行行，你上次游戏的进度肯定保存在硬盘上了了，是以何种形式呢？游戏过程中产⽣生的很多临时数据是
+不规律律的，可能在你关掉游戏时正好有10个列列表，3个嵌套字典的数据集合在内存⾥里里，需要存下来？你
+如何存？把列列表变成⽂文件⾥里里的多⾏行行多列列形式？那嵌套字典呢？根本没法存。所以，若是有种办法可以直
+接把内存数据存到硬盘上，下次程序再启动，再从硬盘上读回来，还是原来的格式的话，那是极好的。</p>
+<p>用于序列列化的两个模块</p>
+<p>json，⽤用于字符串串 和 python数据类型间进⾏行行转换</p>
+<p>pickle，⽤用于python特有的类型 和 python的数据类型间进⾏行行转换</p>
+<p>json</p>
+<p>Json模块也提供了了四个功能：dumps、dump、loads、load，⽤用法跟pickle⼀一致</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># json.dumps 将数据通过特殊的形式转换位所有程序语⾔言都认识的字符串串</span>
+</span></span><span class="line"><span class="cl"><span class="n">j_str</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="c1"># 注意json dumps⽣生成的是字符串串，不不是bytes</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">print</span><span class="p">(</span><span class="n">j_str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">#dump⼊入⽂文件 </span>
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;result.json&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"> <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">fp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">#从⽂文件⾥里里load</span>
+</span></span><span class="line"><span class="cl"> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;result.json&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"> <span class="n">d</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">2.6 Excel处理理模块 
+    <div id="26-excel%E5%A4%84%E7%90%86%EF%A7%A4%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#26-excel%E5%A4%84%E7%90%86%EF%A7%A4%E6%A8%A1%E5%9D%97" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>第3⽅方开源模块,安装</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">pip</span> <span class="n">install</span> <span class="n">openpyxl</span>
+</span></span></code></pre></div>
+
+<h4 class="relative group">2.6.1 打开⽂文件 
+    <div id="261-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#261-%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>一、创建</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span>  <span class="nn">openpyxl</span> <span class="kn">import</span>  <span class="n">Workbook</span> 
+</span></span><span class="line"><span class="cl"><span class="c1"># 实例例化</span>
+</span></span><span class="line"><span class="cl"><span class="n">wb</span> <span class="o">=</span> <span class="n">Workbook</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="c1">#  </span>
+</span></span><span class="line"><span class="cl"><span class="n">获取当前active的sheet</span>
+</span></span><span class="line"><span class="cl"> <span class="n">ws</span> <span class="o">=</span> <span class="n">wb</span><span class="o">.</span><span class="n">active</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">print</span><span class="p">(</span><span class="n">sheet</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>  <span class="c1"># 打印sheet表名</span>
+</span></span><span class="line"><span class="cl"><span class="n">sheet</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s2">&#34;salary luffy&#34;</span> <span class="c1"># 改sheet 名</span>
+</span></span></code></pre></div><p>二、打开已有文件</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">openpyxl</span>  <span class="kn">import</span> <span class="n">load_workbook</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">wb2</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s1">&#39;⽂文件名称.xlsx&#39;</span><span class="p">)</span>
+</span></span></code></pre></div>
+        </div>
+        
+        
+
+        
+        
+  
+  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/python/&amp;text="
+      title="分享到 Twitter"
+      aria-label="分享到 Twitter"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="https://t.me/share/url?url=http://localhost:1313/python/&amp;resubmit=true&amp;title="
+      title=""
+      aria-label=""
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+      
+      <a
+      target="_blank"
+      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+      href="mailto:?body=http://localhost:1313/python/&amp;subject="
+      title="通过电子邮件发送"
+      aria-label="通过电子邮件发送"
+      >
+      
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+
+    </a>
+      
+    
+  </section>
+
+
+        
+
+
+  
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_python\\index.md"
+        var oid_likes = "likes_python\\index.md"
+      </script>
+      
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/networkengineering/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >DVWA暴力破解攻略</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/friend/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  ></span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+    
+    
+    
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/tags/"
+            title="">
+            
+            系列文章
+          </a>
+        </li>
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=""
+            title="">
+            
+            事项
+          </a>
+        </li>
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=""
+            title="">
+            
+            关于我
+          </a>
+        </li>
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=""
+            title="">
+            
+            文档
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2024
+      Johnny
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer><div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="http://localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>

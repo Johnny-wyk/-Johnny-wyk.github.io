@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title> &middot; Blowfish</title>
-  <meta name="title" content=" &middot; Blowfish" />
+  <title>有效的字母异位词 &middot; Blowfish</title>
+  <meta name="title" content="有效的字母异位词 &middot; Blowfish" />
+  
+  <meta name="description" content="An article to explain valid alphabetic words algorithm" />
   
   
   
-  
-  
-  <link rel="canonical" href="http://localhost:1313/friend/" />
+  <link rel="canonical" href="http://localhost:1313/algorithm/hash/validalphabeticwords/" />
   
   
   
@@ -63,30 +63,31 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/friend/">
+  <meta property="og:url" content="http://localhost:1313/algorithm/hash/validalphabeticwords/">
   <meta property="og:site_name" content="Blowfish">
-  <meta property="og:title" content="Blowfish">
-  <meta property="og:description" content="友链">
+  <meta property="og:title" content="有效的字母异位词">
+  <meta property="og:description" content="An article to explain valid alphabetic words algorithm">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
+    <meta property="article:section" content="algorithm">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Blowfish">
-  <meta name="twitter:description" content="友链">
+  <meta name="twitter:title" content="有效的字母异位词">
+  <meta name="twitter:description" content="An article to explain valid alphabetic words algorithm">
 
   
   <script type="application/ld+json">
   [{
     "@context": "https://schema.org",
     "@type": "Article",
-    "articleSection": "欢迎来到 JohnnyBlog 的个人博客",
-    "name": "",
-    "headline": "",
-    
-    "abstract": "友链",
+    "articleSection": "Algorithms",
+    "name": "有效的字母异位词",
+    "headline": "有效的字母异位词",
+    "description": "An article to explain valid alphabetic words algorithm",
+    "abstract": "题目 # 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字",
     "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/friend\/",
+    "url" : "http:\/\/localhost:1313\/algorithm\/hash\/validalphabeticwords\/",
     "author" : {
       "@type": "Person",
       "name": "Johnny"
@@ -100,7 +101,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "964"
   }]
   </script>
 
@@ -544,6 +545,8 @@
   
     
   
+    
+  
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
@@ -553,11 +556,20 @@
   </li>
 
   
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/algorithm/"
+      >Algorithms</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
   <li class="inline hidden">
     <a
       class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/friend/"
-      ></a
+      href="/algorithm/hash/validalphabeticwords/"
+      >有效的字母异位词</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -566,7 +578,7 @@
 
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      
+      有效的字母异位词
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -609,7 +621,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
   
 
   
@@ -749,7 +761,91 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open class="toc-right mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题目">题目</a></li>
+        <li><a href="#思路">思路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#题目">题目</a></li>
+        <li><a href="#思路">思路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+ 
+<script>
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = e.attr('id');
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -757,8 +853,100 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>友链</p>
+          
 
+<h3 class="relative group">题目 
+    <div id="%E9%A2%98%E7%9B%AE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E9%A2%98%E7%9B%AE" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字母异位词。</p>
+<p>示例 1: 输入: s = &ldquo;anagram&rdquo;, t = &ldquo;nagaram&rdquo; 输出: true</p>
+<p>示例 2: 输入: s = &ldquo;rat&rdquo;, t = &ldquo;car&rdquo; 输出: false</p>
+<p>说明: 你可以假设字符串只包含小写字母。</p>
+
+
+<h3 class="relative group">思路 
+    <div id="%E6%80%9D%E8%B7%AF" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%80%9D%E8%B7%AF" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>先看暴力的解法，两层for循环，同时还要记录字符是否重复出现，很明显时间复杂度是 O(n^2)。</p>
+<p>暴力的方法这里就不做介绍了，直接看一下有没有更优的方式。</p>
+<p>数组其实就是一个简单哈希表，而且这道题目中字符串只有小写字符，那么就可以定义一个数组，来记录字符串s里字符出现的次数。</p>
+<p>如果对哈希表的理论基础关于数组，set，map不了解的话可以看这篇：关于哈希表，你该了解这些！(opens new window)</p>
+<p>需要定义一个多大的数组呢，定一个数组叫做record，大小为26 就可以了，初始化为0，因为字符a到字符z的ASCII也是26个连续的数值。</p>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /algorithm/hash/validalphabeticwords/img_hu3992210971784213547.png 330w,
+        /algorithm/hash/validalphabeticwords/img_hu3464720782624419444.png 660w,
+        /algorithm/hash/validalphabeticwords/img_hu13155591489314113673.png 1024w,
+        /algorithm/hash/validalphabeticwords/img_hu16177359591718456179.png 2x"
+        src="/algorithm/hash/validalphabeticwords/img_hu3464720782624419444.png"
+        alt="img.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>定义一个数组叫做record用来上记录字符串s里字符出现的次数。</p>
+<p>需要把字符映射到数组也就是哈希表的索引下标上，因为字符a到字符z的ASCII是26个连续的数值，所以字符a映射为下标0，相应的字符z映射为下标25。</p>
+<p>再遍历 字符串s的时候，只需要将 s[i] - ‘a’ 所在的元素做+1 操作即可，并不需要记住字符a的ASCII，只要求出一个相对数值就可以了。 这样就将字符串s中字符出现的次数，统计出来了。</p>
+<p>那看一下如何检查字符串t中是否出现了这些字符，同样在遍历字符串t的时候，对t中出现的字符映射哈希表索引上的数值再做-1的操作。</p>
+<p>那么最后检查一下，record数组如果有的元素不为零0，说明字符串s和t一定是谁多了字符或者谁少了字符，return false。</p>
+<p>最后如果record数组所有元素都为零0，说明字符串s和t是字母异位词，return true。</p>
+<p>时间复杂度为O(n)，空间上因为定义是的一个常量大小的辅助数组，所以空间复杂度为O(1)。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * 242. 有效的字母异位词 字典解法
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * 时间复杂度O(m+n) 空间复杂度O(1)
+</span></span></span><span class="line"><span class="cl"><span class="cm"> */</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">Solution</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isAnagram</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">26</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kd">record</span><span class="err">[</span><span class="nc">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="o">]++</span><span class="p">;</span><span class="w">     </span><span class="c1">// 并不需要记住字符a的ASCII，只要求出一个相对数值就可以了</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="na">length</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kd">record</span><span class="err">[</span><span class="nc">t</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="o">]--</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">:</span><span class="w"> </span><span class="n">record</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">               </span><span class="c1">// record数组如果有的元素不为零0，说明字符串s和t 一定是谁多了字符或者谁少了字符。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">                        </span><span class="c1">// record数组所有元素都为零0，说明字符串s和t是字母异位词</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div>
         </div>
         
         
@@ -772,7 +960,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/friend/&amp;text="
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/algorithm/hash/validalphabeticwords/&amp;text=%e6%9c%89%e6%95%88%e7%9a%84%e5%ad%97%e6%af%8d%e5%bc%82%e4%bd%8d%e8%af%8d"
       title="分享到 Twitter"
       aria-label="分享到 Twitter"
       >
@@ -790,7 +978,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=http://localhost:1313/friend/&amp;resubmit=true&amp;title="
+      href="https://t.me/share/url?url=http://localhost:1313/algorithm/hash/validalphabeticwords/&amp;resubmit=true&amp;title=%e6%9c%89%e6%95%88%e7%9a%84%e5%ad%97%e6%af%8d%e5%bc%82%e4%bd%8d%e8%af%8d"
       title=""
       aria-label=""
       >
@@ -809,7 +997,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=http://localhost:1313/friend/&amp;subject="
+      href="mailto:?body=http://localhost:1313/algorithm/hash/validalphabeticwords/&amp;subject=%e6%9c%89%e6%95%88%e7%9a%84%e5%ad%97%e6%af%8d%e5%bc%82%e4%bd%8d%e8%af%8d"
       title="通过电子邮件发送"
       aria-label="通过电子邮件发送"
       >
@@ -841,8 +1029,8 @@
           
         
       <script>
-        var oid = "views_friend\\index.md"
-        var oid_likes = "likes_friend\\index.md"
+        var oid = "views_Algorithm\\hash\\ValidAlphabeticWords\\index.md"
+        var oid_likes = "likes_Algorithm\\hash\\ValidAlphabeticWords\\index.md"
       </script>
       
       
@@ -862,7 +1050,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="flex group mr-3" href="/python/">
+            <a class="flex group mr-3" href="/algorithm/stack/">
               <span
                 class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
                 >&larr;</span
@@ -874,7 +1062,7 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  ></span
+                  >栈</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
@@ -886,6 +1074,28 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/algorithm/linkedlist/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >链表</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>

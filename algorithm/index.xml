@@ -49,6 +49,16 @@
     </item>
     
     <item>
+      <title>有效的字母异位词</title>
+      <link>http://localhost:1313/algorithm/hash/validalphabeticwords/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/hash/validalphabeticwords/</guid>
+      <description>题目 # 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字</description>
+      
+    </item>
+    
+    <item>
       <title>栈</title>
       <link>http://localhost:1313/algorithm/stack/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

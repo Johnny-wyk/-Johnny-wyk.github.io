@@ -13,6 +13,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/python/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/algorithm/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -148,6 +153,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/algorithm/hash/basicknowledge/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -163,12 +173,22 @@
     />
   </url>
   <url>
+    <loc>http://localhost:1313/mysql/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/algorithm/linkedlist/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://localhost:1313/all/algorithm/linkedlist/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/algorithm/hash/validalphabeticwords/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
