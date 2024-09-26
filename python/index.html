@@ -100,7 +100,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "5003"
+    "wordCount": "5062"
   }]
   </script>
 
@@ -609,7 +609,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">10 分钟</span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">11 分钟</span>
   
 
   
@@ -790,6 +790,7 @@
         <li><a href="#26-excel处理理模块">2.6 Excel处理理模块</a>
           <ul>
             <li><a href="#261-打开文件">2.6.1 打开⽂文件</a></li>
+            <li><a href="#python-openpyxl-读取-写-修改-操作excel">Python openpyxl 读取 写⼊ 修改 操作Excel</a></li>
           </ul>
         </li>
       </ul>
@@ -835,6 +836,7 @@
         <li><a href="#26-excel处理理模块">2.6 Excel处理理模块</a>
           <ul>
             <li><a href="#261-打开文件">2.6.1 打开⽂文件</a></li>
+            <li><a href="#python-openpyxl-读取-写-修改-操作excel">Python openpyxl 读取 写⼊ 修改 操作Excel</a></li>
           </ul>
         </li>
       </ul>
@@ -1500,6 +1502,19 @@ d.year,d.timetuple()等⽅方法可以调⽤用</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">openpyxl</span>  <span class="kn">import</span> <span class="n">load_workbook</span>
 </span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">wb2</span> <span class="o">=</span> <span class="n">load_workbook</span><span class="p">(</span><span class="s1">&#39;⽂文件名称.xlsx&#39;</span><span class="p">)</span>
 </span></span></code></pre></div>
+
+<h4 class="relative group">Python openpyxl 读取 写⼊ 修改 操作Excel 
+    <div id="python-openpyxl-%E8%AF%BB%E5%8F%96-%E5%86%99-%E4%BF%AE%E6%94%B9-%E6%93%8D%E4%BD%9Cexcel" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#python-openpyxl-%E8%AF%BB%E5%8F%96-%E5%86%99-%E4%BF%AE%E6%94%B9-%E6%93%8D%E4%BD%9Cexcel" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<p>在openpyxl中，主要⽤到三个概念：Workbooks，Sheets， Cells。</p>
+
         </div>
         
         

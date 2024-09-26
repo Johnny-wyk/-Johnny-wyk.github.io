@@ -124,7 +124,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/mysql/</guid>
-      <description># （思考：left join连接两个图表，因为左边ALLEN在</description>
+      <description>sql执行顺序 # SQL 中，查询中子句的执行顺序通常如下： FROM 子句：</description>
       
     </item>
     
