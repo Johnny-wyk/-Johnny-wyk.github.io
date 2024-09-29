@@ -100,7 +100,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "7675"
+    "wordCount": "8763"
   }]
   </script>
 
@@ -206,6 +206,16 @@
     
     <p class="text-base font-medium" title="">
         首页
+    </p>
+</a>
+
+
+            
+            
+  <a href="/mysql/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        MySQL题目
     </p>
 </a>
 
@@ -390,6 +400,20 @@
         
         <p class="text-bg font-bg" title="">
             首页
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/mysql/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            MySQL题目
         </p>
     </a>
 </li>
@@ -609,7 +633,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">16 分钟</span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">18 分钟</span>
   
 
   
@@ -805,6 +829,9 @@
         <li><a href="#五python-xlswriter-写-操作excel">五、Python xlswriter 写⼊ 操作Excel</a>
           <ul>
             <li><a href="#51-xlswriter基本操作">5.1 xlswriter基本操作</a></li>
+            <li><a href="#52-xlswriter-成折线图">5.2 xlswriter ⽣成折线图</a></li>
+            <li><a href="#53-xlswriter-成柱状图">5.3 xlswriter ⽣成柱状图</a></li>
+            <li><a href="#54-xlswriter-成饼图">5.4 xlswriter ⽣成饼图</a></li>
           </ul>
         </li>
       </ul>
@@ -865,6 +892,9 @@
         <li><a href="#五python-xlswriter-写-操作excel">五、Python xlswriter 写⼊ 操作Excel</a>
           <ul>
             <li><a href="#51-xlswriter基本操作">5.1 xlswriter基本操作</a></li>
+            <li><a href="#52-xlswriter-成折线图">5.2 xlswriter ⽣成折线图</a></li>
+            <li><a href="#53-xlswriter-成柱状图">5.3 xlswriter ⽣成柱状图</a></li>
+            <li><a href="#54-xlswriter-成饼图">5.4 xlswriter ⽣成饼图</a></li>
           </ul>
         </li>
       </ul>
@@ -2379,6 +2409,205 @@ chart4.overlap = 100
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="c1"># 合并单元格写⼊</span>
 </span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">merge_range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> 
 </span></span><span class="line"><span class="cl"><span class="s1">&#39;merge_range&#39;</span><span class="p">)</span>
+</span></span></code></pre></div>
+
+<h4 class="relative group">5.2 xlswriter ⽣成折线图 
+    <div id="52-xlswriter-%E6%88%90%E6%8A%98%E7%BA%BF%E5%9B%BE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#52-xlswriter-%E6%88%90%E6%8A%98%E7%BA%BF%E5%9B%BE" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># -*- coding:utf-8 -*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlsxwriter</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 创建⼀个excel</span>
+</span></span><span class="line"><span class="cl"><span class="n">workbook</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl"><span class="n">xlsxwriter</span><span class="o">.</span><span class="n">Workbook</span><span class="p">(</span><span class="s2">&#34;chart_line.xlsx&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个sheet</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># worksheet = </span>
+</span></span><span class="line"><span class="cl"><span class="n">workbook</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">(</span><span class="s2">&#34;bug_analysis&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># ⾃定义样式，加粗</span>
+</span></span><span class="line"><span class="cl"><span class="n">bold</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_format</span><span class="p">({</span><span class="s1">&#39;bold&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># --------1、准备数据并写⼊excel--------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 向excel中写⼊数据，建⽴图标时要⽤到</span>
+</span></span><span class="line"><span class="cl"><span class="n">headings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Number&#39;</span><span class="p">,</span> <span class="s1">&#39;testA&#39;</span><span class="p">,</span> <span class="s1">&#39;testB&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s1">&#39;2017-9-1&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-2&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-3&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;2017-9-4&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-5&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-6&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"> <span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 写⼊表头</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">write_row</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="n">headings</span><span class="p">,</span> <span class="n">bold</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 写⼊数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">write_column</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span><span class="o">.</span><span class="n">write_column</span><span class="p">(</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span><span class="o">.</span><span class="n">write_column</span><span class="p">(</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># --------2、⽣成图表并插⼊到excel---------------</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个柱状图(line chart)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">chart_col</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_chart</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;line&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 配置第⼀个系列数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">add_series</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 这⾥的sheet1是默认的值，因为我们在新建sheet</span>
+</span></span><span class="line"><span class="cl"><span class="n">时没有指定sheet名</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果我们新建sheet时设置了sheet名，这⾥就要设</span>
+</span></span><span class="line"><span class="cl"><span class="n">置成相应的值</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$B$1&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;categories&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$A$2:$A$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;values&#39;</span><span class="p">:</span>   
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;=Sheet1!$B$2:$B$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 配置第⼆个系列数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">add_series</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$C$1&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;categories&#39;</span><span class="p">:</span>  <span class="s1">&#39;=Sheet1!$A$2:$A$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;values&#39;</span><span class="p">:</span>   
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;=Sheet1!$C$2:$C$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">},})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 设置图表的title 和 x，y轴信息</span>
+</span></span><span class="line"><span class="cl">  <span class="n">chart_col</span><span class="o">.</span><span class="n">set_title</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;The xxx site </span>
+</span></span><span class="line"><span class="cl"><span class="n">Bug</span> <span class="n">Analysis</span><span class="s1">&#39;})</span>
+</span></span><span class="line"><span class="cl"> <span class="n">chart_col</span><span class="o">.</span><span class="n">set_x_axis</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Test number&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="n">chart_col</span><span class="o">.</span><span class="n">set_y_axis</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span>  <span class="s1">&#39;Sample length </span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">mm</span><span class="p">)</span><span class="s1">&#39;})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 设置图表的⻛格</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 把图表插⼊到worksheet并设置偏移</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">insert_chart</span><span class="p">(</span><span class="s1">&#39;A10&#39;</span><span class="p">,</span> <span class="n">chart_col</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="s1">&#39;x_offset&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;y_offset&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="n">workbook</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div>
+
+<h4 class="relative group">5.3 xlswriter ⽣成柱状图 
+    <div id="53-xlswriter-%E6%88%90%E6%9F%B1%E7%8A%B6%E5%9B%BE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#53-xlswriter-%E6%88%90%E6%9F%B1%E7%8A%B6%E5%9B%BE" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="c1"># -*- coding:utf-8 -*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlsxwriter</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个excel</span>
+</span></span><span class="line"><span class="cl"> <span class="n">workbook</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl"><span class="n">xlsxwriter</span><span class="o">.</span><span class="n">Workbook</span><span class="p">(</span><span class="s2">&#34;chart_column.xlsx&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个sheet</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># worksheet = </span>
+</span></span><span class="line"><span class="cl"><span class="n">workbook</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">(</span><span class="s2">&#34;bug_analysis&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># ⾃定义样式，加粗</span>
+</span></span><span class="line"><span class="cl"><span class="n">bold</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_format</span><span class="p">({</span><span class="s1">&#39;bold&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># --------1、准备数据并写⼊excel--------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 向excel中写⼊数据，建⽴图标时要⽤到</span>
+</span></span><span class="line"><span class="cl"><span class="n">headings</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Number&#39;</span><span class="p">,</span> <span class="s1">&#39;testA&#39;</span><span class="p">,</span> <span class="s1">&#39;testB&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s1">&#39;2017-9-1&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-2&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-3&#39;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;2017-9-4&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-5&#39;</span><span class="p">,</span> <span class="s1">&#39;2017-9-6&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"> <span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 写⼊表头</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">write_row</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="n">headings</span><span class="p">,</span> <span class="n">bold</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 写⼊数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">write_column</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span><span class="o">.</span><span class="n">write_column</span><span class="p">(</span><span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span><span class="o">.</span><span class="n">write_column</span><span class="p">(</span><span class="s1">&#39;C2&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># --------2、⽣成图表并插⼊到excel---------------</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个柱状图(column chart)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">chart_col</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_chart</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;column&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 配置第⼀个系列数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">add_series</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 这⾥的sheet1是默认的值，因为我们在新建sheet</span>
+</span></span><span class="line"><span class="cl"><span class="n">时没有指定sheet名</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 如果我们新建sheet时设置了sheet名，这⾥就要设</span>
+</span></span><span class="line"><span class="cl"><span class="n">置成相应的值</span>
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$B$1&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;categories&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$A$2:$A$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;values&#39;</span><span class="p">:</span>   
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;=Sheet1!$B$2:$B$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 配置第⼆个系列数据(⽤了另⼀种语法)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">chart_col</span><span class="o">.</span><span class="n">add_series</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$C$1&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;categories&#39;</span><span class="p">:</span>  <span class="s1">&#39;=Sheet1!$A$2:$A$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;values&#39;</span><span class="p">:</span>   
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;=Sheet1!$C$2:$C$7&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 设置图表的title 和 x，y轴信息</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">set_title</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;The xxx site </span>
+</span></span><span class="line"><span class="cl"><span class="n">Bug</span> <span class="n">Analysis</span><span class="s1">&#39;})</span>
+</span></span><span class="line"><span class="cl"> <span class="n">chart_col</span><span class="o">.</span><span class="n">set_x_axis</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Test number&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="n">chart_col</span><span class="o">.</span><span class="n">set_y_axis</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span>  <span class="s1">&#39;Sample length </span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">mm</span><span class="p">)</span><span class="s1">&#39;})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 设置图表的⻛格</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 把图表插⼊到worksheet以及偏移</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">insert_chart</span><span class="p">(</span><span class="s1">&#39;A10&#39;</span><span class="p">,</span> <span class="n">chart_col</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="s1">&#39;x_offset&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;y_offset&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="n">workbook</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></div>
+
+<h4 class="relative group">5.4 xlswriter ⽣成饼图 
+    <div id="54-xlswriter-%E6%88%90%E9%A5%BC%E5%9B%BE" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#54-xlswriter-%E6%88%90%E9%A5%BC%E5%9B%BE" aria-label="锚点">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"> <span class="c1"># -*- coding:utf-8 -*</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">xlsxwriter</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个excel</span>
+</span></span><span class="line"><span class="cl"> <span class="n">workbook</span> <span class="o">=</span> 
+</span></span><span class="line"><span class="cl"><span class="n">xlsxwriter</span><span class="o">.</span><span class="n">Workbook</span><span class="p">(</span><span class="s2">&#34;chart_pie.xlsx&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个sheet</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_worksheet</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># ⾃定义样式，加粗</span>
+</span></span><span class="line"><span class="cl"><span class="n">bold</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_format</span><span class="p">({</span><span class="s1">&#39;bold&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># --------1、准备数据并写⼊excel--------------</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 向excel中写⼊数据，建⽴图标时要⽤到</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="s1">&#39;closed&#39;</span><span class="p">,</span> <span class="s1">&#39;active&#39;</span><span class="p">,</span> <span class="s1">&#39;reopen&#39;</span><span class="p">,</span> <span class="s1">&#39;NT&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="mi">1012</span><span class="p">,</span> <span class="mi">109</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="mi">131</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"> <span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 写⼊数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">write_row</span><span class="p">(</span><span class="s1">&#39;A1&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">bold</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">worksheet</span><span class="o">.</span><span class="n">write_row</span><span class="p">(</span><span class="s1">&#39;A2&#39;</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># --------2、⽣成图表并插⼊到excel---------------</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 创建⼀个柱状图(pie chart)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">chart_col</span> <span class="o">=</span> <span class="n">workbook</span><span class="o">.</span><span class="n">add_chart</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> 
+</span></span><span class="line"><span class="cl"><span class="s1">&#39;pie&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 配置第⼀个系列数据</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">add_series</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bug Analysis&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;categories&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$A$1:$D$1&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;values&#39;</span><span class="p">:</span> <span class="s1">&#39;=Sheet1!$A$2:$D$2&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;#00CD00&#39;</span><span class="p">}},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;red&#39;</span><span class="p">}},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;yellow&#39;</span><span class="p">}},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span><span class="s1">&#39;fill&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;gray&#39;</span><span class="p">}},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 设置图表的title 和 x，y轴信息</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">set_title</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Bug Analysis&#39;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 设置图表的⻛格</span>
+</span></span><span class="line"><span class="cl"><span class="n">chart_col</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl"> <span class="c1"># 把图表插⼊到worksheet以及偏移</span>
+</span></span><span class="line"><span class="cl"><span class="n">worksheet</span><span class="o">.</span><span class="n">insert_chart</span><span class="p">(</span><span class="s1">&#39;B10&#39;</span><span class="p">,</span> <span class="n">chart_col</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="p">{</span><span class="s1">&#39;x_offset&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;y_offset&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"> <span class="n">workbook</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span></code></pre></div>
         </div>
         
