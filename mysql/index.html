@@ -100,7 +100,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "516"
+    "wordCount": "705"
   }]
   </script>
 
@@ -769,6 +769,9 @@
         <li><a href="#第二高的薪水">第二高的薪水</a></li>
         <li><a href="#第n高的薪水">第N高的薪水</a></li>
         <li><a href="#分数排名">分数排名</a></li>
+        <li><a href="#可回收且低脂产品">可回收且低脂产品</a></li>
+        <li><a href="#大的国家">大的国家</a></li>
+        <li><a href="#文章浏览">文章浏览</a></li>
       </ul>
     </li>
   </ul>
@@ -791,6 +794,9 @@
         <li><a href="#第二高的薪水">第二高的薪水</a></li>
         <li><a href="#第n高的薪水">第N高的薪水</a></li>
         <li><a href="#分数排名">分数排名</a></li>
+        <li><a href="#可回收且低脂产品">可回收且低脂产品</a></li>
+        <li><a href="#大的国家">大的国家</a></li>
+        <li><a href="#文章浏览">文章浏览</a></li>
       </ul>
     </li>
   </ul>
@@ -908,11 +914,14 @@
   
 
 </p>
-<p>（思考：left join连接两个图表，因为左边ALLEN在address表中city和state是null）</p>
-<p>select t1.firstName,t1.lastName,t2.city,t2.state from Person as t1</p>
-<p>left join Address as t2</p>
-<p>on t1.personId=t2.personId;</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">（</span><span class="n">思考</span><span class="err">：</span><span class="n">left</span> <span class="n">join连接两个图表</span><span class="err">，</span><span class="n">因为左边ALLEN在address表中city和state是null</span><span class="err">）</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">t1</span><span class="o">.</span><span class="n">firstName</span><span class="p">,</span><span class="n">t1</span><span class="o">.</span><span class="n">lastName</span><span class="p">,</span><span class="n">t2</span><span class="o">.</span><span class="n">city</span><span class="p">,</span><span class="n">t2</span><span class="o">.</span><span class="n">state</span> <span class="kn">from</span> <span class="nn">Person</span> <span class="k">as</span> <span class="n">t1</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">left</span> <span class="n">join</span> <span class="n">Address</span> <span class="k">as</span> <span class="n">t2</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">on</span> <span class="n">t1</span><span class="o">.</span><span class="n">personId</span><span class="o">=</span><span class="n">t2</span><span class="o">.</span><span class="n">personId</span><span class="p">;</span>
+</span></span></code></pre></div>
 
 <h3 class="relative group">第二高的薪水 
     <div id="%E7%AC%AC%E4%BA%8C%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4" class="anchor"></div>
@@ -952,16 +961,19 @@
     </figure>
   
 
-
-(思考：offset用法：offset n 去掉几个值</p>
-<p>offset去掉最大值，limit 1 选取第二个值作为第二高薪</p>
-<p>select 200 as salary
-)</p>
-<p>select
-(select distinct Salary from Employee
-order by Salary desc
-limit 1 offset 1)AS SecondHighestSalary;</p>
-
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">(</span><span class="n">思考</span><span class="err">：</span><span class="n">offset用法</span><span class="err">：</span><span class="n">offset</span> <span class="n">n</span> <span class="n">去掉几个值</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">offset去掉最大值</span><span class="err">，</span><span class="n">limit</span> <span class="mi">1</span> <span class="n">选取第二个值作为第二高薪</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="mi">200</span> <span class="k">as</span> <span class="n">salary</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">select</span> <span class="n">distinct</span> <span class="n">Salary</span> <span class="kn">from</span> <span class="nn">Employee</span>
+</span></span><span class="line"><span class="cl"><span class="n">order</span> <span class="n">by</span> <span class="n">Salary</span> <span class="n">desc</span>
+</span></span><span class="line"><span class="cl"><span class="n">limit</span> <span class="mi">1</span> <span class="n">offset</span> <span class="mi">1</span><span class="p">)</span><span class="n">AS</span> <span class="n">SecondHighestSalary</span><span class="p">;</span>
+</span></span></code></pre></div>
 
 <h3 class="relative group">第N高的薪水 
     <div id="%E7%AC%ACn%E9%AB%98%E7%9A%84%E8%96%AA%E6%B0%B4" class="anchor"></div>
@@ -1002,21 +1014,23 @@ limit 1 offset 1)AS SecondHighestSalary;</p>
   
 
 </p>
-<p>（思考：distinct去重重复的salary，方便查找唯一值，order by 薪资，降序排列结合limit获取第n条数据，</p>
-<p>limit 3 ：只有一个参数，表示获取前三条数据，</p>
-<p>limit 3，2；limit有两个参数，第一个参数表示从第几行数据开始查，第二个参数表示查几条数据，
-“limit 3,2”表示从第四行数据开始，取两条数据。 ）</p>
-<p>CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT</p>
-<p>BEGIN</p>
-<p>DECLARE M INT;</p>
-<p>SET M=N-1;</p>
-<p>RETURN (</p>
-<p>select distinct salary from Employee</p>
-<p>order by salary desc</p>
-<p>limit M, 1</p>
-<p>);</p>
-<p>END</p>
-
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="err">（</span><span class="n">思考</span><span class="err">：</span><span class="n">distinct去重重复的salary</span><span class="err">，</span><span class="n">方便查找唯一值</span><span class="err">，</span><span class="n">order</span> <span class="n">by</span> <span class="n">薪资</span><span class="err">，</span><span class="n">降序排列结合limit获取第n条数据</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl"><span class="n">limit</span> <span class="mi">3</span> <span class="err">：</span><span class="n">只有一个参数</span><span class="err">，</span><span class="n">表示获取前三条数据</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl"><span class="n">limit</span> <span class="mi">3</span><span class="err">，</span><span class="mi">2</span><span class="err">；</span><span class="n">limit有两个参数</span><span class="err">，</span><span class="n">第一个参数表示从第几行数据开始查</span><span class="err">，</span><span class="n">第二个参数表示查几条数据</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl"><span class="err">“</span><span class="n">limit</span> <span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="err">”</span><span class="n">表示从第四行数据开始</span><span class="err">，</span><span class="n">取两条数据</span><span class="err">。</span> <span class="err">）</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">CREATE</span> <span class="n">FUNCTION</span> <span class="n">getNthHighestSalary</span><span class="p">(</span><span class="n">N</span> <span class="n">INT</span><span class="p">)</span> <span class="n">RETURNS</span> <span class="n">INT</span>
+</span></span><span class="line"><span class="cl"><span class="n">BEGIN</span>
+</span></span><span class="line"><span class="cl"><span class="n">DECLARE</span> <span class="n">M</span> <span class="n">INT</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">SET</span> <span class="n">M</span><span class="o">=</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">RETURN</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">distinct</span> <span class="n">salary</span> <span class="kn">from</span> <span class="nn">Employee</span>
+</span></span><span class="line"><span class="cl"><span class="n">order</span> <span class="n">by</span> <span class="n">salary</span> <span class="n">desc</span>
+</span></span><span class="line"><span class="cl"><span class="n">limit</span> <span class="n">M</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">END</span>
+</span></span></code></pre></div>
 
 <h3 class="relative group">分数排名 
     <div id="%E5%88%86%E6%95%B0%E6%8E%92%E5%90%8D" class="anchor"></div>
@@ -1057,11 +1071,176 @@ limit 1 offset 1)AS SecondHighestSalary;</p>
   
 
 </p>
-<p>select score,</p>
-<p>(select count(distinct s2.score) from Scores s2 where s2.score&gt;=s1.score)as &lsquo;rank&rsquo;</p>
-<p>from Scores s1</p>
-<p>order by s1.score desc</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">select</span> <span class="n">score</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">select</span> <span class="n">count</span><span class="p">(</span><span class="n">distinct</span> <span class="n">s2</span><span class="o">.</span><span class="n">score</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">Scores</span> <span class="n">s2</span> <span class="n">where</span> <span class="n">s2</span><span class="o">.</span><span class="n">score</span><span class="o">&gt;=</span><span class="n">s1</span><span class="o">.</span><span class="n">score</span><span class="p">)</span><span class="k">as</span> <span class="s1">&#39;rank&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Scores</span> <span class="n">s1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">order</span> <span class="n">by</span> <span class="n">s1</span><span class="o">.</span><span class="n">score</span> <span class="n">desc</span>
+</span></span></code></pre></div>
 
+<h3 class="relative group">可回收且低脂产品 
+    <div id="%E5%8F%AF%E5%9B%9E%E6%94%B6%E4%B8%94%E4%BD%8E%E8%84%82%E4%BA%A7%E5%93%81" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%8F%AF%E5%9B%9E%E6%94%B6%E4%B8%94%E4%BD%8E%E8%84%82%E4%BA%A7%E5%93%81" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_4_hu7407930278294212722.png 330w,
+        /mysql/img_4_hu3504131921597336240.png 660w,
+        /mysql/img_4_hu10873599184350052522.png 1024w,
+        /mysql/img_4_hu16594231531864648388.png 2x"
+        src="/mysql/img_4_hu3504131921597336240.png"
+        alt="img_4.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">select</span> <span class="n">product_id</span> <span class="kn">from</span> <span class="nn">Products</span> <span class="n">where</span> <span class="n">low_fats</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span> <span class="ow">and</span> <span class="n">recyclable</span><span class="o">=</span><span class="s1">&#39;Y&#39;</span>
+</span></span></code></pre></div><p>###寻找用户推荐人
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_5_hu15060343486878203737.png 330w,
+        /mysql/img_5_hu13502242707032604533.png 660w,
+        /mysql/img_5_hu2699269690095186491.png 1024w,
+        /mysql/img_5_hu13056769230188501143.png 2x"
+        src="/mysql/img_5_hu13502242707032604533.png"
+        alt="img_5.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">MySQL</span> <span class="n">使用三值逻辑</span> <span class="err">——</span> <span class="n">TRUE</span><span class="p">,</span> <span class="n">FALSE</span> <span class="n">和</span> <span class="n">UNKNOWN</span><span class="err">。</span><span class="n">任何与</span> <span class="n">NULL</span> <span class="n">值进行的比较都会与第三种值</span> <span class="n">UNKNOWN</span> <span class="n">做比较</span><span class="err">。</span><span class="n">这个</span><span class="err">“</span><span class="n">任何值</span><span class="err">”</span><span class="n">包括</span> <span class="n">NULL</span> <span class="n">本身</span><span class="err">！</span><span class="n">这就是为什么</span> <span class="n">MySQL</span> <span class="n">提供</span> <span class="n">IS</span> <span class="n">NULL</span> <span class="n">和</span> <span class="n">IS</span> <span class="n">NOT</span> <span class="n">NULL</span> <span class="n">两种操作来对</span> <span class="n">NULL</span> <span class="n">特殊判断</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="n">因此</span><span class="err">，</span><span class="n">在</span> <span class="n">WHERE</span> <span class="n">语句中我们需要做一个额外的条件判断</span> <span class="err">`</span><span class="n">referee_id</span> <span class="n">IS</span> <span class="n">NULL</span><span class="s1">&#39;。）</span>
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">name</span> <span class="kn">from</span> <span class="nn">Customer</span> <span class="n">where</span> <span class="n">referee_Id</span> <span class="o">!=</span><span class="mi">2</span> <span class="ow">or</span> <span class="n">referee_Id</span> <span class="n">IS</span> <span class="n">NULL</span><span class="p">;</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">大的国家 
+    <div id="%E5%A4%A7%E7%9A%84%E5%9B%BD%E5%AE%B6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%A4%A7%E7%9A%84%E5%9B%BD%E5%AE%B6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_6_hu9011213168153551791.png 330w,
+        /mysql/img_6_hu6407482511294701232.png 660w,
+        /mysql/img_6_hu402048821600582104.png 1024w,
+        /mysql/img_6_hu17455548884690384826.png 2x"
+        src="/mysql/img_6_hu6407482511294701232.png"
+        alt="img_6.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">select</span> <span class="n">name</span><span class="p">,</span><span class="n">population</span><span class="p">,</span><span class="n">area</span> <span class="kn">from</span> <span class="nn">World</span>
+</span></span><span class="line"><span class="cl"><span class="n">where</span> <span class="n">area</span><span class="o">&gt;=</span><span class="mi">3000000</span> <span class="ow">or</span> <span class="n">population</span> <span class="o">&gt;=</span><span class="mi">25000000</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">文章浏览 
+    <div id="%E6%96%87%E7%AB%A0%E6%B5%8F%E8%A7%88" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%96%87%E7%AB%A0%E6%B5%8F%E8%A7%88" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_7_hu11044466424216510778.png 330w,
+        /mysql/img_7_hu4776897723066199919.png 660w,
+        /mysql/img_7_hu13407277479442033207.png 1024w,
+        /mysql/img_7_hu2483532527402256581.png 2x"
+        src="/mysql/img_7_hu4776897723066199919.png"
+        alt="img_7.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">select</span> <span class="n">distinct</span> <span class="n">viewer_id</span> <span class="k">as</span> <span class="nb">id</span> <span class="kn">from</span> <span class="nn">Views</span> 
+</span></span><span class="line"><span class="cl"><span class="n">where</span> <span class="n">Views</span><span class="o">.</span><span class="n">viewer_id</span> <span class="o">=</span> <span class="n">Views</span><span class="o">.</span><span class="n">author_id</span>
+</span></span><span class="line"><span class="cl"><span class="n">order</span> <span class="n">by</span> <span class="nb">id</span> <span class="n">asc</span>
+</span></span></code></pre></div>
         </div>
         
         
