@@ -30,10 +30,10 @@
     
     <item>
       <title></title>
-      <link>http://localhost:1313/python/</link>
+      <link>http://localhost:1313/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/python/</guid>
+      <guid>http://localhost:1313/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</guid>
       <description>文件操作 # 2.1 python操作⽂文件流程 # f=open(filename) # 打开⽂文件 f.w</description>
       
     </item>
@@ -65,6 +65,36 @@
       
       <guid>http://localhost:1313/interview/mysql/</guid>
       <description>mysql # 慢查询 # 聚合查询 多表查询 表数据量过大查询 深度分页查询 表象</description>
+      
+    </item>
+    
+    <item>
+      <title>numpy</title>
+      <link>http://localhost:1313/python/numpy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/python/numpy/</guid>
+      <description>numpy模块 # NumPy(Numerical Python) 是 Python 语言中做科学计算的基础库。重在于数值</description>
+      
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>http://localhost:1313/python/pandas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/python/pandas/</guid>
+      <description>基于pandas的数据清洗 # 处理丢失数据 # 有两种丢失数据： None</description>
+      
+    </item>
+    
+    <item>
+      <title>Series</title>
+      <link>http://localhost:1313/python/series/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/python/series/</guid>
+      <description>Series # Series是一种类似与一维数组的对象，由下面两个部分组</description>
       
     </item>
     

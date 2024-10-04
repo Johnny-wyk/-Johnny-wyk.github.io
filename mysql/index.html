@@ -100,7 +100,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "705"
+    "wordCount": "1426"
   }]
   </script>
 
@@ -633,7 +633,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span>
+  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
   
 
   
@@ -796,6 +796,11 @@
         <li><a href="#可回收且低脂产品">可回收且低脂产品</a></li>
         <li><a href="#大的国家">大的国家</a></li>
         <li><a href="#文章浏览">文章浏览</a></li>
+        <li><a href="#使用唯一标识码替换用户id">使用唯一标识码替换用户id</a></li>
+        <li><a href="#进店却未消费的顾客">进店却未消费的顾客</a></li>
+        <li><a href="#上升的温度">上升的温度</a></li>
+        <li><a href="#每台机器运行的时间">每台机器运行的时间</a></li>
+        <li><a href="#员工奖金">员工奖金</a></li>
       </ul>
     </li>
   </ul>
@@ -821,6 +826,11 @@
         <li><a href="#可回收且低脂产品">可回收且低脂产品</a></li>
         <li><a href="#大的国家">大的国家</a></li>
         <li><a href="#文章浏览">文章浏览</a></li>
+        <li><a href="#使用唯一标识码替换用户id">使用唯一标识码替换用户id</a></li>
+        <li><a href="#进店却未消费的顾客">进店却未消费的顾客</a></li>
+        <li><a href="#上升的温度">上升的温度</a></li>
+        <li><a href="#每台机器运行的时间">每台机器运行的时间</a></li>
+        <li><a href="#员工奖金">员工奖金</a></li>
       </ul>
     </li>
   </ul>
@@ -1264,6 +1274,356 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">select</span> <span class="n">distinct</span> <span class="n">viewer_id</span> <span class="k">as</span> <span class="nb">id</span> <span class="kn">from</span> <span class="nn">Views</span> 
 </span></span><span class="line"><span class="cl"><span class="n">where</span> <span class="n">Views</span><span class="o">.</span><span class="n">viewer_id</span> <span class="o">=</span> <span class="n">Views</span><span class="o">.</span><span class="n">author_id</span>
 </span></span><span class="line"><span class="cl"><span class="n">order</span> <span class="n">by</span> <span class="nb">id</span> <span class="n">asc</span>
+</span></span></code></pre></div><p>###无效的推文
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_8_hu2555665098537262628.png 330w,
+        /mysql/img_8_hu12208820749402247479.png 660w,
+        /mysql/img_8_hu10608268914287169514.png 1024w,
+        /mysql/img_8_hu7394416896958375237.png 2x"
+        src="/mysql/img_8_hu12208820749402247479.png"
+        alt="img_8.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">length</span><span class="err">：</span><span class="n">长度</span>
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">tweet_id</span> <span class="kn">from</span> <span class="nn">Tweets</span> <span class="n">where</span> <span class="n">length</span><span class="p">(</span><span class="n">content</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">15</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">使用唯一标识码替换用户id 
+    <div id="%E4%BD%BF%E7%94%A8%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86%E7%A0%81%E6%9B%BF%E6%8D%A2%E7%94%A8%E6%88%B7id" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BD%BF%E7%94%A8%E5%94%AF%E4%B8%80%E6%A0%87%E8%AF%86%E7%A0%81%E6%9B%BF%E6%8D%A2%E7%94%A8%E6%88%B7id" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_10_hu17804320863808308579.png 330w,
+        /mysql/img_10_hu17095511732329608307.png 660w,
+        /mysql/img_10_hu8030634759321299464.png 1024w,
+        /mysql/img_10_hu10983089225893903779.png 2x"
+        src="/mysql/img_10_hu17095511732329608307.png"
+        alt="img_10.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">用left</span> <span class="n">join连接</span><span class="err">，</span><span class="n">因为有些用户没有unique_id</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">name</span><span class="p">,</span> <span class="n">unique_id</span>  <span class="kn">from</span> <span class="nn">Employees</span>
+</span></span><span class="line"><span class="cl"><span class="n">left</span> <span class="n">join</span> <span class="n">EmployeeUNI</span> <span class="n">on</span> <span class="n">Employees</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="n">EmployeeUNI</span><span class="o">.</span><span class="n">id</span>
+</span></span></code></pre></div><p>###产品销售分析一
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_11_hu4509973506003307990.png 330w,
+        /mysql/img_11_hu9934081613953135012.png 660w,
+        /mysql/img_11_hu8042902511402540072.png 1024w,
+        /mysql/img_11_hu5724492020651490120.png 2x"
+        src="/mysql/img_11_hu9934081613953135012.png"
+        alt="img_11.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">select</span> <span class="n">product_name</span><span class="p">,</span><span class="n">year</span><span class="p">,</span><span class="n">price</span> <span class="kn">from</span> <span class="nn">Product</span> 
+</span></span><span class="line"><span class="cl"><span class="n">inner</span> <span class="n">join</span> <span class="n">Sales</span> <span class="n">on</span> <span class="n">Sales</span><span class="o">.</span><span class="n">product_id</span> <span class="o">=</span> <span class="n">Product</span><span class="o">.</span><span class="n">product_id</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">进店却未消费的顾客 
+    <div id="%E8%BF%9B%E5%BA%97%E5%8D%B4%E6%9C%AA%E6%B6%88%E8%B4%B9%E7%9A%84%E9%A1%BE%E5%AE%A2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%BF%9B%E5%BA%97%E5%8D%B4%E6%9C%AA%E6%B6%88%E8%B4%B9%E7%9A%84%E9%A1%BE%E5%AE%A2" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_12_hu14448550518918420686.png 330w,
+        /mysql/img_12_hu10596655329759280376.png 660w,
+        /mysql/img_12_hu4728412059275393029.png 1024w,
+        /mysql/img_12_hu2523649972053341720.png 2x"
+        src="/mysql/img_12_hu10596655329759280376.png"
+        alt="img_12.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">左外连接</span><span class="err">，</span><span class="n">没有交易的顾客transaction_id为null</span><span class="err">，</span><span class="n">在where语句中用</span> <span class="ow">is</span> <span class="n">null筛选</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">customer_id</span><span class="p">,</span><span class="n">count</span><span class="p">(</span><span class="n">customer_id</span><span class="p">)</span> <span class="k">as</span> <span class="n">count_no_trans</span> <span class="kn">from</span> <span class="nn">Visits</span> 
+</span></span><span class="line"><span class="cl"><span class="n">left</span> <span class="n">join</span> <span class="n">Transactions</span> <span class="n">on</span> <span class="n">Visits</span><span class="o">.</span><span class="n">visit_id</span> <span class="o">=</span> <span class="n">Transactions</span><span class="o">.</span><span class="n">visit_id</span>
+</span></span><span class="line"><span class="cl"><span class="n">where</span> <span class="n">transaction_id</span> <span class="ow">is</span> <span class="n">null</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="n">by</span> <span class="n">customer_id</span> 
+</span></span></code></pre></div>
+
+<h3 class="relative group">上升的温度 
+    <div id="%E4%B8%8A%E5%8D%87%E7%9A%84%E6%B8%A9%E5%BA%A6" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%B8%8A%E5%8D%87%E7%9A%84%E6%B8%A9%E5%BA%A6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_13_hu4192949181968328739.png 330w,
+        /mysql/img_13_hu12247495257813321207.png 660w,
+        /mysql/img_13_hu2515264841140865651.png 1024w,
+        /mysql/img_13_hu11148462832106146309.png 2x"
+        src="/mysql/img_13_hu12247495257813321207.png"
+        alt="img_13.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">方法一</span><span class="err">：</span><span class="n">笛卡尔积</span>
+</span></span><span class="line"><span class="cl"><span class="n">获取所有比前一天温度高的记录并记录其id</span>
+</span></span><span class="line"><span class="cl"><span class="n">找相关联表</span> <span class="n">题干涉及到的表只有单表Weather</span>
+</span></span><span class="line"><span class="cl"><span class="n">分析</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl"><span class="n">我们想要拿记录的温度与前一天进行相对比</span><span class="err">，</span><span class="n">那必然需要将前一天的记录放到一行中</span><span class="err">，</span><span class="n">不然单纯的select是无法进行比较的</span><span class="err">；</span><span class="n">所以想到用笛卡儿积</span><span class="err">，</span><span class="n">然后再通过前置知识进去过滤</span><span class="o">+</span><span class="n">温度条件</span>
+</span></span><span class="line"><span class="cl"><span class="n">三</span><span class="err">、</span><span class="n">写SQL</span> <span class="n">将1步骤对应条件拼接到步骤2后面即可得到SQL</span>
+</span></span><span class="line"><span class="cl"><span class="n">假设集合A</span><span class="o">=</span><span class="p">{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">}</span><span class="err">，</span><span class="n">集合B</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span><span class="err">，</span><span class="n">则两个集合的笛卡尔积为</span><span class="p">{(</span><span class="n">a</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mi">2</span><span class="p">)}</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="n">inner</span> <span class="n">join</span><span class="p">(</span><span class="n">等值连接</span><span class="p">)</span> <span class="n">只返回两个表中联结字段相等的行on表示链接条件</span>
+</span></span><span class="line"><span class="cl"><span class="n">DATEDIFF</span><span class="p">()</span> <span class="n">函数返回两个日期之间的时间</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">b</span><span class="o">.</span><span class="n">Id</span> 
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> 
+</span></span><span class="line"><span class="cl">    <span class="nn">weather</span> <span class="n">a</span> 
+</span></span><span class="line"><span class="cl"><span class="n">inner</span> <span class="n">join</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">weather</span> <span class="n">b</span> 
+</span></span><span class="line"><span class="cl"><span class="n">where</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">DATEDIFF</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">recordDate</span><span class="p">,</span><span class="n">a</span><span class="o">.</span><span class="n">recordDate</span><span class="p">)</span><span class="o">=</span><span class="mi">1</span> 
+</span></span><span class="line"><span class="cl"><span class="ow">and</span> <span class="n">b</span><span class="o">.</span><span class="n">Temperature</span> <span class="o">&gt;</span> <span class="n">a</span><span class="o">.</span><span class="n">Temperature</span><span class="p">;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">方法二</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl"><span class="n">ADDDATE</span><span class="p">()</span><span class="n">函数用于将指定的时间间隔添加到日期值date是表示日期的值</span><span class="err">，</span><span class="n">它可以是</span> <span class="n">String</span><span class="err">、</span><span class="n">DATE</span><span class="err">（</span><span class="n">YEAR</span><span class="err">、</span><span class="n">MONTH</span> <span class="n">和</span> <span class="n">DAY</span><span class="err">）、</span><span class="n">DATETIME</span><span class="err">（</span><span class="n">HOURS</span><span class="err">、</span><span class="n">MINUTES</span> <span class="n">或</span> <span class="n">SECONDS</span><span class="err">）</span><span class="n">或</span> <span class="n">TIMESTAMP</span> <span class="n">类型</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="n">ADDDATE</span><span class="p">(</span> <span class="n">date</span> <span class="p">,</span> <span class="n">INTERVAL</span> <span class="n">value</span> <span class="n">addunit</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ADDDATE</span><span class="p">(</span> <span class="n">date</span> <span class="p">,</span> <span class="n">days</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">a</span><span class="o">.</span><span class="n">id</span> <span class="kn">from</span> <span class="nn">Weather</span> <span class="n">a</span> <span class="n">inner</span> <span class="n">join</span> <span class="n">Weather</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">on</span> <span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">recordDate</span> <span class="o">=</span> <span class="n">adddate</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">recordDate</span><span class="p">,</span><span class="n">INTERVAL</span> <span class="mi">1</span> <span class="n">day</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="n">where</span> <span class="n">a</span><span class="o">.</span><span class="n">temperature</span> <span class="o">&gt;</span> <span class="n">b</span><span class="o">.</span><span class="n">temperature</span>
+</span></span></code></pre></div><p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_14_hu9453507217862912993.png 330w,
+        /mysql/img_14_hu5572151389123826309.png 660w,
+        /mysql/img_14_hu17442254893830698782.png 1024w,
+        /mysql/img_14_hu6083076985995545725.png 2x"
+        src="/mysql/img_14_hu5572151389123826309.png"
+        alt="img_14.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+
+
+<h3 class="relative group">每台机器运行的时间 
+    <div id="%E6%AF%8F%E5%8F%B0%E6%9C%BA%E5%99%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E6%97%B6%E9%97%B4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E6%AF%8F%E5%8F%B0%E6%9C%BA%E5%99%A8%E8%BF%90%E8%A1%8C%E7%9A%84%E6%97%B6%E9%97%B4" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_15_hu1235802372688252827.png 330w,
+        /mysql/img_15_hu13783998570504114074.png 660w,
+        /mysql/img_15_hu13366685670644640.png 1024w,
+        /mysql/img_15_hu6904998333090720968.png 2x"
+        src="/mysql/img_15_hu13783998570504114074.png"
+        alt="img_15.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">保留小数点后三位</span><span class="err">，</span><span class="n">用round</span><span class="p">()</span><span class="n">函数</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">a</span><span class="o">.</span><span class="n">machine_Id</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">avg</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">timestamp</span> <span class="o">-</span> <span class="n">a</span><span class="o">.</span><span class="n">timestamp</span><span class="p">),</span><span class="mi">3</span><span class="p">)</span> <span class="k">as</span> <span class="n">processing_time</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">Activity</span> <span class="k">as</span> <span class="n">a</span> <span class="n">join</span> <span class="n">Activity</span> <span class="k">as</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">on</span> <span class="n">a</span><span class="o">.</span><span class="n">machine_id</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">machine_id</span> <span class="ow">and</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">process_id</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">process_id</span> <span class="ow">and</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">.</span><span class="n">activity_type</span><span class="o">=</span><span class="s1">&#39;start&#39;</span> <span class="ow">and</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span><span class="o">.</span><span class="n">activity_type</span><span class="o">=</span><span class="s1">&#39;end&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="n">by</span> <span class="n">machine_id</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">员工奖金 
+    <div id="%E5%91%98%E5%B7%A5%E5%A5%96%E9%87%91" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%91%98%E5%B7%A5%E5%A5%96%E9%87%91" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /mysql/img_16_hu17463460049582673171.png 330w,
+        /mysql/img_16_hu16740404041313427864.png 660w,
+        /mysql/img_16_hu10764413007037820245.png 1024w,
+        /mysql/img_16_hu16750545535842583641.png 2x"
+        src="/mysql/img_16_hu16740404041313427864.png"
+        alt="img_16.png"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">判断是否为空不能用b</span><span class="o">.</span><span class="n">bonus</span> <span class="o">=</span> <span class="n">null</span> <span class="n">要用</span> <span class="n">b</span><span class="o">.</span><span class="n">bonus</span> <span class="ow">is</span> <span class="n">null</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">select</span> <span class="n">e</span><span class="o">.</span><span class="n">name</span><span class="p">,</span><span class="n">b</span><span class="o">.</span><span class="n">bonus</span> <span class="kn">from</span> <span class="nn">Employee</span> <span class="k">as</span> <span class="n">e</span> <span class="n">left</span> <span class="n">join</span> <span class="n">Bonus</span> <span class="k">as</span> <span class="n">b</span>
+</span></span><span class="line"><span class="cl"><span class="n">on</span> <span class="n">e</span><span class="o">.</span><span class="n">empId</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">empId</span>
+</span></span><span class="line"><span class="cl"><span class="n">where</span> <span class="n">b</span><span class="o">.</span><span class="n">bonus</span> <span class="o">&lt;</span> <span class="mi">1000</span> <span class="ow">or</span> <span class="n">b</span><span class="o">.</span><span class="n">bonus</span> <span class="ow">is</span> <span class="n">null</span>
 </span></span></code></pre></div>
         </div>
         
@@ -1422,10 +1782,10 @@
       <ul class="flex flex-col list-none sm:flex-row">
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/tags/"
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/python/"
             title="">
             
-            系列文章
+            数据分析
           </a>
         </li>
         
