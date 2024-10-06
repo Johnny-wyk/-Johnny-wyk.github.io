@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/en/all/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/all/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/all/"
+    />
+  </url>
+  <url>
     <loc>http://localhost:1313/en/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -60,6 +75,21 @@
       rel="alternate"
       hreflang="en"
       href="http://localhost:1313/en/interview/"
+    />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/all/interview/jvm/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-cn"
+      href="http://localhost:1313/all/interview/jvm/"
+    />
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="http://localhost:1313/en/all/interview/jvm/"
     />
   </url>
   <url>

@@ -7,7 +7,257 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Johnny</copyright>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pandas</title>
+      <link>http://localhost:1313/all/python/pandas/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/python/pandas/</guid>
+      <description>基于pandas的数据清洗 # 处理丢失数据 # 有两种丢失数据： None</description>
+      
+    </item>
+    
+    <item>
+      <title>Pandas</title>
+      <link>http://localhost:1313/python/pandas/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/python/pandas/</guid>
+      <description>基于pandas的数据清洗 # 处理丢失数据 # 有两种丢失数据： None</description>
+      
+    </item>
+    
+    <item>
+      <title>numpy</title>
+      <link>http://localhost:1313/all/python/numpy/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/python/numpy/</guid>
+      <description>numpy模块 # NumPy(Numerical Python) 是 Python 语言中做科学计算的基础库。重在于数值</description>
+      
+    </item>
+    
+    <item>
+      <title>numpy</title>
+      <link>http://localhost:1313/python/numpy/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/python/numpy/</guid>
+      <description>numpy模块 # NumPy(Numerical Python) 是 Python 语言中做科学计算的基础库。重在于数值</description>
+      
+    </item>
+    
+    <item>
+      <title>Series</title>
+      <link>http://localhost:1313/all/python/series/</link>
+      <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/python/series/</guid>
+      <description>Series # Series是一种类似与一维数组的对象，由下面两个部分组</description>
+      
+    </item>
+    
+    <item>
+      <title>Series</title>
+      <link>http://localhost:1313/python/series/</link>
+      <pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/python/series/</guid>
+      <description>Series # Series是一种类似与一维数组的对象，由下面两个部分组</description>
+      
+    </item>
+    
+    <item>
+      <title>excel自动化办公</title>
+      <link>http://localhost:1313/all/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</link>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</guid>
+      <description>文件操作 # 2.1 python操作⽂文件流程 # f=open(filename) # 打开⽂文件 f.w</description>
+      
+    </item>
+    
+    <item>
+      <title>excel自动化办公</title>
+      <link>http://localhost:1313/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</link>
+      <pubDate>Fri, 20 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</guid>
+      <description>文件操作 # 2.1 python操作⽂文件流程 # f=open(filename) # 打开⽂文件 f.w</description>
+      
+    </item>
+    
+    <item>
+      <title>mysql基础50题</title>
+      <link>http://localhost:1313/all/mysql/%E9%AB%98%E9%A2%91sql50%E9%A2%98/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/mysql/%E9%AB%98%E9%A2%91sql50%E9%A2%98/</guid>
+      <description>sql执行顺序 # SQL 中，查询中子句的执行顺序通常如下： FROM 子句：</description>
+      
+    </item>
+    
+    <item>
+      <title>mysql基础50题</title>
+      <link>http://localhost:1313/mysql/%E9%AB%98%E9%A2%91sql50%E9%A2%98/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/mysql/%E9%AB%98%E9%A2%91sql50%E9%A2%98/</guid>
+      <description>sql执行顺序 # SQL 中，查询中子句的执行顺序通常如下： FROM 子句：</description>
+      
+    </item>
+    
+    <item>
+      <title>DVWA暴力破解攻略</title>
+      <link>http://localhost:1313/all/networkengineering/penetrationtesting/</link>
+      <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/networkengineering/penetrationtesting/</guid>
+      <description>DVWA暴力破解攻略 # 一、 靶场考核点 # 弱口令(weak password) 没有</description>
+      
+    </item>
+    
+    <item>
+      <title>DVWA暴力破解攻略</title>
+      <link>http://localhost:1313/networkengineering/penetrationtesting/</link>
+      <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/networkengineering/penetrationtesting/</guid>
+      <description>DVWA暴力破解攻略 # 一、 靶场考核点 # 弱口令(weak password) 没有</description>
+      
+    </item>
+    
+    <item>
+      <title>二叉树</title>
+      <link>http://localhost:1313/algorithm/tree/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/tree/</guid>
+      <description>二叉树理论基础篇 # 递归查找 # 递归算法的三个要素 1.确定递归函</description>
+      
+    </item>
+    
+    <item>
+      <title>二叉树</title>
+      <link>http://localhost:1313/all/algorithm/tree/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/tree/</guid>
+      <description>二叉树理论基础篇 # 递归查找 # 递归算法的三个要素 1.确定递归函</description>
+      
+    </item>
+    
+    <item>
+      <title>链表</title>
+      <link>http://localhost:1313/algorithm/linkedlist/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/linkedlist/</guid>
+      <description>链表 # 基础知识 # 链表是一种通过指针串联在一起的线性结构，每一</description>
+      
+    </item>
+    
+    <item>
+      <title>链表</title>
+      <link>http://localhost:1313/all/algorithm/linkedlist/</link>
+      <pubDate>Wed, 21 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/linkedlist/</guid>
+      <description>链表 # 基础知识 # 链表是一种通过指针串联在一起的线性结构，每一</description>
+      
+    </item>
+    
+    <item>
+      <title>哈希表基础知识</title>
+      <link>http://localhost:1313/algorithm/hash/basicknowledge/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/hash/basicknowledge/</guid>
+      <description>哈希表理论基础 # 哈希表 # 哈希表中关键码就是数组的索引下标，然</description>
+      
+    </item>
+    
+    <item>
+      <title>哈希表基础知识</title>
+      <link>http://localhost:1313/all/algorithm/hash/basicknowledge/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/hash/basicknowledge/</guid>
+      <description>哈希表理论基础 # 哈希表 # 哈希表中关键码就是数组的索引下标，然</description>
+      
+    </item>
+    
+    <item>
+      <title>有效的字母异位词</title>
+      <link>http://localhost:1313/algorithm/hash/validalphabeticwords/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/hash/validalphabeticwords/</guid>
+      <description>题目 # 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字</description>
+      
+    </item>
+    
+    <item>
+      <title>有效的字母异位词</title>
+      <link>http://localhost:1313/all/algorithm/hash/validalphabeticwords/</link>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/hash/validalphabeticwords/</guid>
+      <description>题目 # 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字</description>
+      
+    </item>
+    
+    <item>
+      <title>二分查找</title>
+      <link>http://localhost:1313/algorithm/mid/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/mid/</guid>
+      <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/algorithm/mid/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>二分查找</title>
+      <link>http://localhost:1313/all/algorithm/mid/</link>
+      <pubDate>Thu, 15 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/mid/</guid>
+      <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/all/algorithm/mid/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>栈</title>
+      <link>http://localhost:1313/algorithm/stack/</link>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/algorithm/stack/</guid>
+      <description>栈与队列理论基础 # 用栈实现队列 # class MyQueue { Stack&amp;lt;Integer&amp;gt; stackIn; Stack&amp;lt;Integer&amp;gt; stackOut; /** Initialize your data structure here. */</description>
+      
+    </item>
+    
+    <item>
+      <title>栈</title>
+      <link>http://localhost:1313/all/algorithm/stack/</link>
+      <pubDate>Sat, 10 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/algorithm/stack/</guid>
+      <description>栈与队列理论基础 # 用栈实现队列 # class MyQueue { Stack&amp;lt;Integer&amp;gt; stackIn; Stack&amp;lt;Integer&amp;gt; stackOut; /** Initialize your data structure here. */</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/all/project/foodordersystem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/all/project/foodordersystem/</guid>
+      <description>nginx:使用nginx进行反向代理，前端发起的请求先发给</description>
+      
+    </item>
+    
     <item>
       <title></title>
       <link>http://localhost:1313/friend/</link>
@@ -29,22 +279,12 @@
     </item>
     
     <item>
-      <title></title>
-      <link>http://localhost:1313/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</link>
+      <title>JVM知识点</title>
+      <link>http://localhost:1313/all/interview/jvm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/python/excel%E8%87%AA%E5%8A%A8%E5%8C%96%E5%8A%9E%E5%85%ACpython/</guid>
-      <description>文件操作 # 2.1 python操作⽂文件流程 # f=open(filename) # 打开⽂文件 f.w</description>
-      
-    </item>
-    
-    <item>
-      <title>DVWA暴力破解攻略</title>
-      <link>http://localhost:1313/networkengineering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/networkengineering/</guid>
-      <description>DVWA暴力破解攻略 # 一、 靶场考核点 # 弱口令(weak password) 没有</description>
+      <guid>http://localhost:1313/all/interview/jvm/</guid>
+      <description>JVM # 1.概念： # JVM是可运行Java代码的假想计算机，包括</description>
       
     </item>
     
@@ -60,151 +300,21 @@
     
     <item>
       <title>mysql面试知识点</title>
-      <link>http://localhost:1313/interview/mysql/</link>
+      <link>http://localhost:1313/all/interview/mysql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/interview/mysql/</guid>
+      <guid>http://localhost:1313/all/interview/mysql/</guid>
       <description>mysql # 慢查询 # 聚合查询 多表查询 表数据量过大查询 深度分页查询 表象</description>
       
     </item>
     
     <item>
-      <title>numpy</title>
-      <link>http://localhost:1313/python/numpy/</link>
+      <title>mysql面试知识点</title>
+      <link>http://localhost:1313/interview/mysql/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/python/numpy/</guid>
-      <description>numpy模块 # NumPy(Numerical Python) 是 Python 语言中做科学计算的基础库。重在于数值</description>
-      
-    </item>
-    
-    <item>
-      <title>Pandas</title>
-      <link>http://localhost:1313/python/pandas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/python/pandas/</guid>
-      <description>基于pandas的数据清洗 # 处理丢失数据 # 有两种丢失数据： None</description>
-      
-    </item>
-    
-    <item>
-      <title>Series</title>
-      <link>http://localhost:1313/python/series/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/python/series/</guid>
-      <description>Series # Series是一种类似与一维数组的对象，由下面两个部分组</description>
-      
-    </item>
-    
-    <item>
-      <title>二叉树</title>
-      <link>http://localhost:1313/algorithm/tree/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/algorithm/tree/</guid>
-      <description>二叉树理论基础篇 # 递归查找 # 递归算法的三个要素 1.确定递归函</description>
-      
-    </item>
-    
-    <item>
-      <title>二叉树</title>
-      <link>http://localhost:1313/all/algorithm/tree/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/all/algorithm/tree/</guid>
-      <description>二叉树理论基础篇 # 递归查找 # 递归算法的三个要素 1.确定递归函</description>
-      
-    </item>
-    
-    <item>
-      <title>二分查找</title>
-      <link>http://localhost:1313/algorithm/mid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/algorithm/mid/</guid>
-      <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/algorithm/mid/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>二分查找</title>
-      <link>http://localhost:1313/all/algorithm/mid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/all/algorithm/mid/</guid>
-      <description>数组 # 二分查找 # 第一种写法：target在[left,rig</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/all/algorithm/mid/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>哈希表基础知识</title>
-      <link>http://localhost:1313/algorithm/hash/basicknowledge/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/algorithm/hash/basicknowledge/</guid>
-      <description>哈希表理论基础 # 哈希表 # 哈希表中关键码就是数组的索引下标，然</description>
-      
-    </item>
-    
-    <item>
-      <title>记录在力扣刷过的数据库题目</title>
-      <link>http://localhost:1313/mysql/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/mysql/</guid>
-      <description>sql执行顺序 # SQL 中，查询中子句的执行顺序通常如下： FROM 子句：</description>
-      
-    </item>
-    
-    <item>
-      <title>链表</title>
-      <link>http://localhost:1313/algorithm/linkedlist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/algorithm/linkedlist/</guid>
-      <description>链表 # 基础知识 # 链表是一种通过指针串联在一起的线性结构，每一</description>
-      
-    </item>
-    
-    <item>
-      <title>链表</title>
-      <link>http://localhost:1313/all/algorithm/linkedlist/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/all/algorithm/linkedlist/</guid>
-      <description>链表 # 基础知识 # 链表是一种通过指针串联在一起的线性结构，每一</description>
-      
-    </item>
-    
-    <item>
-      <title>有效的字母异位词</title>
-      <link>http://localhost:1313/algorithm/hash/validalphabeticwords/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/algorithm/hash/validalphabeticwords/</guid>
-      <description>题目 # 给定两个字符串 s 和 t ，编写一个函数来判断 t 是否是 s 的字</description>
-      
-    </item>
-    
-    <item>
-      <title>栈</title>
-      <link>http://localhost:1313/algorithm/stack/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/algorithm/stack/</guid>
-      <description>栈与队列理论基础 # 用栈实现队列 # class MyQueue { Stack&amp;lt;Integer&amp;gt; stackIn; Stack&amp;lt;Integer&amp;gt; stackOut; /** Initialize your data structure here. */</description>
-      
-    </item>
-    
-    <item>
-      <title>栈</title>
-      <link>http://localhost:1313/all/algorithm/stack/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/all/algorithm/stack/</guid>
-      <description>栈与队列理论基础 # 用栈实现队列 # class MyQueue { Stack&amp;lt;Integer&amp;gt; stackIn; Stack&amp;lt;Integer&amp;gt; stackOut; /** Initialize your data structure here. */</description>
+      <guid>http://localhost:1313/interview/mysql/</guid>
+      <description>mysql # 慢查询 # 聚合查询 多表查询 表数据量过大查询 深度分页查询 表象</description>
       
     </item>
     

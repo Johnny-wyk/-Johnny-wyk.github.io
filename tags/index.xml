@@ -7,6 +7,56 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2024 Johnny</copyright>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python</title>
+      <link>http://localhost:1313/tags/python/</link>
+      <pubDate>Sat, 28 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>http://localhost:1313/tags/mysql/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/mysql/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Network Engineering</title>
+      <link>http://localhost:1313/tags/network-engineering/</link>
+      <pubDate>Tue, 10 Sep 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/network-engineering/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Algorithm</title>
+      <link>http://localhost:1313/tags/algorithm/</link>
+      <pubDate>Fri, 23 Aug 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/algorithm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Interview</title>
+      <link>http://localhost:1313/tags/interview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/interview/</guid>
+      <description></description>
+      
+    </item>
+    
   </channel>
 </rss>

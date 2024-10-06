@@ -8,14 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>DVWA暴力破解攻略 &middot; Blowfish</title>
-  <meta name="title" content="DVWA暴力破解攻略 &middot; Blowfish" />
+  <title>NetworkEngineerings &middot; Blowfish</title>
+  <meta name="title" content="NetworkEngineerings &middot; Blowfish" />
   
-  <meta name="description" content="An article to explain the security of network,describing something I do in the experiments" />
+  
   
   
   
   <link rel="canonical" href="http://localhost:1313/networkengineering/" />
+  
+  <link rel="alternate" type="application/rss+xml" href="/networkengineering/index.xml" title="Blowfish" />
   
   
   
@@ -65,45 +67,16 @@
   
   <meta property="og:url" content="http://localhost:1313/networkengineering/">
   <meta property="og:site_name" content="Blowfish">
-  <meta property="og:title" content="DVWA暴力破解攻略">
-  <meta property="og:description" content="An article to explain the security of network,describing something I do in the experiments">
+  <meta property="og:title" content="NetworkEngineerings">
   <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="DVWA暴力破解攻略">
-  <meta name="twitter:description" content="An article to explain the security of network,describing something I do in the experiments">
+  <meta name="twitter:title" content="NetworkEngineerings">
 
   
-  <script type="application/ld+json">
-  [{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "articleSection": "欢迎来到 JohnnyBlog 的个人博客",
-    "name": "DVWA暴力破解攻略",
-    "headline": "DVWA暴力破解攻略",
-    "description": "An article to explain the security of network,describing something I do in the experiments",
-    "abstract": "DVWA暴力破解攻略 # 一、 靶场考核点 # 弱口令(weak password) 没有",
-    "inLanguage": "zh-cn",
-    "url" : "http:\/\/localhost:1313\/networkengineering\/",
-    "author" : {
-      "@type": "Person",
-      "name": "Johnny"
-    },
-    
-    
-    
-    
-    
-    
-    
-    
-    "mainEntityOfPage": "true",
-    "wordCount": "4342"
-  }]
-  </script>
-
+  
 
   
   
@@ -242,10 +215,10 @@
 
             
             
-  <a href="/interview/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  <a href="/python/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
     <p class="text-base font-medium" title="">
-        面试
+        数据分析
     </p>
 </a>
 
@@ -452,10 +425,10 @@
 
                     
   <li class="mt-1">
-    <a href="/interview/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    <a href="/python/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
         <p class="text-bg font-bg" title="">
-            面试
+            数据分析
         </p>
     </a>
 </li>
@@ -517,13 +490,10 @@
       
 
 
-<article>
-  
-  
-  
-  
-  
-  
+
+
+
+
  
   
    
@@ -531,8 +501,6 @@
  
 
 
-
-<div id="hero" class="h-[150px] md:h-[200px]"></div>
 
 
 
@@ -558,49 +526,11 @@
     });
 </script>
 
+ <header>
   
-  
-
-  <header id="single_header" class="mt-5 max-w-prose">
+  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">NetworkEngineerings</h1>
+  <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
     
-    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
-  
-  
-    
-  
-  <li class="inline hidden">
-    <a
-      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/"
-      >欢迎来到 JohnnyBlog 的个人博客</a
-    ><span class="px-1 text-primary-500">/</span>
-  </li>
-
-  
-  <li class="inline hidden">
-    <a
-      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
-      href="/networkengineering/"
-      >DVWA暴力破解攻略</a
-    ><span class="px-1 text-primary-500">/</span>
-  </li>
-
-</ol>
-
-
-    
-    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      DVWA暴力破解攻略
-    </h1>
-    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-      
-
-
-
-
-
-  
-  
 
 
 
@@ -608,15 +538,7 @@
 
 
 
-  
 
-
-
-
-
-
-
-  
 
 
 
@@ -633,1640 +555,170 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">9 分钟</span>
-  
-
-  
-  
 </div>
 
 
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</div>
-
-
-
-
-<div class="flex flex-row flex-wrap items-center">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</div>
-
-
-
-    </div>
-
-    
-    
-    
-    
-    
-
-    
-
-    
-      
-      
-        
-        
-<div class="flex author">
-  
-    
-    
-      
-    
-    
-      
-        
-      
-      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
-      alt="Johnny" src="/img/avatar_hu6747771277720944470.jpg" />
-    
-  
-  <div class="place-self-center">
-    
-    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
-      作者
-    </div>
-    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      Johnny
-    </div>
-    
-    
-    <div class="text-2xl sm:text-lg">
-  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
-    
-      
-        <a
-          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
-          href="https://twitter.com/burufugu"
-          target="_blank"
-          aria-label="X-Twitter"
-          rel="me noopener noreferrer"
-          ><span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-  </span>
-
-</span></a
-        >
-      
-    
-      
-        <a
-          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
-          href="https://github.com/Johnny-wyk"
-          target="_blank"
-          aria-label="Github"
-          rel="me noopener noreferrer"
-          ><span class="inline-block align-text-bottom">
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-
-  </span>
-
-</span></a
-        >
-      
-    
   </div>
-
-</div>
-  </div>
-</div>
-
-      
-
-      
-
-      
-      <div class="mb-5"></div>
-      
-
-    
-
+  
+  
+  
+  
+  <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
   </header>
-  
-  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+  <section class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
     
-     <div
-      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
-      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
-
-         <details open class="toc-right mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
-  <summary
-    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#一靶场考核点">一、	靶场考核点</a></li>
-        <li><a href="#二靶场复现">二、	靶场复现</a>
-          <ul>
-            <li><a href="#等级low">等级：LOW</a></li>
-            <li><a href="#暴力破解medium步骤跟low一样">暴力破解medium步骤跟low一样</a></li>
-            <li><a href="#等级-high">等级： high</a></li>
-          </ul>
-        </li>
-        <li><a href="#三漏洞分析">三、	漏洞分析</a></li>
-        <li><a href="#basic-knowledage-and-tools-to-get-debugs">basic knowledage and tools to get debugs</a></li>
-        <li><a href="#录遍历漏洞">⽬录遍历漏洞</a>
-          <ul>
-            <li><a href="#录扫描">⽬录扫描</a></li>
-          </ul>
-        </li>
-        <li><a href="#dirsearch">dirsearch</a></li>
-        <li><a href="#原理">原理</a>
-          <ul>
-            <li><a href="#请求包">请求包：</a></li>
-            <li><a href="#post传值-在body中传值">post传值 在body中传值</a></li>
-            <li><a href="#request-header请求头">request header请求头：</a></li>
-            <li><a href="#响应包">响应包：</a></li>
-            <li><a href="#状态码">状态码</a></li>
-            <li><a href="#response-header-响应头">response header 响应头</a></li>
-          </ul>
-        </li>
-        <li><a href="#级录扫描">⼆级⽬录扫描</a></li>
-        <li><a href="#端扫描">端⼝扫描</a></li>
-        <li><a href="#nmap">nmap</a>
-          <ul>
-            <li><a href="#2防墙">2.防⽕墙</a></li>
-          </ul>
-        </li>
-        <li><a href="#全端扫描">全端⼝扫描</a></li>
-        <li><a href="#question-and-answer">Question and Answer</a></li>
-        <li><a href="#爆破">爆破</a></li>
-        <li><a href="#kali带字典">kali⾃带字典</a></li>
-        <li><a href="#靶场">靶场</a></li>
-        <li><a href="#html">html</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
-<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
-  <summary
-    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#一靶场考核点">一、	靶场考核点</a></li>
-        <li><a href="#二靶场复现">二、	靶场复现</a>
-          <ul>
-            <li><a href="#等级low">等级：LOW</a></li>
-            <li><a href="#暴力破解medium步骤跟low一样">暴力破解medium步骤跟low一样</a></li>
-            <li><a href="#等级-high">等级： high</a></li>
-          </ul>
-        </li>
-        <li><a href="#三漏洞分析">三、	漏洞分析</a></li>
-        <li><a href="#basic-knowledage-and-tools-to-get-debugs">basic knowledage and tools to get debugs</a></li>
-        <li><a href="#录遍历漏洞">⽬录遍历漏洞</a>
-          <ul>
-            <li><a href="#录扫描">⽬录扫描</a></li>
-          </ul>
-        </li>
-        <li><a href="#dirsearch">dirsearch</a></li>
-        <li><a href="#原理">原理</a>
-          <ul>
-            <li><a href="#请求包">请求包：</a></li>
-            <li><a href="#post传值-在body中传值">post传值 在body中传值</a></li>
-            <li><a href="#request-header请求头">request header请求头：</a></li>
-            <li><a href="#响应包">响应包：</a></li>
-            <li><a href="#状态码">状态码</a></li>
-            <li><a href="#response-header-响应头">response header 响应头</a></li>
-          </ul>
-        </li>
-        <li><a href="#级录扫描">⼆级⽬录扫描</a></li>
-        <li><a href="#端扫描">端⼝扫描</a></li>
-        <li><a href="#nmap">nmap</a>
-          <ul>
-            <li><a href="#2防墙">2.防⽕墙</a></li>
-          </ul>
-        </li>
-        <li><a href="#全端扫描">全端⼝扫描</a></li>
-        <li><a href="#question-and-answer">Question and Answer</a></li>
-        <li><a href="#爆破">爆破</a></li>
-        <li><a href="#kali带字典">kali⾃带字典</a></li>
-        <li><a href="#靶场">靶场</a></li>
-        <li><a href="#html">html</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
-
- 
-<script>
-  (function () {
-    var $toc = $('#TableOfContents');
-    if ($toc.length > 0) {
-      var $window = $(window);
-
-      function onScroll() {
-        var currentScroll = $window.scrollTop();
-        var h = $('.anchor');
-        var id = "";
-        h.each(function (i, e) {
-          e = $(e);
-          if (e.offset().top - $(window).height()/3 <= currentScroll) {
-            id = e.attr('id');
-          }
-        });
-        var active = $toc.find('a.active');      
-        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
-
-        active.each(function (i, e) {
-          
-            $(e).removeClass('active');
-          
-        });
-        $toc.find('a[href="#' + id + '"]').addClass('active')
-        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
-          $(e).children('a').parents('ul').show();          
-        });
-      }
-
-      $window.on('scroll', onScroll);
-      $(document).ready(function () {
-        
-        onScroll();
-      });
-    }
-  })();
-</script>
-   </div>
-      </div>
+    <div class="min-w-0 min-h-0 max-w-prose">
       
+    </div>
+   
 
-      <div class="min-w-0 min-h-0 max-w-fit">
-        
-        
 
 
-        <div class="article-content max-w-prose mb-20">
-          
-
-<h1 class="relative group">DVWA暴力破解攻略 
-    <div id="dvwa%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E6%94%BB%E7%95%A5" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#dvwa%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E6%94%BB%E7%95%A5" aria-label="锚点">#</a>
-    </span>        
-    
-</h1>
-
-
-<h3 class="relative group">一、	靶场考核点 
-    <div id="%E4%B8%80%E9%9D%B6%E5%9C%BA%E8%80%83%E6%A0%B8%E7%82%B9" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%80%E9%9D%B6%E5%9C%BA%E8%80%83%E6%A0%B8%E7%82%B9" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>弱口令(weak password) 没有严格和准确的定义，通常认为容易被别人（他们有可能对你很了解）猜测到或被破解工具破解的口令均为弱口令。
-弱口令指的是仅包含简单数字和字母的口令，例如“123”、“abc”等，因为这样的口令很容易被别人破解，从而使用户的互联网账号受到他人控制，因此不推荐用户使用。</p>
-
-
-<h3 class="relative group">二、	靶场复现 
-    <div id="%E4%BA%8C%E9%9D%B6%E5%9C%BA%E5%A4%8D%E7%8E%B0" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E9%9D%B6%E5%9C%BA%E5%A4%8D%E7%8E%B0" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-
-
-<h4 class="relative group">等级：LOW 
-    <div id="%E7%AD%89%E7%BA%A7low" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%AD%89%E7%BA%A7low" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<p>1、开启代理，输入账号密码
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_hu3735938693702834835.png 330w,
-        /networkengineering/img_hu13134181141709418103.png 660w,
-        /networkengineering/img_hu15906503050874271078.png 1024w,
-        /networkengineering/img_hu17397237990799923072.png 2x"
-        src="/networkengineering/img_hu13134181141709418103.png"
-        alt="img.png"
-      />
-      
-      
-    </figure>
-  
-
-
-2、打开抓包工具抓包
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_1_hu11236874757875169923.png 330w,
-        /networkengineering/img_1_hu7194999211612391699.png 660w,
-        /networkengineering/img_1_hu4832297034530883655.png 1024w,
-        /networkengineering/img_1_hu18066583700179054974.png 2x"
-        src="/networkengineering/img_1_hu7194999211612391699.png"
-        alt="img_1.png"
-      />
-      
-      
-    </figure>
-  
-
-
-3、点击Acktion,点击send to Intruder,进入Intruder模块
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_2_hu6167463752849161571.png 330w,
-        /networkengineering/img_2_hu8415452559747493787.png 660w,
-        /networkengineering/img_2_hu4838299773417354245.png 1024w,
-        /networkengineering/img_2_hu8649852654328868088.png 2x"
-        src="/networkengineering/img_2_hu8415452559747493787.png"
-        alt="img_2.png"
-      />
-      
-      
-    </figure>
-  
-
-
-4、快速设置，开启攻击，得到长度不同的情况极大可能是账号密码
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_3_hu8026026320564013252.png 330w,
-        /networkengineering/img_3_hu10225909281592065597.png 660w,
-        /networkengineering/img_3_hu528105592397770957.png 1024w,
-        /networkengineering/img_3_hu13332134943261303892.png 2x"
-        src="/networkengineering/img_3_hu10225909281592065597.png"
-        alt="img_3.png"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-
-
-<h4 class="relative group">暴力破解medium步骤跟low一样 
-    <div id="%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3medium%E6%AD%A5%E9%AA%A4%E8%B7%9Flow%E4%B8%80%E6%A0%B7" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3medium%E6%AD%A5%E9%AA%A4%E8%B7%9Flow%E4%B8%80%E6%A0%B7" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-
-
-<h4 class="relative group">等级： high 
-    <div id="%E7%AD%89%E7%BA%A7-high" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%AD%89%E7%BA%A7-high" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<p>1、 开启抓包，发现多了个token，发送至intruder模块positions设置为pitchfork
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_4_hu1916714038345134860.png 330w,
-        /networkengineering/img_4_hu460424627813400629.png 660w,
-        /networkengineering/img_4_hu13374702728587214674.png 1024w,
-        /networkengineering/img_4_hu17751830528001414507.png 2x"
-        src="/networkengineering/img_4_hu460424627813400629.png"
-        alt="img_4.png"
-      />
-      
-      
-    </figure>
-  
-
-
-2、Option线程设置为1，grep-extract打勾，点击add
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_5_hu5096815596693847000.png 330w,
-        /networkengineering/img_5_hu5989509780240185177.png 660w,
-        /networkengineering/img_5_hu5414245998186215064.png 1024w,
-        /networkengineering/img_5_hu7747221946514880974.png 2x"
-        src="/networkengineering/img_5_hu5989509780240185177.png"
-        alt="img_5.png"
-      />
-      
-      
-    </figure>
-  
-
-
-3、进行如下设置，复制好value的值，点击Ok,然后找到redirections设置为Always
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_6_hu11769536113197129504.png 330w,
-        /networkengineering/img_6_hu10018797570788461438.png 660w,
-        /networkengineering/img_6_hu9439531273366997822.png 1024w,
-        /networkengineering/img_6_hu11312029841778035440.png 2x"
-        src="/networkengineering/img_6_hu10018797570788461438.png"
-        alt="img_6.png"
-      />
-      
-      
-    </figure>
-  
-
-
-4、最后进行payloads设置，第二个设置为recursive grep模式
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_7_hu3972377928704264168.png 330w,
-        /networkengineering/img_7_hu4047957825176042372.png 660w,
-        /networkengineering/img_7_hu13238932327965970274.png 1024w,
-        /networkengineering/img_7_hu15825547100504119524.png 2x"
-        src="/networkengineering/img_7_hu4047957825176042372.png"
-        alt="img_7.png"
-      />
-      
-      
-    </figure>
-  
-
-
-5、最后进行攻击，破解成功
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      
-      <img
-        class="my-0 rounded-md"
-        loading="lazy"
-        srcset="
-        /networkengineering/img_8_hu8510973983024692412.png 330w,
-        /networkengineering/img_8_hu6926469728546552958.png 660w,
-        /networkengineering/img_8_hu6478309273097683931.png 1024w,
-        /networkengineering/img_8_hu1883787773310541347.png 2x"
-        src="/networkengineering/img_8_hu6926469728546552958.png"
-        alt="img_8.png"
-      />
-      
-      
-    </figure>
-  
-
-</p>
-
-
-<h3 class="relative group">三、	漏洞分析 
-    <div id="%E4%B8%89%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E4%B8%89%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>1、未设计安全的验证码；
-2、未对认证错误的提交进行计数并给出限制；
-3、未使用双因素认证；</p>
-
-
-<h3 class="relative group">basic knowledage and tools to get debugs 
-    <div id="basic-knowledage-and-tools-to-get-debugs" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#basic-knowledage-and-tools-to-get-debugs" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-
-
-<h3 class="relative group">⽬录遍历漏洞 
-    <div id="%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%BD%95%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-
-
-<h4 class="relative group">⽬录扫描 
-    <div id="%E5%BD%95%E6%89%AB%E6%8F%8F" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%BD%95%E6%89%AB%E6%8F%8F" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<p>什么是⽬录？
-url的组成：
-<a href="https://blog.mo60.cn/index.php/archiv1s/2024-HeiDun.html"   target="_blank">
-    https://blog.mo60.cn/index.php/archiv1s/2024-HeiDun.html</a> -&gt; http服务 提供⽹⻚服务的
-<a href="https://blog.mo60.cn:443/index.php/archiv1s/2024-HeiDun.html"   target="_blank">
-    https://blog.mo60.cn:443/index.php/archiv1s/2024-HeiDun.html</a>
-:80
-:443
-端⼝与服务有对应关系</p>
-<p>http服务 -&gt; 80</p>
-<p>http -&gt; tcp/80</p>
-<p>https -&gt; tcp/443</p>
-<p>http:// /
-https://
-protocol://(sub)domain:port/path1/path2/path3</p>
-<p>port -&gt; 端⼝65535端⼝ tcp/ip协议</p>
-<p>端⼝：提供服务的</p>
-<p>http：明⽂传输</p>
-<p>https：加密传输</p>
-<p>ftp：⽂件传输协议 file tralation protocol
-明⽂ -&gt; 传输流量是明⽂ 是可读的 可能会泄露敏感 信息</p>
-<p>sftp: 加密版本的ftp s -&gt; ssl tls 加密协议</p>
-
-
-<h3 class="relative group">dirsearch 
-    <div id="dirsearch" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#dirsearch" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>python3 -m pip install -r requirements.txt</p>
-<p>xxxx package exsting 版本⾼于requirement中要求的版本</p>
-<p>pip uninstall -&gt; pip卸载⾼版本的y  -&gt; cannot uninstall the package  the package has</p>
-<p>installed by debian</p>
-<p>apt</p>
-<p>apt-get</p>
-<p>apt list|grep   termcolora</p>
-<p>python3-temcolora</p>
-<p>apt remove python3-termcolora -&gt;</p>
-<p>什么是debian？</p>
-<p>linux最早 林纳斯·xxx ,linux：开源 源代码开放 ,允许任何个⼈或组织基于linux进⾏⼆次开发 ,开源协议要求使⽤这个程序⼆次开发的应⽤ 也需要开源
-ubuntu centos readhat debian 就都是linux的发⾏版</p>
-<p>unix -&gt; 闭源  -&gt; macos 基于unix进⾏⼆次开发 -&gt; macos就也闭源
-linux命名 linux is not unix</p>
-
-
-<h3 class="relative group">原理 
-    <div id="%E5%8E%9F%E7%90%86" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%8E%9F%E7%90%86" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>http协议基础</p>
-<p>tcp/ip协议 有状态性</p>
-<p>应⽤层 http协议</p>
-<p>表示层</p>
-<p>会话层</p>
-<p>传输层</p>
-<p>⽹络层</p>
-<p>数据链路层 arp协议</p>
-<p>物理层 ⽹线 光纤</p>
-<p>http协议 -&gt; tcp/ip ⽆状态性</p>
-<p>服务端在默认情况下并不知道哪个请求来源于哪个客户端</p>
-<p>在http协议中 有7种请求⽅式 最常⻅的就是get / post</p>
-<p>get使⽤url传值:</p>
-<p>http://112.124.71.224:18080/vulnerabilities/brute/?username=admin&amp;pa</p>
-<p>ssword=admin&amp;Login=Login#</p>
-<p>浏览器对于url的⻓度有限制</p>
-<p>?name1=value1&amp;name2=value2 安全性⽐较低</p>
-
-
-<h4 class="relative group">请求包： 
-    <div id="%E8%AF%B7%E6%B1%82%E5%8C%85" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E8%AF%B7%E6%B1%82%E5%8C%85" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">GET /login?username=admin<span class="err">&amp;</span>password=admin HTTP/1.1
-</span></span><span class="line"><span class="cl"> Host: mbinvest.tebon.com.cn
-</span></span><span class="line"><span class="cl"> Connection: close
-</span></span><span class="line"><span class="cl"> Content-Length: 358
-</span></span><span class="line"><span class="cl"> Pragma: no-cache
-</span></span><span class="line"><span class="cl"> Cache-Control: no-cache
-</span></span><span class="line"><span class="cl"> tztWebdataEncrypt: 1
-</span></span><span class="line"><span class="cl"> X-Requested-With: XMLHttpRequest
-</span></span><span class="line"><span class="cl"> User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; MuMu Build/V417IR; wv) 
-</span></span><span class="line"><span class="cl">AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 
-</span></span><span class="line"><span class="cl">Mobile Safari/537.36;/dbzq
-</span></span><span class="line"><span class="cl"> Content-Type: application/x-www-form-urlencoded;
-</span></span><span class="line"><span class="cl"> Accept: */*
-</span></span><span class="line"><span class="cl"> Origin: https://mbinvest.tebon.com.cn
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Site: same-origin
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Mode: cors
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Dest: empty
-</span></span><span class="line"><span class="cl"> Referer: https://mbinvest.tebon.com.cn/h5_vue/news/wealth-app/index.html
-</span></span><span class="line"><span class="cl"> Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Cookie: sajssdk_2015_cross_new_user=1; 
-</span></span><span class="line"><span class="cl">sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221919cdf8e18175
-</span></span><span class="line"><span class="cl">0bdab4c7be43008-20331d51-557200
-</span></span><span class="line"><span class="cl">1919cdf8e19227%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24late
-</span></span><span class="line"><span class="cl"> st_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C
-</span></span><span class="line"><span class="cl"> %22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_
-</span></span><span class="line"><span class="cl"> %E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%
-</span></span><span class="line"><span class="cl"> 22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTkxOWNkZjh
-</span></span><span class="line"><span class="cl"> lMTgxNzUtMGJkYWI0YzdiZTQzMDA4LTIwMzMxZDUxLTU1NzIwMC0xOTE5Y2RmOGUxOTIyNyJ9
-</span></span><span class="line"><span class="cl"> %22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%22%2C%22value%22%3A%22
-</span></span><span class="line"><span class="cl"> %22%7D%2C%22%24device_id%22%3A%221919cdf8e18175-0bdab4c7be43008-20331d51
-</span></span><span class="line"><span class="cl">557200-1919cdf8e19227%22%7D; 
-</span></span><span class="line"><span class="cl">t1=DEB48BC37658EAC11885AA1DFE8F8632CA2B49294C51C1BACC
-</span></span></code></pre></div>
-
-<h4 class="relative group">post传值 在body中传值 
-    <div id="post%E4%BC%A0%E5%80%BC-%E5%9C%A8body%E4%B8%AD%E4%BC%A0%E5%80%BC" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#post%E4%BC%A0%E5%80%BC-%E5%9C%A8body%E4%B8%AD%E4%BC%A0%E5%80%BC" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">POST /login HTTP/1.1
-</span></span><span class="line"><span class="cl"> Host: mbinvest.tebon.com.cn
-</span></span><span class="line"><span class="cl"> Connection: close
-</span></span><span class="line"><span class="cl"> Content-Length: 358
-</span></span><span class="line"><span class="cl"> Pragma: no-cache
-</span></span><span class="line"><span class="cl"> Cache-Control: no-cache
-</span></span><span class="line"><span class="cl"> tztWebdataEncrypt: 1
-</span></span><span class="line"><span class="cl"> X-Requested-With: XMLHttpRequest
-</span></span><span class="line"><span class="cl"> User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; MuMu Build/V417IR; wv) 
-</span></span><span class="line"><span class="cl">AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 
-</span></span><span class="line"><span class="cl">Mobile Safari/537.36;/dbzq
-</span></span><span class="line"><span class="cl"> Content-Type: application/x-www-form-urlencoded;
-</span></span><span class="line"><span class="cl"> Accept: */*
-</span></span><span class="line"><span class="cl"> Origin: https://mbinvest.tebon.com.cn
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Site: same-origin
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Mode: cors
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Dest: empty
-</span></span><span class="line"><span class="cl"> Referer: https://mbinvest.tebon.com.cn/h5_vue/news/wealth-app/index.html
-</span></span><span class="line"><span class="cl"> Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Cookie: sajssdk_2015_cross_new_user=1; 
-</span></span><span class="line"><span class="cl">sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221919cdf8e18175
-</span></span><span class="line"><span class="cl">0bdab4c7be43008-20331d51-557200
-</span></span><span class="line"><span class="cl">1919cdf8e19227%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24late
-</span></span><span class="line"><span class="cl"> st_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C
-</span></span><span class="line"><span class="cl"> %22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_
-</span></span><span class="line"><span class="cl"> %E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%
-</span></span><span class="line"><span class="cl"> 22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTkxOWNkZjh
-</span></span><span class="line"><span class="cl"> lMTgxNzUtMGJkYWI0YzdiZTQzMDA4LTIwMzMxZDUxLTU1NzIwMC0xOTE5Y2RmOGUxOTIyNyJ9
-</span></span><span class="line"><span class="cl"> %22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%22%2C%22value%22%3A%22
-</span></span><span class="line"><span class="cl"> %22%7D%2C%22%24device_id%22%3A%221919cdf8e18175-0bdab4c7be43008-20331d51
-</span></span><span class="line"><span class="cl">557200-1919cdf8e19227%22%7D; 
-</span></span><span class="line"><span class="cl">t1=DEB48BC37658EAC11885AA1DFE8F8632CA2B49294C51C1BACC
-</span></span><span class="line"><span class="cl"> username=admin<span class="err">&amp;</span>password=admin
-</span></span></code></pre></div>
-
-<h4 class="relative group">request header请求头： 
-    <div id="request-header%E8%AF%B7%E6%B1%82%E5%A4%B4" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#request-header%E8%AF%B7%E6%B1%82%E5%A4%B4" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Host: mbinvest.tebon.com.cn
-</span></span><span class="line"><span class="cl"> Connection: close
-</span></span><span class="line"><span class="cl"> Content-Length: 358
-</span></span><span class="line"><span class="cl"> Pragma: no-cache
-</span></span><span class="line"><span class="cl"> Cache-Control: no-cache
-</span></span><span class="line"><span class="cl"> tztWebdataEncrypt: 1
-</span></span><span class="line"><span class="cl"> X-Requested-With: XMLHttpRequest
-</span></span><span class="line"><span class="cl"> User-Agent: Mozilla/5.0 (Linux; Android 6.0.1; MuMu Build/V417IR; wv) 
-</span></span><span class="line"><span class="cl">AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/91.0.4472.114 
-</span></span><span class="line"><span class="cl">Mobile Safari/537.36;/dbzq
-</span></span><span class="line"><span class="cl"> Content-Type: application/x-www-form-urlencoded;
-</span></span><span class="line"><span class="cl"> Accept: */*
-</span></span><span class="line"><span class="cl"> Origin: https://mbinvest.tebon.com.cn
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Site: same-origin
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Mode: cors
-</span></span><span class="line"><span class="cl"> Sec-Fetch-Dest: empty
-</span></span><span class="line"><span class="cl"> Referer: https://mbinvest.tebon.com.cn/h5_vue/news/wealth-app/index.html
-</span></span><span class="line"><span class="cl"> Accept-Language: zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Cookie: username=guest; 
-</span></span><span class="line"><span class="cl">sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221919cdf8e18175
-</span></span><span class="line"><span class="cl">0bdab4c7be43008-20331d51-557200
-</span></span><span class="line"><span class="cl">1919cdf8e19227%22%2C%22first_id%22%3A%22%22%2C%22props%22%3A%7B%22%24late
-</span></span><span class="line"><span class="cl"> st_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C
-</span></span><span class="line"><span class="cl"> %22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_
-</span></span><span class="line"><span class="cl"> %E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%
-</span></span><span class="line"><span class="cl"> 22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTkxOWNkZjh
-</span></span><span class="line"><span class="cl"> lMTgxNzUtMGJkYWI0YzdiZTQzMDA4LTIwMzMxZDUxLTU1NzIwMC0xOTE5Y2RmOGUxOTIyNyJ9
-</span></span><span class="line"><span class="cl"> %22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%22%2C%22value%22%3A%22
-</span></span><span class="line"><span class="cl"> %22%7D%2C%22%24device_id%22%3A%221919cdf8e18175-0bdab4c7be43008-20331d51
-</span></span><span class="line"><span class="cl">557200-1919cdf8e19227%22%7D; 
-</span></span><span class="line"><span class="cl">t1=DEB48BC37658EAC11885AA1DFE8F8632CA2B49294C51C1BACC
-</span></span></code></pre></div>
-
-<h4 class="relative group">响应包： 
-    <div id="%E5%93%8D%E5%BA%94%E5%8C%85" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%93%8D%E5%BA%94%E5%8C%85" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-
-
-<h4 class="relative group">状态码 
-    <div id="%E7%8A%B6%E6%80%81%E7%A0%81" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%8A%B6%E6%80%81%E7%A0%81" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<p>100-299 -&gt; 响应正常</p>
-<p>30x -&gt; 301 ⽹⻚发⽣了跳转</p>
-<p>40x -&gt; 404 not found -&gt; 请求的路径不存在 4开头的状态码代表请求的错误 包括但不限于权 限问题、请求路径问题
-404 请求路径问题</p>
-<p>401 un auth -&gt; 权限不够</p>
-<p>5xx &gt; 501 internel error -&gt; 5开头的状态码⼀般意味着服务器有内部错误</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">HTTP/1.1 200 OK 状态码
-</span></span><span class="line"><span class="cl">Server: nginx/1.20.1
-</span></span><span class="line"><span class="cl"> Date: Wed, 11 Sep 2024 08:37:06 GMT
-</span></span><span class="line"><span class="cl"> Content-Type: application/json;charset=utf-8
-</span></span><span class="line"><span class="cl"> Connection: close
-</span></span><span class="line"><span class="cl"> Cache-Control: no-cache
-</span></span><span class="line"><span class="cl"> X-Content-Type-Options: nosniff
-</span></span><span class="line"><span class="cl"> X-Frame-Options: SAMEORIGIN
-</span></span><span class="line"><span class="cl"> X-XSS-Protection: 1; mode=block
-</span></span><span class="line"><span class="cl">Access-Control-Allow-Credentials: true
-</span></span><span class="line"><span class="cl"> Content-Length: 235
-</span></span><span class="line"><span class="cl"> {
-</span></span><span class="line"><span class="cl"> }
-</span></span><span class="line"><span class="cl">  &#34;ACTION&#34;: &#34;46116&#34;,
-</span></span><span class="line"><span class="cl">  &#34;MAXCOUNT&#34;: &#34;10&#34;,
-</span></span><span class="line"><span class="cl">  &#34;ERRORNO&#34;: &#34;0&#34;,
-</span></span><span class="line"><span class="cl">  &#34;ERRORMESSAGE&#34;: &#34;未找到资讯信息&#34;,
-</span></span><span class="line"><span class="cl">  &#34;IDINDEX&#34;: &#34;0&#34;,
-</span></span><span class="line"><span class="cl">  &#34;INFOTITLEINDEX&#34;: &#34;1&#34;,
-</span></span><span class="line"><span class="cl">  &#34;DATESINDEX&#34;: &#34;2&#34;,
-</span></span><span class="line"><span class="cl">  &#34;MEDIAINDEX&#34;: &#34;3&#34;,
-</span></span><span class="line"><span class="cl">  &#34;FLAGINDEX&#34;: &#34;4&#34;,
-</span></span><span class="line"><span class="cl">  &#34;STOCKCODEINDEX&#34;: &#34;5&#34;
-</span></span></code></pre></div>
-
-<h4 class="relative group">response header 响应头 
-    <div id="response-header-%E5%93%8D%E5%BA%94%E5%A4%B4" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#response-header-%E5%93%8D%E5%BA%94%E5%A4%B4" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Server: nginx/1.20.1
-</span></span><span class="line"><span class="cl"> Date: Wed, 11 Sep 2024 08:37:06 GMT
-</span></span><span class="line"><span class="cl"> Content-Type: application/json;charset=utf-8  -&gt; 响应类型
-</span></span><span class="line"><span class="cl">Connection: close
-</span></span><span class="line"><span class="cl"> Cache-Control: no-cache
-</span></span><span class="line"><span class="cl"> X-Content-Type-Options: nosniff
-</span></span><span class="line"><span class="cl"> X-Frame-Options: SAMEORIGIN
-</span></span><span class="line"><span class="cl"> X-XSS-Protection: 1; mode=block
-</span></span><span class="line"><span class="cl"> Access-Control-Allow-Credentials: true
-</span></span><span class="line"><span class="cl"> Content-Length: 235  -&gt; 响应⻓度
-</span></span></code></pre></div><p>dirsearch 可以根据扫描得到的response的状态码来判断⽬标路径、⽂件 是否存在</p>
-<p>404 -&gt; 不存在</p>
-<p>200 -&gt; 存在</p>
-<p>301 -&gt; 该路径不直接存在 -&gt; 被重定向到另⼀个路径</p>
-
-
-<h3 class="relative group">⼆级⽬录扫描 
-    <div id="%E7%BA%A7%E5%BD%95%E6%89%AB%E6%8F%8F" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%BA%A7%E5%BD%95%E6%89%AB%E6%8F%8F" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Target: http://112.124.71.224:18080/
-</span></span><span class="line"><span class="cl">[16:48:49] Starting: game/
-</span></span><span class="line"><span class="cl"> [16:49:07] 200 -  158B  - /game/www
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  300B  - /game/.ht_wsr.txt
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess.bak1
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  304B  - /game/.htaccess_extra
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess.orig
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  305B  - /game/.htaccess.sample
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess_orig
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  301B  - /game/.htaccessOLD
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  299B  - /game/.htpasswds
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  302B  - /game/.htaccessOLD2
-</span></span><span class="line"><span class="cl"> [16:49:26] 403 -  303B  - /game/.htpasswd_test
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  301B  - /game/.htaccessBAK
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  303B  - /game/.htaccess.save
-</span></span><span class="line"><span class="cl"> [16:49:26] 403 -  300B  - /game/.httr-oauth
-</span></span><span class="line"><span class="cl"> [16:49:25] 403 -  301B  - /game/.htaccess_sc
-</span></span><span class="line"><span class="cl"> [16:50:34] 200 -  158B  - /game/www.zip
-</span></span></code></pre></div><p>得到了www.zip 备份⽂件</p>
-
-
-<h3 class="relative group">端⼝扫描 
-    <div id="%E7%AB%AF%E6%89%AB%E6%8F%8F" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%AB%AF%E6%89%AB%E6%8F%8F" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>ip : 112.124.71.224</p>
-<p>通过浏览器正常访问 发现返回空响应</p>
-<p>能说这个ip地址（服务器）没有任何的对外服务吗？</p>
-<p>1-65535个端⼝</p>
-<p>浏览器访问112.124.71.224 只探测了80</p>
-<p>https://112.124.71.224 -&gt; 443</p>
-
-
-<h3 class="relative group">nmap 
-    <div id="nmap" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#nmap" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>使⽤nmap对112.124.71.224扫描了80端⼝</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">nmap 112.124.71.224 -p 80
-</span></span><span class="line"><span class="cl"> Starting Nmap 7.95 ( https://nmap.org ) at 2024-09-11 10:29 CST
-</span></span><span class="line"><span class="cl"> Nmap scan report for 112.124.71.224
-</span></span><span class="line"><span class="cl"> Host is up (0.052s latency).
-</span></span><span class="line"><span class="cl"> PORT  
-</span></span><span class="line"><span class="cl"> STATE  SERVICE
-</span></span><span class="line"><span class="cl"> 80/tcp closed http
-</span></span><span class="line"><span class="cl"> Nmap done: 1 IP address (1 host up) scanned in 0.20 seconds
-</span></span></code></pre></div><p>想让nmap帮我们扫描这台主机的所有端⼝?
-tcp三次握⼿</p>
-<p>第⼀次握⼿：</p>
-<p>client(nmap) -&gt; server(112.124.71.224:80) : syn 请求包</p>
-<p>server -&gt; client : ack 确认包</p>
-<p>如果只根据上⾯两个包就判定端⼝是否开放 在nmap属于半开扫描</p>
-<p>半开扫描的结果不⼀定准确</p>
-<p>client -&gt; 决定建⽴连接 -&gt; syn+ack</p>
-<p>server -&gt; client -&gt; ack</p>
-<p>nmap在默认情况下都是全连接扫描 -&gt; 三次握⼿+ 四次挥⼿-sS -&gt; 指定nmap进⾏半开扫描 2次握⼿ 提升速度 牺牲的精度</p>
-<p>特洛伊⽊⻢ -&gt; 1个特征 -&gt; ⽤过⼀次就⾃我销毁</p>
-<p>⽤过1次 取决于有没有完整的建⽴过1次tcp三次握⼿</p>
-<p>CTF解题模式、AWD局域⽹攻防竞赛</p>
-<p>靶机不会给你初始权限 提供低权限⽤户</p>
-<p>出题⼈会在靶机中放置⼀个特洛伊⽊⻢</p>
-<p>nc连接端⼝ 就可以得到⼀个shell</p>
-<p>netcat 瑞⼠军⼑</p>
-<p>nc ip port  nc 112.124.71.224 1445 -&gt; $&gt;id -&gt; root</p>
-<p>nmap 112.124.71.224 -p 1-65535 -&gt; ⽐赛的时候 如果直接nmap 会导致特洛伊⽊⻢⾃我销毁 -&gt; -sS半开扫描可以解决这个问题</p>
-<p>tcp三次握⼿ 四次挥⼿</p>
-<p>只⽤了两次握⼿就判断了端⼝是否开放</p>
-<p>nmap收到ack的回复 ⽬标端⼝开放</p>
-<p>client(nmap) -&gt; server(112.124.71.224:80) : syn 请求包</p>
-<p>server -&gt; RST/FIN : ack 确认包</p>
-<p>nmap收到rst/fin回复 判定端⼝未开放</p>
-<p>为什么说端⼝未开放 有可能会回复 有可能不会回复？</p>
-<p>取决于端⼝是怎样的不开放</p>
-<p>1.112.124.71.224的确没有http服务</p>
-<p>nmap扫描 80/443 -&gt; 不会回应</p>
-
-
-<h4 class="relative group">2.防⽕墙 
-    <div id="2%E9%98%B2%E5%A2%99" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#2%E9%98%B2%E5%A2%99" aria-label="锚点">#</a>
-    </span>        
-    
-</h4>
-<p>112.124.71.224开放了http服务 但是限制了源ip地址</p>
-<p>nmap扫描80/443 -&gt; 会回应 -&gt; FIN/RST</p>
-<p>80/tcp close/open/filtered(过滤的)</p>
-
-
-<h3 class="relative group">全端⼝扫描 
-    <div id="%E5%85%A8%E7%AB%AF%E6%89%AB%E6%8F%8F" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E5%85%A8%E7%AB%AF%E6%89%AB%E6%8F%8F" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">Host is up (0.051s latency).
-</span></span><span class="line"><span class="cl"> Not shown: 65521 closed tcp ports (conn-refused)
-</span></span><span class="line"><span class="cl"> PORT    
-</span></span><span class="line"><span class="cl">  STATE  
-</span></span><span class="line"><span class="cl">21/tcp  
-</span></span><span class="line"><span class="cl">22/tcp  
-</span></span><span class="line"><span class="cl">135/tcp  
-</span></span><span class="line"><span class="cl">  open    
-</span></span><span class="line"><span class="cl">  open    
-</span></span><span class="line"><span class="cl">  SERVICE
-</span></span><span class="line"><span class="cl"> ftp    
-</span></span><span class="line"><span class="cl"> ssh    
-</span></span><span class="line"><span class="cl"> filtered msrpc
-</span></span><span class="line"><span class="cl"> 136/tcp  
-</span></span><span class="line"><span class="cl">137/tcp  
-</span></span><span class="line"><span class="cl"> filtered profile
-</span></span><span class="line"><span class="cl"> -&gt; ⽂件传输协议
-</span></span><span class="line"><span class="cl"> -&gt; ssh远程连接linux服务器
-</span></span><span class="line"><span class="cl"> filtered netbios-ns
-</span></span><span class="line"><span class="cl"> 138/tcp  
-</span></span><span class="line"><span class="cl">139/tcp  
-</span></span><span class="line"><span class="cl">445/tcp  
-</span></span><span class="line"><span class="cl"> filtered netbios-dgm
-</span></span><span class="line"><span class="cl"> filtered netbios-ssn
-</span></span><span class="line"><span class="cl"> filtered microsoft-ds
-</span></span><span class="line"><span class="cl"> 135-139 445端⼝ 都是windows特有的端⼝ netbios  samba服务 ⽂件共享
-</span></span><span class="line"><span class="cl">17010永恒之蓝漏洞 就是基于445端⼝的samba服务进⾏的攻击
-</span></span><span class="line"><span class="cl">政企的安全建设中 ⼀般认为445端⼝是⾼危端⼝
-</span></span><span class="line"><span class="cl">windowes 7  -&gt; 永恒之蓝漏洞 导致全球千万台pc机 感染了勒索病毒
-</span></span><span class="line"><span class="cl">windows 10 -&gt; 永恒之⿊ 影响⾯不如永恒之蓝⼴泛 
-</span></span><span class="line"><span class="cl">593/tcp  
-</span></span><span class="line"><span class="cl"> filtered http-rpc-epmap
-</span></span><span class="line"><span class="cl"> 4444/tcp  filtered krb524
-</span></span><span class="line"><span class="cl"> filtered -&gt; 已过滤状态 阿⾥云防⽕墙默认不启⽤445端⼝ 系统⾃带的防⽕墙
-</span></span><span class="line"><span class="cl">5003/tcp  open    
-</span></span><span class="line"><span class="cl"> filemaker
-</span></span><span class="line"><span class="cl"> 5355/tcp  filtered llmnr
-</span></span><span class="line"><span class="cl"> 18080/tcp open    
-</span></span><span class="line"><span class="cl"> unknown -&gt; unkown就是nmap没有匹配到指纹
-</span></span><span class="line"><span class="cl">80 -&gt; http -&gt; 实际建站不会使⽤默认80 -&gt; tomcat / nginx -&gt; 8080
-</span></span><span class="line"><span class="cl">服务器 和web应⽤ 是⼀⽐⼀的关系吗？ 不是
-</span></span><span class="line"><span class="cl">80 -&gt; ⽹站A
-</span></span><span class="line"><span class="cl"> 8080
-</span></span><span class="line"><span class="cl"> 8081
-</span></span><span class="line"><span class="cl"> 18080
-</span></span><span class="line"><span class="cl"> 18081
-</span></span><span class="line"><span class="cl">使⽤⾼位端⼝启⽤web服务
-</span></span><span class="line"><span class="cl">40301/tcp open    
-</span></span><span class="line"><span class="cl"> unknown
-</span></span><span class="line"><span class="cl"> Nmap done: 1 IP address (1 host up) scanned in 4063.19 seconds
-</span></span></code></pre></div><p>扫描：
-对112.124.71.224发起端⼝扫描</p>
-<p>我们的流量 是从当前主机直接到达了⽬标主机吗</p>
-<p>使⽤校园⽹：⽹络出⼝就是学校的公⽹IP（⽹关） -&gt; ⽹关可能部署⼀些流量清洗的设备</p>
-<p>使⽤浏览器访问18080端⼝ 可以正常访问 这是因为浏览器访问的流量合法 不存在扫描器的特
-征</p>
-<p>nmap特征明显 可能被校园⽹的流量清洗设备捕获 扫描结果被劫持</p>
-
-
-<h3 class="relative group">Question and Answer 
-    <div id="question-and-answer" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#question-and-answer" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<ol>
-<li>
-<p>⽹络问题</p>
-<p>⽹卡NAT模式：· 安全问题如果虚拟机部署了靶场可能导致被其他⼈攻击对虚拟机造成损坏</p>
-<p>校园⽹问题 上游的校园⽹服务器 只会对1个校园⽹账号下发1个ip地址导致使⽤桥接模式的虚拟机获取不到ip地址 没⽹</p>
-</li>
-<li>
-<p>pip问题
-什么是pip?</p>
-<p>pip是python官⽅的⽤于管理（安装、更新、卸载）python依赖（库、包）</p>
-<p>python3 -m pip install -r requirement.txt -&gt; no moudule name pip</p>
-<p>python3安装pip  -&gt; curl bootstrap.com/get-pip.py  -&gt; python3 get-pip.py</p>
-</li>
-<li>
-<p>运⾏问题
-域名 -&gt; dns</p>
-<p>顶级域：.com   .cn（中国特⾊顶级域） .gov政府  .gov.cn（中国政府的顶级域） .gov(美
-国政府)</p>
-<p>.org 组织</p>
-<p>⼦域名 -&gt; 在主域名之下 -&gt; mo60.cn -&gt; blog.mo60.cn / tools.mo60.cn</p>
-</li>
-</ol>
-
-
-<h3 class="relative group">爆破 
-    <div id="%E7%88%86%E7%A0%B4" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E7%88%86%E7%A0%B4" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-
-
-<h3 class="relative group">kali⾃带字典 
-    <div id="kali%E5%B8%A6%E5%AD%97%E5%85%B8" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#kali%E5%B8%A6%E5%AD%97%E5%85%B8" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>/usr/share/wordlists/rockyou.tar.gz  -&gt; rockyou是美国情报机构</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">$&gt; zcat rockyou.txt.gz &gt; /root/password.txt
-</span></span><span class="line"><span class="cl">$&gt; head -n 10 /root/password.txt
-</span></span></code></pre></div><p>/usr/share/wordlists/ -&gt; kali存放字典的⽬录</p>
-
-
-<h3 class="relative group">靶场 
-    <div id="%E9%9D%B6%E5%9C%BA" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#%E9%9D%B6%E5%9C%BA" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>http://112.124.71.224:18080/login.php</p>
-
-
-<h3 class="relative group">html 
-    <div id="html" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#html" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-<p>hyper text mark language -&gt; 超⽂本标记语⾔</p>
-<p>以标签的⽅式进⾏编写  标签是成对的</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
-</span></span></span><span class="line"><span class="cl"><span class="cp">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>   -&gt; 指代了html的
-</span></span><span class="line"><span class="cl">标准
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  ... html代码会被浏览器渲染 呈现出画⾯给⽤户
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>⽹⻚标题<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  ...  -&gt; ⽹⻚的主体内容
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>body -&gt;  表单 -&gt; 表单是html⽹⻚前端与后端交互的介质</p>
-<p>表单</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;GET&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> Username:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>  控件
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;username&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> Password:<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">autocomplete</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;password&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Login&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;Login&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">控件最重要的属性 就是name值
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>前端：浏览器中看到的⻚⾯ 统⼀都是前端</p>
-<p>后端：逻辑处理 ⽐如百度热搜 热搜榜单 后端做的逻辑处理</p>
-<p>账号：admin</p>
-<p>密码：password</p>
-<p>前端：在浏览器中能看到的⻚⾯ 全都属于前端  /admin/index.php  -》 后台管理界⾯ -&gt;</p>
-<p>前端</p>
-<p>后端：逻辑代码</p>
-<p>后端会接收前端的传值 -&gt; 前端就是我们⽤户操作过程中会传值</p>
-<p>cookie 饼⼲</p>
-<p>cookie -》 session 会话</p>
-<p>cookie session机制 就是为了解决http⽆状态性</p>
-<p>⽹站的注册登录功能</p>
-<p>登录之后 服务器就会向浏览器写⼊cookie</p>
-<p>浏览器发起的每个请求 都会携带cookie</p>
-<p>cookie 会存储在浏览器</p>
-<p>session 存储在服务器</p>
-<p>csrf漏洞  -&gt; 跨站请求伪造</p>
-<p>http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;password_</p>
-<p>conf=password&amp;Change=Change#</p>
-<p>admin ⽤户 改密码</p>
-<p>may -&gt;http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;pas</p>
-<p>sword_conf=password&amp;Change=Change#</p>
-<p>may在不知情况的情况下 修改了密码</p>
-<p>密码 参数也会加密</p>
-<p>短链接</p>
-<p>session cookie这⼀套机制导致的</p>
-<p>cookie 记录当前⽤户的身份</p>
-<p>本质上要解决的是 服务器</p>
-<p>token  -&gt; 令牌</p>
-<p>token  1个token对应1次⽹络请求</p>
-<p>admin:http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;pas</p>
-<p>sword_conf=password&amp;Change=Change&amp;token=fdjaf84384u83ruf3483</p>
-<p>may：http://112.124.71.224:18080/vulnerabilities/csrf/?password_new=password&amp;pass</p>
-<p>word_conf=password&amp;Change=Change&amp;token=fdjaf84384u83ruf3483</p>
-<p>token⻛险</p>
-<p>是在当前请求的响应中把下⼀次请求要给⽤户的token直接展示了</p>
-<p>tcp/ip -&gt; 有状态性</p>
-<p>应⽤层   http  -&gt; ⽆状态性</p>
-<p>表示层</p>
-<p>会话层</p>
-<p>传输层</p>
-<p>⽹络层</p>
-<p>数据链路层</p>
-<p>物理层</p>
-<p>响应</p>
-<p>200 OK  -&gt; http状态码</p>
-<p>100-299  -&gt; 请求是没有发⽣错误</p>
-<p>300 -&gt; 399 -&gt; 服务器发⽣了重定向</p>
-<p>400 -&gt; 499   404  -&gt; 404 not found -&gt; 请求路径、资源不存在  401 权限不够   4xx状态码就是</p>
-<p>请求有问题</p>
-<p>500 -&gt; 599 5xx⼀般是服务器内部出问题  501    http 501 interl error 内部错误</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">HTTP/1.1 200 OK
-</span></span><span class="line"><span class="cl"> Date: Thu, 12 Sep 2024 08:33:37 GMT
-</span></span><span class="line"><span class="cl"> Server: Apache/2.4.7 (Ubuntu)
-</span></span><span class="line"><span class="cl"> X-Powered-By: PHP/5.5.9-1ubuntu4.20
-</span></span><span class="line"><span class="cl"> Expires: Tue, 23 Jun 2009 12:00:00 GMT
-</span></span><span class="line"><span class="cl"> Cache-Control: no-cache, must-revalidate
-</span></span><span class="line"><span class="cl"> Pragma: no-cache
-</span></span><span class="line"><span class="cl"> Vary: Accept-Encoding
-</span></span><span class="line"><span class="cl"> Content-Length: 4943  -&gt; 响应体⼤⼩
-</span></span><span class="line"><span class="cl">Connection: close
-</span></span><span class="line"><span class="cl"> Content-Type: text/html;charset=utf-8  -&gt; 响应类型
-</span></span><span class="line"><span class="cl">response header 响应头
-</span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; 
-</span></span></span><span class="line"><span class="cl"><span class="cp">&#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">html</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&#34;http://www.w3.org/1999/xhtml&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;Content-Type&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;text/html; charset=UTF-8&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Vulnerability: Brute Force :: Damn Vulnerable Web Application 
-</span></span><span class="line"><span class="cl">(DVWA) v1.9<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/css&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../dvwa/css/main.css&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;icon&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;\image/ico&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../favicon.ico&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../dvwa/js/dvwaPage.js&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">body</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;home&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;header&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../../dvwa/images/logo.png&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;Damn Vulnerable Web 
-</span></span></span><span class="line"><span class="cl"><span class="s">Application&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main_menu&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main_menu_padded&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../.&#39;&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../.&#34;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../instructions.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../instructions.php&#34;</span><span class="p">&gt;</span>Instructions<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../setup.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../setup.php&#34;</span><span class="p">&gt;</span>Setup / Reset DB<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> 
-</span></span><span class="line"><span class="cl"><span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/brute/&#39;&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;selected&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/brute/&#34;</span><span class="p">&gt;</span>Brute Force<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/exec/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/exec/&#34;</span><span class="p">&gt;</span>Command Injection<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/csrf/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/csrf/&#34;</span><span class="p">&gt;</span>CSRF<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/fi/.?
-</span></span></span><span class="line"><span class="cl"><span class="s"> page=include.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/fi/.?
-</span></span></span><span class="line"><span class="cl"><span class="s"> page=include.php&#34;</span><span class="p">&gt;</span>File Inclusion<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/upload/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/upload/&#34;</span><span class="p">&gt;</span>File Upload<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/captcha/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/captcha/&#34;</span><span class="p">&gt;</span>Insecure CAPTCHA<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/sqli/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/sqli/&#34;</span><span class="p">&gt;</span>SQL Injection<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/sqli_blind/&#39;&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/sqli_blind/&#34;</span><span class="p">&gt;</span>SQL Injection 
-</span></span><span class="line"><span class="cl">(Blind)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/xss_r/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/xss_r/&#34;</span><span class="p">&gt;</span>XSS (Reflected)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../vulnerabilities/xss_s/&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../vulnerabilities/xss_s/&#34;</span><span class="p">&gt;</span>XSS (Stored)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> 
-</span></span><span class="line"><span class="cl"><span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../security.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../security.php&#34;</span><span class="p">&gt;</span>DVWA Security<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../phpinfo.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../phpinfo.php&#34;</span><span class="p">&gt;</span>PHP Info<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../about.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../about.php&#34;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;menuBlocks&#34;</span><span class="p">&gt;&lt;</span><span class="nt">li</span> 
-</span></span><span class="line"><span class="cl"><span class="na">onclick</span><span class="o">=</span><span class="s">&#34;window.location=&#39;../../logout.php&#39;&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;&#34;</span><span class="p">&gt;&lt;</span><span class="nt">a</span> 
-</span></span><span class="line"><span class="cl"><span class="na">href</span><span class="o">=</span><span class="s">&#34;../../logout.php&#34;</span><span class="p">&gt;</span>Logout<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;main_body&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;body_padded&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Vulnerability: Brute Force<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;vulnerable_code_area&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Login<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&#34;#&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;GET&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> Username:<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;username&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> Password:<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">AUTOCOMPLETE</span><span class="o">=</span><span class="s">&#34;off&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;password&#34;</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;Login&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;Login&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>Username and/or password incorrect.<span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>More Information<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://hiderefer.com/?
-</span></span></span><span class="line"><span class="cl"><span class="s"> https://www.owasp.org/index.php/Testing_for_Brute_Force_(OWASP-AT-004)&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>https://www.owasp.org/index.php/Testing_for_Brute_Force_(
-</span></span><span class="line"><span class="cl"> OWASP-AT-004)<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://hiderefer.com/?
-</span></span></span><span class="line"><span class="cl"><span class="s"> http://www.symantec.com/connect/articles/password-crackers-ensuring
-</span></span></span><span class="line"><span class="cl"><span class="s">security-your-password&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>http://www.symantec.com/connect/articles/password
-</span></span><span class="line"><span class="cl">crackers-ensuring-security-your-password<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;http://hiderefer.com/?
-</span></span></span><span class="line"><span class="cl"><span class="s"> http://www.sillychicken.co.nz/Security/how-to-brute-force-http-forms-in
-</span></span></span><span class="line"><span class="cl"><span class="s">windows.html&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>http://www.sillychicken.co.nz/Security/how
-</span></span><span class="line"><span class="cl">to-brute-force-http-forms-in-windows.html<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;clear&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;system_info&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;View Help&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;popup_button&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">onClick</span><span class="o">=</span><span class="s">&#34;javascript:popUp( &#39;../../vulnerabilities/view_help.php?
-</span></span></span><span class="line"><span class="cl"><span class="s"> id=brute&amp;security=low&#39; )&#34;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;View Source&#34;</span> 
-</span></span><span class="line"><span class="cl"><span class="na">class</span><span class="o">=</span><span class="s">&#34;popup_button&#34;</span> <span class="na">onClick</span><span class="o">=</span><span class="s">&#34;javascript:popUp( 
-</span></span></span><span class="line"><span class="cl"><span class="s">&#39;../../vulnerabilities/view_source.php?id=brute&amp;security=low&#39; )&#34;</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">div</span> 
-</span></span><span class="line"><span class="cl"><span class="na">align</span><span class="o">=</span><span class="s">&#34;left&#34;</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Username:<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> admin<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Security Level:<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> 
-</span></span><span class="line"><span class="cl">low<span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>PHPIDS:<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> disabled<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;footer&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Damn Vulnerable Web Application (DVWA) v1.9<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div>
-        </div>
-        
-        
-
-        
-        
-  
-  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
-    
-      
-      <a
-      target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/networkengineering/&amp;text=DVWA%e6%9a%b4%e5%8a%9b%e7%a0%b4%e8%a7%a3%e6%94%bb%e7%95%a5"
-      title="分享到 Twitter"
-      aria-label="分享到 Twitter"
-      >
-      
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-  </span>
-
-
-    </a>
-      
-    
-      
-      <a
-      target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://t.me/share/url?url=http://localhost:1313/networkengineering/&amp;resubmit=true&amp;title=DVWA%e6%9a%b4%e5%8a%9b%e7%a0%b4%e8%a7%a3%e6%94%bb%e7%95%a5"
-      title=""
-      aria-label=""
-      >
-      
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
-
-  </span>
-
-
-    </a>
-      
-    
-      
-      <a
-      target="_blank"
-      class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="mailto:?body=http://localhost:1313/networkengineering/&amp;subject=DVWA%e6%9a%b4%e5%8a%9b%e7%a0%b4%e8%a7%a3%e6%94%bb%e7%95%a5"
-      title="通过电子邮件发送"
-      aria-label="通过电子邮件发送"
-      >
-      
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
-
-  </span>
-
-
-    </a>
-      
-    
   </section>
+  
 
+    
+    
+    
+
+    
+
+      
+
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          
+          
+          
+
+  <a href="/networkengineering/penetrationtesting/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card nozoom" style="background-image:url(/img/paint_hu4234542555039975943.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
 
         
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/networkengineering/penetrationtesting/">DVWA暴力破解攻略</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+
+
 
 
   
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2024-09-10 00:00:00 &#43;0000 UTC">2024-09-10</time><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">9 分钟</span>
+  
+
+  
+  
+</div>
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/network-engineering/&#34;,'_self');">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Network Engineering
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+        </div>
+
+        
       </div>
-     
-      
-      
-        
-        
-          
-          
-        
-      <script>
-        var oid = "views_NetworkEngineering\\index.md"
-        var oid_likes = "likes_NetworkEngineering\\index.md"
-      </script>
-      
-      
-      
-      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
-  
-    </section>
-  <footer class="pt-8 max-w-prose print:hidden">
+      <div class="px-6 pt-4 pb-2">
 
-    
-  
-    
-    
-    
-    <div class="pt-8">
-      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
-      <div class="flex justify-between pt-3">
-        <span>
-          
-            <a class="flex group mr-3" href="/mysql/">
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >记录在力扣刷过的数据库题目</span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time>
-                  
-                </span>
-              </span>
-            </a>
-          
-        </span>
-        <span>
-          
-            <a class="flex text-right group ml-3" href="/friend/">
-              <span class="flex flex-col">
-                <span
-                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  ></span
-                >
-                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-                  
-                    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC">0001-01-01</time>
-                  
-                </span>
-              </span>
-              <span
-                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
-                >&rarr;</span
-              >
-              <span
-                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
-                >&larr;</span
-              >
-            </a>
-          
-        </span>
       </div>
     </div>
+  </a>
+          
+          
+        </section>
+
+    
+
+    
+
   
 
+    
 
-    
-    
-    
-    
-    
-  </footer>
-</article>
-
-      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
-  <a href="#the-top"
-    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-    aria-label="返回顶部" title="返回顶部">
-    &uarr;
-  </a>
-</div>
+  
+      
     </main><footer id="site-footer" class="py-10 print:hidden">
   
   
@@ -2275,10 +727,10 @@ tcp三次握⼿</p>
       <ul class="flex flex-col list-none sm:flex-row">
         
         <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
-          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/python/"
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/tags/"
             title="">
             
-            数据分析
+            系列文章
           </a>
         </li>
         
